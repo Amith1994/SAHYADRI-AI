@@ -589,40 +589,107 @@ export const ChatMessage: React.FC<Props> = ({
                     </div>
                   </button>
 
-                  {/* Collapsed/Expanded Content */}
+                  {/* Collapsed/Expanded Content with Clickable University Portal Links */}
                   {isSourcesExpanded && (
-                    <div className="p-3.5 space-y-2 border-t border-[#DDD4C4] bg-[#FFFFFF] animate-fade-in">
+                    <div className="p-3.5 space-y-2.5 border-t border-[#DDD4C4] bg-[#FFFFFF] animate-fade-in">
                       <div className="text-[11px] text-[#4B5563] font-medium flex items-center gap-1.5 pb-1">
                         <FileText className="w-3.5 h-3.5 text-[#636B2F]" />
                         <span>
                           {language === 'kn'
-                            ? 'ಈ ಕೆಳಗಿನ ಅಧಿಕೃತ ವಿಶ್ವವಿದ್ಯಾಲಯ ಹಾಗೂ ಐಸಿಎಆರ್ ಕೃಷಿ ಶಿಫಾರಸುಗಳನ್ನು ಬಳಸಲಾಗಿದೆ:'
-                            : 'The following verified KSNUAHS & ICAR Package of Practices documents were cited:'}
+                            ? 'ಈ ಕೆಳಗಿನ ಅಧಿಕೃತ ವಿಶ್ವವಿದ್ಯಾಲಯ ಹಾಗೂ ಐಸಿಎಆರ್ ಕೃಷಿ ಶಿಫಾರಸು ಪೋರ್ಟಲ್‌ಗಳಿಗೆ ಭೇಟಿ ನೀಡಿ:'
+                            : 'Click any university or ICAR portal below to inspect verified Package of Practices:'}
                         </span>
                       </div>
-                      {sec.lines.map((line, lIdx) => {
-                        const trimmed = line.trim();
-                        if (!trimmed) return null;
-                        return (
+                      {(() => {
+                        const sourceItems: { num: string; title: string; url: string }[] = [];
+                        let curNum = '';
+                        let curTitle = '';
+
+                        sec.lines.forEach((l) => {
+                          const t = l.trim();
+                          if (!t) return;
+                          const m = t.match(/^\[(\d+)\]\s*(.+)$/);
+                          if (m) {
+                            if (curTitle) {
+                              sourceItems.push({
+                                num: curNum || '1',
+                                title: curTitle,
+                                url: 'https://uahs.edu.in/',
+                              });
+                            }
+                            curNum = m[1];
+                            curTitle = m[2];
+                          } else if (t.startsWith('http://') || t.startsWith('https://')) {
+                            sourceItems.push({
+                              num: curNum || '1',
+                              title: curTitle || t,
+                              url: t,
+                            });
+                            curNum = '';
+                            curTitle = '';
+                          } else if (t) {
+                            if (curTitle) {
+                              sourceItems.push({
+                                num: curNum || '1',
+                                title: curTitle,
+                                url: 'https://uahs.edu.in/',
+                              });
+                            }
+                            curTitle = t;
+                          }
+                        });
+
+                        if (curTitle) {
+                          sourceItems.push({
+                            num: curNum || '1',
+                            title: curTitle,
+                            url: 'https://uahs.edu.in/',
+                          });
+                        }
+
+                        return sourceItems.map((item, idx) => (
                           <div
-                            key={lIdx}
-                            className="p-2.5 rounded-xl bg-[#F8F5EE] border border-[#DDD4C4] text-xs leading-normal font-mono text-[#000000] flex items-start justify-between gap-2"
+                            key={idx}
+                            className="p-3 rounded-xl bg-[#F8F5EE] border border-[#DDD4C4] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:border-[#88BDF2] transition-colors"
                           >
-                            <span className="break-all font-medium">{trimmed}</span>
-                            {trimmed.includes('http') && (
-                              <a
-                                href={trimmed.match(/https?:\/\/[^\s]+/)?.[0] || '#'}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 px-2 py-1 bg-[#FFFFFF] border border-[#88BDF2] text-[#1E3A5F] rounded-md text-[10px] font-bold hover:bg-[#EEF5FC] shrink-0"
-                              >
-                                <span>Open</span>
-                                <ExternalLink className="w-2.5 h-2.5" />
-                              </a>
-                            )}
+                            <div className="flex items-start gap-2.5 min-w-0">
+                              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#1E3A5F] text-[#FFFFFF] text-[10px] font-mono font-black shrink-0 mt-0.5">
+                                {item.num}
+                              </span>
+                              <div className="flex flex-col min-w-0">
+                                <a
+                                  href={item.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-xs sm:text-[13px] font-bold text-[#1E3A5F] hover:underline flex items-center gap-1.5 truncate"
+                                  title="Open official university portal"
+                                >
+                                  <span>{item.title}</span>
+                                  <ExternalLink className="w-3 h-3 shrink-0 text-[#384959]" />
+                                </a>
+                                <a
+                                  href={item.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-[10.5px] text-[#4B5563] font-mono hover:text-[#1E3A5F] truncate underline mt-0.5"
+                                >
+                                  {item.url}
+                                </a>
+                              </div>
+                            </div>
+
+                            <a
+                              href={item.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 bg-[#1E3A5F] hover:bg-[#132742] text-[#FFFFFF] rounded-lg text-[11px] font-extrabold shadow-xs transition-all shrink-0 cursor-pointer"
+                            >
+                              <span>{language === 'kn' ? 'ಪೋರ್ಟಲ್ ತೆರೆಯಿರಿ' : 'Open Link'}</span>
+                              <ExternalLink className="w-3 h-3" />
+                            </a>
                           </div>
-                        );
-                      })}
+                        ));
+                      })()}
                     </div>
                   )}
                 </div>
@@ -715,10 +782,18 @@ export const ChatMessage: React.FC<Props> = ({
                   <button
                     key={c.id}
                     type="button"
-                    onClick={() => onCitationClick && onCitationClick(c)}
-                    className="text-[10px] bg-[#FFFFFF] hover:bg-[#F5F0E6] text-[#000000] font-extrabold px-2.5 py-0.5 rounded-full border border-[#DDD4C4] transition-colors shadow-2xs cursor-pointer"
+                    onClick={() => {
+                      if (c.url) {
+                        window.open(c.url, '_blank', 'noopener,noreferrer');
+                      } else if (onCitationClick) {
+                        onCitationClick(c);
+                      }
+                    }}
+                    className="text-[10px] bg-[#FFFFFF] hover:bg-[#EEF5FC] text-[#1E3A5F] hover:text-[#0F172A] font-extrabold px-2.5 py-0.5 rounded-full border border-[#88BDF2] transition-colors shadow-2xs cursor-pointer flex items-center gap-1"
+                    title={`Open ${c.title}`}
                   >
-                    [{c.id}] {c.title.split('—')[0].trim()}
+                    <span>[{c.id}] {c.title.split('—')[0].trim()}</span>
+                    <ExternalLink className="w-2.5 h-2.5 text-[#384959]" />
                   </button>
                 ))}
               </div>
