@@ -1,4 +1,7 @@
-# 🌱 Sahyadri Chatbot — Karnataka Agricultural AI Assistant
+# 🌱 SAHYADRI AI — Karnataka Agricultural Advisory System
+
+[![Live Web App](https://img.shields.io/badge/Live_Demo-amith1994.github.io%2FSAHYADRI--AI-22c55e?style=for-the-badge&logo=googlechrome&logoColor=white)](https://amith1994.github.io/SAHYADRI-AI/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Amith1994%2FSAHYADRI--AI-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Amith1994/SAHYADRI-AI)
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5+-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19.0+-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
@@ -9,6 +12,9 @@
 [![Gemini Multi-Model](https://img.shields.io/badge/Google_Gemini-2.5_Flash_Lite_|_3.1_Flash-4285F4?style=flat-square&logo=google&logoColor=white)](https://ai.google.dev/)
 [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-412991?style=flat-square&logo=openai&logoColor=white)](https://openai.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
+
+> **Live Web App Available at**: [https://amith1994.github.io/SAHYADRI-AI/](https://amith1994.github.io/SAHYADRI-AI/)  
+> **GitHub Repository**: [https://github.com/Amith1994/SAHYADRI-AI](https://github.com/Amith1994/SAHYADRI-AI)
 
 An enterprise-grade, **Retrieval-Augmented Generation (RAG)** Agricultural AI Assistant purpose-built for Karnataka farmers, agronomists, researchers, and extension officers. Sahyadri delivers authoritative, scientifically verified cultivation intelligence for **Groundnut, Rice/Paddy, Maize, and Arecanut**, cross-referenced with real-time **IMD Agromet Weather Bulletins** across all 31 districts of Karnataka in both **English and Kannada (ಕನ್ನಡ)**.
 
