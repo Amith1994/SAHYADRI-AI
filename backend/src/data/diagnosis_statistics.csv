@@ -1,0 +1,39 @@
+date,crop,diagnosis,confidence,provider,model,response_time,farmer_feedback,expert_verified
+2026-08-20,Groundnut,Early Leaf Spot,0.89,gemini,gemini-1.5-flash,1.42,Correct,True
+2026-08-20,Paddy,Blast,0.92,gemini,gemini-1.5-flash,1.15,Correct,True
+2026-08-20,Maize,Fall armyworm,0.85,router9,gpt-4o,1.88,Correct,True
+2026-08-20,Arecanut,Mahali kolerogo fruit rot,0.58,gemini,gemini-1.5-flash,1.60,Wrong,False
+2026-08-20,Groundnut,No Groundnut plant detected,0.0,gemini,gemini-1.5-flash,18.87,Pending,False
+2026-08-20,Maize,No Maize plant visible,0.0,gemini,gemini-1.5-flash,21.95,Pending,False
+2026-08-20,Arecanut,Inflorescence Blight,0.85,gemini,gemini-1.5-flash,17.02,Pending,False
+2026-08-20,Arecanut,Koleroga (Mahali disease),0.9,gemini,gemini-2.5-flash,16.69,Pending,False
+2026-08-20,Maize,Fall Armyworm,0.92,gemini,gemini-2.5-flash,7.89,Pending,False
+2026-08-20,Maize,Fall Armyworm,0.9,gemini,gemini-2.5-flash,6.92,Pending,False
+2026-08-20,Maize,Fall armyworm,0.88,gemini,gemini-2.5-flash,27.29,Pending,False
+2026-08-20,Arecanut,Koleroga (Mahali disease),0.88,gemini,gemini-2.5-flash,13.94,Pending,False
+2026-08-20,Maize,Fall Armyworm,0.9,gemini,gemini-2.5-flash,10.79,Pending,False
+2026-08-20,Maize,Fall Armyworm,0.9,gemini,gemini-2.5-flash,7.04,Pending,False
+2026-08-20,Paddy,Koleroga (Mahali disease),0.85,gemini,gemini-2.5-flash,12.42,Pending,False
+2026-08-20,Paddy,Paddy Stem Borer,0.9,gemini,gemini-2.5-flash,19.64,Pending,False
+2026-08-20,Maize,Fall Armyworm,0.9,gemini,gemini-2.5-flash,16.51,Pending,False
+2026-08-20,Paddy,Rice Blast,0.9,gemini,gemini-2.5-flash,16.55,Pending,False
+2026-08-20,Groundnut,Flea Beetles,0.88,gemini,gemini-2.5-flash,14.72,Pending,False
+2026-08-20,Groundnut,Aphids,0.9,gemini,gemini-2.5-flash,12.17,Pending,False
+2026-08-20,Arecanut,Button Shedding,0.85,gemini,gemini-2.5-flash,17.35,Pending,False
+2026-08-20,Paddy,Blast,0.85,gemini,gemini-2.5-flash,47.4,Pending,False
+2026-08-20,Maize,Fall armyworm,0.88,gemini,gemini-2.5-flash,3.63,Pending,False
+2026-08-20,Maize,Fall armyworm,0.88,gemini,gemini-2.5-flash,2.72,Pending,False
+2026-08-20,Maize,Maize Aphids,0.92,gemini,gemini-3.6-flash,32.42,Pending,False
+2026-08-20,Maize,Maize Aphids,0.92,gemini,gemini-3.5-flash,49.13,Pending,False
+2026-08-20,Maize,Maize Aphids,0.92,gemini,gemini-3.6-flash,27.61,Pending,False
+2026-08-21,Maize,Inflorescence Die-Back & Button Shedding,0.92,gemini,gemini-3.6-flash,16.72,Pending,False
+2026-08-21,Maize,Inflorescence Die-Back & Button Shedding,0.92,gemini,gemini-3.6-flash,15.99,Pending,False
+2026-08-21,Arecanut,Inflorescence Die-Back & Button Shedding,0.92,gemini,gemini-3.6-flash,8.37,Pending,False
+2026-08-21,Maize,Inflorescence Die-Back & Button Shedding,0.92,gemini,gemini-3.6-flash,14.52,Pending,False
+2026-08-21,Arecanut,Inflorescence Die-Back & Button Shedding,0.9,gemini,gemini-3.6-flash,11.34,Pending,False
+2026-08-21,Maize,Inflorescence Die-Back & Button Shedding,0.92,gemini,gemini-3.6-flash,17.26,Pending,False
+2026-08-21,Maize,Inflorescence Die-Back & Button Shedding,0.92,gemini,gemini-3.5-flash,60.97,Pending,False
+2026-08-21,Groundnut,Early Leaf Spot / Tikka,0.9,gemini,gemini-3.6-flash,13.27,Pending,False
+2026-08-21,Maize,Inflorescence Die-Back & Button Shedding,0.92,gemini,gemini-3.6-flash,17.59,Pending,False
+2026-08-21,Maize,Inflorescence Die-Back & Button Shedding,0.92,gemini,gemini-3.5-flash,12.76,Pending,False
+2026-08-21,Maize,Fall armyworm,0.88,gemini,gemini-2.5-flash,20.1,Pending,False

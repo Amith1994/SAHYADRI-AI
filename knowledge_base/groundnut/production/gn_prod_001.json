@@ -1,0 +1,16 @@
+{
+  "id": "gn_prod_001",
+  "crop": "groundnut",
+  "topic": "production",
+  "title": "Groundnut — Varieties, Seed Rate and Sowing",
+  "content": "RECOMMENDED VARIETIES FOR KARNATAKA:\nKharif: GPBD-4 (bunch, 95-100 days, 2.5 t/ha), TMV-2 (bunch, 100-110 days), Girnar-2 (bunch), Kadiri-6 (runner).\nRabi/Summer: GPBD-4, JL-24 (bunch, 100 days), TAG-24.\n\nSEED RATE:\nBunch varieties: 100-125 kg/ha. Runner varieties: 80-100 kg/ha. Ensure minimum germination 80-85%.\n\nSEED TREATMENT (Mandatory):\n1. Carbendazim @ 2g/kg seed (fungicide treatment).\n2. Rhizobium japonicum culture @ 600g/ha.\n3. PSB (Phosphate Solubilizing Bacteria) @ 600g/ha.\n4. Apply biofertilizers after fungicide drying.\n\nSPACING:\nIrrigated: 30 x 10 cm (row x plant). Rainfed: 45 x 10 cm.\nMechanical sowing: 45 x 10 cm.\n\nSOWING DEPTH: 4-5 cm in red sandy loam soil. 3-4 cm in black soils.\n\nSEASON:\nKharif: June-July (with onset of southwest monsoon).\nRabi: October-November.\nSummer (irrigated only): February-March.\n\nLAND PREPARATION:\nDeep plowing 30cm before kharif sowing. 2-3 harrowings. Form ridges and furrows in rainfed areas for moisture conservation.",
+  "source_name": "ICAR-Indian Institute of Groundnut Research",
+  "source_short": "ICAR-IIGR",
+  "source_id": "icar_iigr",
+  "source_url": "https://www.icar-iigr.org.in/",
+  "source_type": "ICAR Research Institute",
+  "state": "National",
+  "language": "English",
+  "last_verified": "2026-01-01",
+  "authority": 1
+}

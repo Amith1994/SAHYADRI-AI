@@ -1,0 +1,3 @@
+case_id,crop,image,AI_diagnosis,confidence,alternative_diagnoses,farmer_feedback,expert_diagnosis,expert_notes,status,timestamp
+CASE-1001,Groundnut,groundnut_sample_01.jpg,Early Leaf Spot,0.54,Late Leaf Spot (0.35); Rust (0.11),Wrong,,Awaiting expert verification,PENDING,2026-08-20T08:30:00Z
+CASE-1002,Arecanut,arecanut_sample_02.jpg,Mahali kolerogo fruit rot,0.58,Bud rot (0.30); Yellow leaf disease (0.12),Needs expert confirmation,,Awaiting review,PENDING,2026-08-20T09:10:00Z

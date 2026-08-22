@@ -1,0 +1,16 @@
+{
+  "id": "gn_prod_002",
+  "crop": "groundnut",
+  "topic": "production",
+  "title": "Groundnut — Karnataka Specific Package of Practices",
+  "content": "KARNATAKA GROUNDNUT PACKAGE OF PRACTICES (UAS Dharwad / UAS Bengaluru):\n\nRECOMMENDED VARIETIES (Karnataka):\n- North Karnataka (Dharwad zone): GPBD-4 (kharif, 95 days, high oleic), TAG-24, JL-24\n- South Karnataka (Bengaluru zone): GPBD-4, TMV-2, CO-2\n- Raichur-Hyderabad Karnataka: GPBD-4, K-134, Narayani\n\nSEED TREATMENT (Karnataka Recommendation):\n1. Bavistin (Carbendazim) 2g/kg seed — soilborne disease protection.\n2. Thiram 3g/kg seed — if Aspergillus crown rot risk.\n3. Rhizobium culture 600g/ha — promotes nitrogen fixation.\n4. PSB 600g/ha — phosphorus mobilization.\n\nLAND PREPARATION (Karnataka):\n- Red sandy loam: Deep plow 30cm in summer before kharif.\n- Black cotton soil: Summer plowing + 2 harrowing before sowing.\n- Form ridges 20-25cm height for rainfed areas to prevent waterlogging.\n\nSOWING:\n- Kharif (North Karnataka): 1st–2nd week of June.\n- Kharif (South Karnataka): 3rd week of June – 1st week of July.\n- Rabi (irrigated only): October–November.\n\nKEY AGRONOMIC PRACTICES:\n- Earthing up at 30-35 DAS is critical for pegging.\n- If soil crust forms, break crust at 7-10 DAS for better germination.\n- Thin seedlings to maintain recommended plant population.",
+  "source_name": "University of Agricultural Sciences Dharwad",
+  "source_short": "UAS Dharwad",
+  "source_id": "uas_dharwad",
+  "source_url": "https://www.uasd.edu/",
+  "source_type": "Karnataka Agricultural University",
+  "state": "Karnataka",
+  "language": "English",
+  "last_verified": "2026-01-01",
+  "authority": 2
+}

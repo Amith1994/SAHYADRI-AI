@@ -1,0 +1,24 @@
+{
+  "name": "sahyadri-chatbot-workspace",
+  "version": "1.0.0",
+  "description": "Sahyadri Agricultural AI Chatbot — RAG MVP for Karnataka Crops",
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "test:backend": "cd backend && npm test",
+    "build": "cd backend && npm run build && cd ../frontend && npm run build"
+  },
+  "keywords": [
+    "agriculture",
+    "karnataka",
+    "rag",
+    "ai",
+    "icar",
+    "groundnut",
+    "paddy",
+    "maize",
+    "arecanut"
+  ],
+  "author": "Google DeepMind pair programming with User",
+  "license": "MIT"
+}

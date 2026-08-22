@@ -1,0 +1,482 @@
+# 🌱 Sahyadri Chatbot — Karnataka Agricultural AI Assistant
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5+-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19.0+-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-8.2+-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-4.19+-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.4+-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Gemini Multi-Model](https://img.shields.io/badge/Google_Gemini-2.5_Flash_Lite_|_3.1_Flash-4285F4?style=flat-square&logo=google&logoColor=white)](https://ai.google.dev/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-412991?style=flat-square&logo=openai&logoColor=white)](https://openai.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
+
+An enterprise-grade, **Retrieval-Augmented Generation (RAG)** Agricultural AI Assistant purpose-built for Karnataka farmers, agronomists, researchers, and extension officers. Sahyadri delivers authoritative, scientifically verified cultivation intelligence for **Groundnut, Rice/Paddy, Maize, and Arecanut**, cross-referenced with real-time **IMD Agromet Weather Bulletins** across all 31 districts of Karnataka in both **English and Kannada (ಕನ್ನಡ)**.
+
+---
+
+## 📑 Table of Contents
+
+1. [Key Highlights & Core Principles](#-key-highlights--core-principles)
+2. [ChatGPT / Claude-Level Agronomic Intelligence](#-chatgpt--claude-level-agronomic-intelligence)
+3. [Supported Crops & Agronomic Intents](#-supported-crops--agronomic-intents)
+4. [IMD Agromet 5-Day Weather Advisory Engine](#-imd-agromet-5-day-weather-advisory-engine)
+5. [Farm Context & Personalization System](#-farm-context--personalization-system)
+6. [System Architecture & Multi-Model RAG Pipeline](#-system-architecture--multi-model-rag-pipeline)
+7. [Knowledge Base & Institutional Hierarchy](#-knowledge-base--institutional-hierarchy)
+8. [Professional Report UI & Typography Standards](#-professional-report-ui--typography-standards)
+9. [Backend Services & Code Structure](#-backend-services--code-structure)
+10. [REST API Documentation](#-rest-api-documentation)
+11. [Quick Start & Installation](#-quick-start--installation)
+12. [Automated Testing Suite](#-automated-testing-suite)
+13. [Agricultural Safety & Ethics Guardrails](#-agricultural-safety--ethics-guardrails)
+14. [Project Directory Layout](#-project-directory-layout)
+15. [Roadmap](#-roadmap)
+16. [License & Acknowledgements](#-license--acknowledgements)
+
+---
+
+## 🌟 Key Highlights & Core Principles
+
+- **Zero Chemical Hallucination**: Strict context-bounded generation guarantees that pesticide, fungicide, herbicide, and fertilizer dosages come only from university-approved Packages of Practices (PoP 2026).
+- **Stage-Aware Crop Precision**: The AI detects specific crop age/stage (e.g., *30 days after sowing, flowering, pegging, transplanting, maturity*) and delivers tailored field operations rather than generic pre-sowing advice.
+- **Multi-Model Gemini Failover Ladder**: Automatic failover across `gemini-2.5-flash-lite`, `gemini-3.1-flash-lite`, `gemini-2.5-flash`, `gemini-3-flash-preview`, and `gemini-3.7-flash` with rate-limit retry and sub-second latency.
+- **Karnataka-First Institutional Hierarchy**: Regional recommendations prioritize **KSNUAHS Shivamogga**, **UAS Dharwad**, **UAS Bengaluru (GKVK)**, and **UAS Raichur**, backed by national **ICAR** apex institutes.
+- **Collapsible Sources & Verification**: Sources are cleanly collapsed by default with an interactive `[SHOW ▼] / [HIDE ▲]` toggle and numbered citations (`[1]`, `[2]`).
+- **Professional Academic & Report Typography**: Sharp black text (`#000000`), full text justification (`text-justify`), 1.45–1.5 line spacing, and highlighted bold agricultural values/dosages.
+- **Native Bilingual Support (English & ಕನ್ನಡ)**: Automatic Unicode script detection with localized prompt templates and native Kannada responses for rural accessibility.
+- **Agromet 5-Day Forecast & Spray Windows**: Real-time integration of IMD agrometeorological data spanning 31 Karnataka districts and 193+ block series with automated spray-window safety checks.
+- **Dynamic Offline Agronomy Engine**: Stage-aware offline rule engine for full functionality when internet or API keys are unavailable.
+
+---
+
+## 🧠 ChatGPT / Claude-Level Agronomic Intelligence
+
+Sahyadri is engineered to think and respond with the depth, nuance, and contextual understanding of state-of-the-art AI models, specifically fine-tuned for Karnataka crops and agro-climatic conditions.
+
+### 🎯 Crop Growth Stage Awareness
+When a farmer asks a question specifying crop age (e.g., *"my groundnut crop is 30 days old and looking at the rainfall what operations should I do for higher yield"*), the assistant does **not** output irrelevant pre-sowing seed rates or land preparation. Instead, it provides:
+1. **Critical Growth Stage Identification**: Identifies that 30 DAS represents the vegetative-to-pegging transition.
+2. **Key Yield Operations**:
+   - **Gypsum Application**: Top dressing Gypsum @ 500 kg/ha (200 kg/acre) at 30–35 DAS + light earthing up for calcium availability and pod filling.
+   - **Intercultivation Timing**: Final hand weeding and shallow hoeing before 35 DAS; **strict warning against deep hoeing after peg initiation (35+ DAS)** to protect developing pegs.
+   - **Foliar Nutrition**: Spraying 2% DAP or Planofix (NAA) @ 20 ppm / 0.25 mL/L at flowering to prevent flower drop.
+   - **Pest/Disease Surveillance**: Scouting thresholds for Tikka leaf spot (Cercospora) and leaf miner (ETL: 1 mine/leaf).
+3. **5-Day Weather Synthesis**: Synchronizing gypsum broadcasting and foliar sprays with forecast rainfall, humidity (>85%), wind speed (<8 km/h), and drainage requirements.
+
+---
+
+## 🌾 Supported Crops & Agronomic Intents
+
+### 1. The 4 Target Crops
+
+| Crop | Botanical Name | Kannada Name | Major Agro-Climatic Zones in Karnataka |
+| :--- | :--- | :--- | :--- |
+| 🥜 **Groundnut** | *Arachis hypogaea* | **ಶೇಂಗಾ / ಕಡಲೆಕಾಯಿ** | Northern Dry Zone, Southern Dry Zone, Central Dry Zone |
+| 🌾 **Rice / Paddy** | *Oryza sativa* | **ಭತ್ತ** | Coastal Zone, Hilly Zone, Southern Transitional Zone, Tungabhadra Command |
+| 🌽 **Maize** | *Zea mays* | **ಮೆಕ್ಕೆಜೋಳ** | Northern Transitional Zone, Central Dry Zone, Southern Dry Zone |
+| 🌴 **Arecanut** | *Areca catechu* | **ಅಡಿಕೆ** | Malnad / Hilly Zone, Coastal Zone, Southern Transitional Zone |
+
+---
+
+### 2. The 5 Core Agronomic Intents
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                     5 CORE CULTIVATION INTENTS                          │
+├──────────────────┬──────────────────────────────────────────────────────┤
+│ 1. Crop          │ Land prep, recommended varieties (TMV-2, Jyothi,     │
+│    Production    │ NK-6240, Mangala), seed rate, seed treatment,        │
+│                  │ spacing, sowing windows, intercropping systems.      │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ 2. Soil &        │ NPK split schedules, basal vs top-dressing, FYM/     │
+│    Nutrient      │ organic manure, gypsum application, micronutrients   │
+│    Management    │ (Zinc, Boron), soil pH correction, biofertilizers.   │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ 3. Pest &        │ Economic Threshold Levels (ETL), symptom diagnosis,  │
+│    Disease       │ biological controls (Trichoderma, NPV, NSKE 5%),     │
+│    Management    │ CIBRC-approved chemical formulations, spray PPE.     │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ 4. Irrigation &  │ Critical growth stages (flowering, pegging, silking),│
+│    Water         │ Alternate Wetting & Drying (AWD), drip scheduling,   │
+│    Management    │ drainage during waterlogging, drought mitigation.    │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│ 5. Harvest &     │ Physiological maturity indices, harvesting moisture, │
+│    Post-Harvest  │ threshing, drying guidelines, hermetic bag storage,   │
+│                  │ aflatoxin / storage pest prevention (Warehouse tips).│
+└──────────────────┴──────────────────────────────────────────────────────┘
+```
+
+---
+
+## 🌦️ IMD Agromet 5-Day Weather Advisory Engine
+
+Sahyadri features an embedded **Agrometeorological Advisory System** built upon official **India Meteorological Department (IMD)** forecast formats and agromet datasets covering **all 31 districts and 193+ block series of Karnataka**.
+
+### Forecast Parameters Tracked:
+- 🌧️ **Rainfall (mm)**
+- 🌡️ **Maximum & Minimum Temperatures (°C)**
+- 💧 **Morning (RH-I) & Afternoon (RH-II) Relative Humidity (%)**
+- 💨 **Wind Speed (km/h) & Wind Direction (16-point Compass)**
+- ☁️ **Cloud Cover (Octas)**
+- ⚠️ **IMD Weather Warnings & Heavy Rain Alerts**
+
+### 🛡️ Smart Spray Window Advisory:
+The engine assesses weather parameters against scientific spraying thresholds:
+- ✅ **Optimal**: Rainfall $< 2\text{ mm}$, Wind Speed $5\text{–}10\text{ km/h}$, Temperature $< 32^\circ\text{C}$, Morning (6:30–9:00 AM) or Late Afternoon (4:30–6:30 PM).
+- ⚠️ **Caution / Unfavorable**: Rainfall $> 5\text{ mm}$, Wind $> 15\text{ km/h}$ (drift hazard), Rain forecast within 6 hours, Extreme midday heat.
+
+---
+
+## 🚜 Farm Context & Personalization System
+
+Farmers and field agents can customize the **Farm Profile** via the interactive context drawer to receive hyper-localized recommendations:
+
+```
+[ Farm Profile Drawer ]
+  ├── District & Taluk: (e.g., Shivamogga → Thirthahalli / Chitradurga → Hiriyur / Dharwad → Navalgund)
+  ├── Agro-Climatic Zone: (Coastal, Hilly/Malnad, Northern Dry, Central Dry, Southern Transitional)
+  ├── Cultivation Season: (Kharif, Rabi, Summer)
+  ├── Selected Variety: (e.g., Groundnut: TMV-2, GPBD-4 | Rice: Jyothi, BPT-5204 | Maize: NK-6240 | Arecanut: Mohitnagar)
+  └── Soil Type: (Red Sandy Loam, Black Clay/Vertisol, Laterite Soil, Alluvial Soil)
+```
+
+---
+
+## 🏛️ System Architecture & Multi-Model RAG Pipeline
+
+```
+                               ┌────────────────────────┐
+                               │  Farmer / User Query   │
+                               │  (English or ಕನ್ನಡ)    │
+                               └───────────┬────────────┘
+                                           │
+                                           ▼
+                       ┌────────────────────────────────────────┐
+                       │     React 19 + Vite + Tailwind UI      │
+                       │  - Language Selector (EN / KN)         │
+                       │  - 4-Crop Ribbon & Prompt Library      │
+                       │  - Farm Context (District/Soil/Season) │
+                       │  - Professional Justified Typography   │
+                       └───────────────────┬────────────────────┘
+                                           │ POST /api/chat
+                                           ▼
+                       ┌────────────────────────────────────────┐
+                       │    Express + TypeScript Backend API    │
+                       ├────────────────────────────────────────┤
+                       │ 1. Language Detector (Unicode Regex)   │
+                       │ 2. Crop Detector (Aliases & Context)   │
+                       │ 3. Intent & Stage Classifier           │
+                       │ 4. Domain Query Rewriter               │
+                       └───────────────────┬────────────────────┘
+                                           │
+                                           ▼
+                       ┌────────────────────────────────────────┐
+                       │     TF-IDF Vector Retrieval Engine     │
+                       ├────────────────────────────────────────┤
+                       │ Multi-Factor Weighted Scoring:         │
+                       │  • Base TF-IDF Cosine Match            │
+                       │  • Crop Match Boost (2.5x)             │
+                       │  • Intent Match Boost (1.8x)           │
+                       │  • Karnataka Authority Boost (1.3x)    │
+                       │  • Farm Context Soil/Zone Alignment    │
+                       │ => Retrieves Top-K Chunk Excerpts      │
+                       └───────────────────┬────────────────────┘
+                                           │
+                                           ▼
+                       ┌────────────────────────────────────────┐
+                       │    Multi-Model LLM Failover Ladder     │
+                       ├────────────────────────────────────────┤
+                       │  1. gemini-2.5-flash-lite (Primary)    │
+                       │  2. gemini-3.1-flash-lite (Fallback 1) │
+                       │  3. gemini-2.5-flash      (Fallback 2) │
+                       │  4. gemini-3-flash-preview(Fallback 3) │
+                       │  5. gemini-3.7-flash      (Fallback 4) │
+                       │  6. Smart Stage-Aware Offline Engine   │
+                       └───────────────────┬────────────────────┘
+                                           │
+                                           ▼
+                       ┌────────────────────────────────────────┐
+                       │      Citation & Confidence Engine      │
+                       ├────────────────────────────────────────┤
+                       │ • Resolves inline [1], [2] to sources  │
+                       │ • Formats Collapsible Source Cards     │
+                       │ • Generates Warning & PPE Badges       │
+                       └───────────────────┬────────────────────┘
+                                           │
+                                           ▼
+                       ┌────────────────────────────────────────┐
+                       │       Academic Report UI Render        │
+                       │ • Sharp Black Text (#000000)           │
+                       │ • Full Text Justification              │
+                       │ • Highlighted Bold Values & Doses      │
+                       │ • Collapsible Sources [SHOW ▼/HIDE ▲]  │
+                       │ • IMD Weather Advisory & Alert Cards   │
+                       └────────────────────────────────────────┘
+```
+
+---
+
+## 🎨 Professional Report UI & Typography Standards
+
+The chatbot interface adheres to academic publishing and extension report aesthetics:
+
+| Element | Specification | Visual Benefit |
+| :--- | :--- | :--- |
+| **Text Color** | **Sharp Deep Black (`#000000`)** | High contrast, crisp legibility in outdoor and bright mobile environments. |
+| **Alignment** | **Full Justification (`text-justify`)** | Publication-style alignment (`text-justify: inter-word`). |
+| **Line Height** | **`1.45–1.5` (`leading-report`)** | Optimal reading rhythm without crowding. |
+| **Font Family** | **Aptos, Segoe UI, Inter, Times New Roman, Noto Sans Kannada** | Clean, modern sans-serif body with bilingual Kannada support. |
+| **Bold Values** | **Colored Highlight Badges** | Active ingredients, dosages (`@ 0.6 g/L`, `500 kg/ha`), and timings (`6:30–9:00 AM`) rendered in distinct badges (`text-[#166534] bg-[#ECFDF5]`). |
+| **Sources Section** | **Collapsible Accordion (`[SHOW ▼]`)** | Keeps answers concise while providing full source transparency upon one click. |
+| **Farmer Warning** | **`⚠️ Important Message for Farmer`** | Prominent amber-orange alert container for critical field precautions. |
+
+---
+
+## 📚 Knowledge Base & Institutional Hierarchy
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                       INSTITUTIONAL TRUST HIERARCHY                         │
+├────────┬─────────────────┬──────────────────────────────────┬───────────────┤
+│ Tier   │ Category        │ Key Institutions                 │ Weight Boost  │
+├────────┼─────────────────┼──────────────────────────────────┼───────────────┤
+│ Tier 1 │ National ICAR   │ • ICAR-IIGR (Groundnut)          │ Primary Apex  │
+│        │ Research        │ • ICAR-IIRR / ICAR-NRRI (Rice)   │ Standard      │
+│        │ Institutes      │ • ICAR-IIMR (Maize)              │               │
+│        │                 │ • ICAR-CPCRI (Arecanut)          │               │
+├────────┼─────────────────┼──────────────────────────────────┼───────────────┤
+│ Tier 2 │ Karnataka State │ • KSNUAHS Shivamogga (AMFU)      │ +30% Regional │
+│        │ Agricultural    │ • UAS Dharwad (Karnataka PoP)    │ Priority      │
+│        │ Universities    │ • UAS Bengaluru (GKVK)           │ Boost         │
+│        │ (SAUs)          │ • UAS Raichur                    │               │
+├────────┼─────────────────┼──────────────────────────────────┼───────────────┤
+│ Tier 3 │ Agromet & IMD   │ • IMD Agromet Advisory Service   │ Weather       │
+│        │ Bulletins       │ • District Agromet Units (DAMU)  │ Priority      │
+├────────┼─────────────────┼──────────────────────────────────┼───────────────┤
+│ Tier 4 │ Government &    │ • Vikaspedia Agriculture         │ Baseline      │
+│        │ Extension       │ • Karnataka State Dept of Agri   │ Context       │
+└────────┴─────────────────┴──────────────────────────────────┴───────────────┘
+```
+
+---
+
+## ⚙️ Backend Services & Code Structure
+
+| Service File | Responsibility |
+| :--- | :--- |
+| [`backend/src/server.ts`](backend/src/server.ts) | Express server configuration, CORS, rate limits, health checks. |
+| [`backend/src/routes/chat.ts`](backend/src/routes/chat.ts) | Route handlers for `/api/chat`, `/api/weather`, `/api/crops`, `/api/sources`. |
+| [`backend/src/services/rag.ts`](backend/src/services/rag.ts) | Main RAG pipeline orchestrator; coordinates intent detection, retrieval, LLM synthesis, and citations. |
+| [`backend/src/services/cropDetect.ts`](backend/src/services/cropDetect.ts) | Kannada/English language detection, crop entity extraction, intent classification. |
+| [`backend/src/services/retrieval.ts`](backend/src/services/retrieval.ts) | In-memory TF-IDF indexer, multi-factor ranking algorithm, context formatting. |
+| [`backend/src/services/weather.ts`](backend/src/services/weather.ts) | Karnataka district/block weather loader (193 series), IMD bulletin generator, spray-window evaluation. |
+| [`backend/src/services/llm.ts`](backend/src/services/llm.ts) | Multi-model Gemini failover ladder, OpenAI fallback, and dynamic offline mock engine. |
+| [`backend/src/prompts/agricultural.ts`](backend/src/prompts/agricultural.ts) | Agronomist system prompts with strict stage-specific rules and weather integration. |
+| [`backend/src/services/citations.ts`](backend/src/services/citations.ts) | Inline citation validator, URL resolver, and relevance confidence scoring. |
+
+---
+
+## 📡 REST API Documentation
+
+### 1. Execute RAG Chat Query
+- **Endpoint**: `POST /api/chat`
+- **Request Body**:
+```json
+{
+  "question": "my groundnut crop is 30 days what i need to do operation for getting higher yield",
+  "crop": "groundnut",
+  "language": "en",
+  "sessionId": "session-12345",
+  "farmContext": {
+    "district": "Shivamogga",
+    "block": "Shivamogga",
+    "season": "Kharif",
+    "variety": "TMV-2",
+    "soil": "Sandy Loam"
+  }
+}
+```
+- **Response**:
+```json
+{
+  "answer": "### Answer\nAt 30 days after sowing (DAS), your groundnut crop is entering the critical flowering and early pegging stage...\n\n### What to do & Recommended Field Operations\n1. **Gypsum Application**: Apply 500 kg/ha of gypsum at 30–35 DAS...\n2. **Weeding & Intercultivation**: Complete shallow hoeing before 35 DAS...\n\n### 🌦️ Weather-Based Agro-Advisory\n1. **Field Operation Window**: ...\n\n### ⚠️ Important Message for Farmer\nGypsum application is non-negotiable at 30–35 DAS...\n\n### Sources\n[1] ICAR-IIGR...",
+  "crop": "groundnut",
+  "intent": "crop_production",
+  "language": "en",
+  "provider": "gemini",
+  "citations": [
+    {
+      "id": 1,
+      "title": "ICAR-Indian Institute of Groundnut Research",
+      "url": "https://www.icar-iigr.org.in/",
+      "sourceId": "iigr_groundnut",
+      "relevance": 0.98
+    }
+  ]
+}
+```
+
+---
+
+## 🚀 Quick Start & Installation
+
+### 1. Prerequisites
+- **Node.js**: `v18.0.0` or higher
+- **npm**: `v9.0.0` or higher
+- **Operating System**: Windows, macOS, or Linux
+
+---
+
+### 2. Environment Configuration
+Create a `.env` file in the root directory:
+```env
+PORT=3001
+FRONTEND_URL=http://localhost:5173
+NODE_ENV=development
+
+# Choose Provider: 'gemini' | 'openai' | 'mock'
+LLM_PROVIDER=gemini
+
+# Google Gemini API
+GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_MODEL=gemini-2.5-flash-lite
+
+# OpenAI (Optional Fallback)
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_MODEL=gpt-4o-mini
+```
+
+---
+
+### 3. Install Dependencies
+```bash
+# Install backend dependencies
+cd backend && npm install
+
+# Install frontend dependencies
+cd ../frontend && npm install
+```
+
+---
+
+### 4. Running the Application
+
+#### Option A: One-Click Startup (Windows)
+Double-click [`run_sahyadri.bat`](run_sahyadri.bat) or run from PowerShell:
+```cmd
+.\run_sahyadri.bat
+```
+
+#### Option B: Manual Startup
+```bash
+# Terminal 1: Backend API (Port 3001)
+cd backend && npm run dev
+
+# Terminal 2: Frontend App (Port 5173)
+cd frontend && npm run dev
+```
+
+Open your browser at **`http://localhost:5173`**.
+
+---
+
+## 🧪 Automated Testing Suite
+
+The project includes an automated test runner validating **all 4 crops across all 5 intents, Kannada queries, and multi-model failover**:
+
+```bash
+cd backend
+npm test
+```
+
+### Test Coverage Checklist (22 / 22 Passed — 100%):
+- [x] **Groundnut**: Seed rate, Gypsum timing at 30 DAS, Tikka disease control, Irrigation stages, Harvest indicators.
+- [x] **Rice / Paddy**: Nursery area, NPK schedule (Jyothi), Blast management, AWD irrigation, Harvest moisture.
+- [x] **Maize**: Sowing spacing, Split nitrogen doses, FAW biological control, Water stress, Black layer maturity.
+- [x] **Arecanut**: Spacing/Pits, Bearing palm NPK fertilizer, Koleroga (fruit rot) control, Summer water requirement, Green chali vs red harvest.
+- [x] **Kannada NLP**: Parsing of `ಅಡಿಕೆಯಲ್ಲಿ ಕೊಳೆರೋಗವನ್ನು ಹೇಗೆ ನಿಯಂತ್ರಿಸಬೇಕು?`.
+- [x] **Out-of-Scope Safety**: Safe refusal and guidance redirection for non-supported crops (e.g., Sugarcane).
+- [x] **Multi-Model Failover**: Seamless rate-limit failover across Gemini models.
+
+---
+
+## 🛡️ Agricultural Safety & Ethics Guardrails
+
+1. **Anti-Hallucination Policy**: Chemical doses (e.g., Tricyclazole, Carbendazim, Hexaconazole, Mancozeb) are strictly bound to Central Insecticides Board & Registration Committee (CIBRC) and Karnataka SAU Package of Practices.
+2. **Integrated Pest Management (IPM) First**: Non-chemical controls (cultural, mechanical, biological like *Trichoderma harzianum*, *Pseudomonas fluorescens*, NPV, NSKE 5%) are prioritized before chemical intervention.
+3. **Mandatory PPE & Safety Cautions**: Every chemical recommendation includes personal protective equipment (PPE) warnings, waiting periods (pre-harvest intervals - PHI), and safe spray window precautions.
+4. **Emergency KVK Escalation**: Queries involving unconfirmed symptoms or severe outbreaks trigger an automatic referral to the nearest **Krishi Vigyan Kendra (KVK)** or agricultural extension officer.
+
+---
+
+## 📂 Project Directory Layout
+
+```
+sahyadri-chatbot/
+├── .env                              # Environment configuration
+├── package.json                      # Workspace root scripts
+├── run_sahyadri.bat                  # Windows one-click dual launcher
+├── Weather.xls                       # Raw Karnataka Agromet forecast dataset
+│
+├── backend/                          # Express + TypeScript Backend
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── src/
+│       ├── server.ts                 # App entry point & middleware
+│       ├── routes/
+│       │   └── chat.ts               # /api/chat, /api/weather, /api/crops
+│       ├── services/
+│       │   ├── rag.ts                # RAG orchestrator pipeline
+│       │   ├── retrieval.ts          # TF-IDF index & weighted ranking
+│       │   ├── cropDetect.ts         # Intent, crop, & language parser
+│       │   ├── llm.ts                # Multi-model Gemini failover ladder
+│       │   ├── weather.ts            # IMD agromet bulletin & spray engine
+│       │   └── citations.ts          # Citation matching & trust score
+│       ├── prompts/
+│       │   └── agricultural.ts       # Agronomist system prompts
+│       ├── data/
+│       │   ├── sources.ts            # Authority registry & metadata
+│       │   ├── chemical_management.csv # Chemical database
+│       │   ├── biocontrol_database.csv # Biological control database
+│       │   └── ipm_database.csv      # IPM database
+│       └── test/
+│           ├── run_tests.ts          # 22-case automated test suite
+│           └── test_user_query.ts    # Live stage & weather verification
+│
+├── frontend/                         # React 19 + Vite + Tailwind CSS
+│   ├── package.json
+│   ├── vite.config.ts
+│   ├── tailwind.config.js
+│   └── src/
+│       ├── App.tsx                   # Root application component
+│       ├── index.css                 # Typography & justified report styles
+│       ├── components/
+│       │   ├── ChatUI.tsx            # Main chat feed & navigation
+│       │   ├── ChatMessage.tsx       # Sharp black justified report card
+│       │   ├── ChatInput.tsx         # Multilingual input box
+│       │   ├── CropSelector.tsx      # 4-crop switch ribbon
+│       │   ├── FarmContextSelector.tsx # 31-district farm profile drawer
+│       │   ├── WeatherInfoBox.tsx    # 5-day weather forecast modal
+│       │   ├── PromptLibrary.tsx     # One-click question library
+│       │   ├── SourceCard.tsx        # Institutional source card
+│       │   └── SourceList.tsx        # Expandable citation drawer
+│       └── services/
+│           └── api.ts                # Axios client for backend API
+│
+└── knowledge_base/                   # Curated University & ICAR Docs
+    ├── groundnut/                    # PoP UAS Dharwad, ICAR-IIGR guides
+    ├── rice/                         # PoP UAS Bengaluru/Dharwad, ICAR-NRRI
+    ├── maize/                        # PoP UAS Raichur, ICAR-IIMR FAW guides
+    └── arecanut/                     # ICAR-CPCRI, KSNUAHS Shivamogga guides
+```
+
+---
+
+## 📄 License & Acknowledgements
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+### Acknowledgements & Data Sources:
+- **ICAR**: Indian Council of Agricultural Research (ICAR-IIGR, ICAR-IIRR, ICAR-NRRI, ICAR-IIMR, ICAR-CPCRI)
+- **Karnataka State Agricultural Universities**: KSNUAHS Shivamogga, UAS Dharwad, UAS Bengaluru (GKVK), UAS Raichur
+- **India Meteorological Department (IMD)**: Agromet Advisory Services Division & MC Bengaluru

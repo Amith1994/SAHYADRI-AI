@@ -1,0 +1,16 @@
+{
+  "id": "gn_soil_001",
+  "crop": "groundnut",
+  "topic": "soil_nutrition",
+  "title": "Groundnut — Fertilizer and Nutrient Management",
+  "content": "FERTILIZER RECOMMENDATION FOR GROUNDNUT:\n\nBASAL DOSE (at sowing, in furrow):\n- Nitrogen (N): 25 kg/ha\n- Phosphorus (P2O5): 50 kg/ha\n- Potassium (K2O): 50 kg/ha\n(As 110 kg SSP/ha + 50 kg MOP/ha + 55 kg urea/ha)\n\nIMPORTANT: Groundnut is a legume — NO top dressing of nitrogen is recommended as it fixes its own nitrogen via Rhizobium.\n\nGYPSUM APPLICATION (Critical):\n- Apply gypsum 500 kg/ha at pegging stage (30-35 DAS).\n- Gypsum provides calcium and sulfur essential for pod filling.\n- DO NOT skip gypsum — it is specific to groundnut.\n\nMICRONUTRIENTS:\n- Zinc: ZnSO4 @ 25 kg/ha as basal if zinc-deficient soils.\n- Boron: Borax 1 kg/ha if boron deficiency observed.\n- Use SSP preferred over DAP (SSP supplies sulfur which groundnut needs).\n\nFOLIAR NUTRITION:\n- 2% KNO3 spray at 35 DAS + 60 DAS for pod filling enhancement.\n- DAP 2% foliar spray if yellowing observed during vegetative stage.\n\nSOIL REQUIREMENTS:\n- Best yield in well-drained red sandy loam or light textured soils.\n- pH 6.0–7.5 optimal. Avoid waterlogged heavy clay soils.\n- Organic carbon > 0.5% improves yield significantly.\n\nKARNATAKA-SPECIFIC:\n- UAS Dharwad recommends: N:25, P:50, K:50 kg/ha + gypsum 500 kg/ha.\n- In Raichur zone: additional micronutrient spray (ZnSO4 0.5%) at 30 DAS recommended.",
+  "source_name": "ICAR-Indian Institute of Groundnut Research",
+  "source_short": "ICAR-IIGR",
+  "source_id": "icar_iigr",
+  "source_url": "https://www.icar-iigr.org.in/",
+  "source_type": "ICAR Research Institute",
+  "state": "National",
+  "language": "English",
+  "last_verified": "2026-01-01",
+  "authority": 1
+}
