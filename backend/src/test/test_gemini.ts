@@ -10,9 +10,16 @@ async function test() {
   console.log('GEMINI_API_KEY:', process.env.GEMINI_API_KEY ? process.env.GEMINI_API_KEY.slice(0, 10) + '...' : 'NOT SET');
   console.log('GEMINI_MODEL:', process.env.GEMINI_MODEL);
 
-  const res = await callLLM('You are an agricultural assistant.', 'CROP: groundnut\nQUESTION: No rainfall: what to do and how to get higher yield in groundnut?');
+  const res = await callLLM({
+    question: 'No rainfall: what to do and how to get higher yield in groundnut?',
+    crop: 'groundnut',
+    intent: 'general_advisory',
+    language: 'en',
+    context: 'Package of Practices for Groundnut in Karnataka (PoP 2026)',
+    sourceList: 'KSNUAHS Groundnut PoP 2026',
+  });
   console.log('RESULT PROVIDER:', res.provider);
-  console.log('RESULT TEXT:\n', res.text);
+  console.log('RESULT TEXT:\n', res.answer);
 }
 
 test().catch(console.error);

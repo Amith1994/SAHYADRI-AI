@@ -24,11 +24,15 @@ export async function translateToKannada(text: string): Promise<string> {
   if (kannadaChars > 50) return text;
 
   try {
-    const res = await callLLM(
-      TRANSLATION_SYSTEM_PROMPT,
-      `Translate this agricultural advisory into complete, fluent Kannada:\n\n${text}`
-    );
-    return res.text || text;
+    const res = await callLLM({
+      question: `Translate this agricultural advisory into complete, fluent Kannada:\n\n${text}`,
+      crop: null,
+      intent: 'translation',
+      language: 'kn',
+      context: text,
+      sourceList: '',
+    });
+    return res.answer || text;
   } catch (err: any) {
     console.error('[Translator] Error translating to Kannada:', err.message);
     return text;
