@@ -18,6 +18,7 @@ import {
   Volume2,
   Square,
 } from 'lucide-react';
+import ksnuahsLogo from '../assets/ksnuahs_logo.png';
 import type { Message, Citation } from '../types';
 import { translateText } from '../services/api';
 import { speakText, stopSpeech } from '../services/speech';
@@ -474,7 +475,7 @@ export const ChatMessage: React.FC<Props> = ({
       {/* Bot Avatar with University Emblem */}
       <div className="relative flex items-center justify-center w-11 h-11 rounded-full bg-[#FFFFFF] border-2 border-[#636B2F] shadow-sm p-0.5 shrink-0">
         <img
-          src="/ksnuahs_logo.png"
+          src={ksnuahsLogo}
           alt="KSNUAHS Logo"
           className="w-full h-full object-contain"
         />

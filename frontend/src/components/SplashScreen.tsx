@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Sparkles, Sprout, ShieldCheck } from 'lucide-react';
+import ksnuahsLogo from '../assets/ksnuahs_logo.png';
 
 interface Props {
   onFinish: () => void;
@@ -81,7 +82,7 @@ export const SplashScreen: React.FC<Props> = ({ onFinish }) => {
           <div className="absolute -inset-4 bg-gradient-to-r from-[#636B2F] via-[#88BDF2] to-[#D4DE95] rounded-full blur-2xl opacity-60 group-hover:opacity-100 transition duration-700 animate-pulse-glow" />
           <div className="relative flex items-center justify-center w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-[#191b10] border-4 border-[#D4DE95] shadow-2xl p-3 animate-float">
             <img
-              src="/ksnuahs_logo.png"
+              src={ksnuahsLogo}
               alt="KSNUAHS University Emblem"
               className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(212,222,149,0.6)]"
             />

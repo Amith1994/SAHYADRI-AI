@@ -1,5 +1,6 @@
 import React from 'react';
 import { HelpCircle, ShieldCheck, Sparkles, ArrowRight } from 'lucide-react';
+import ksnuahsLogo from '../assets/ksnuahs_logo.png';
 import type { Crop } from '../types';
 
 interface Props {
@@ -127,7 +128,7 @@ export const WelcomeScreen: React.FC<Props> = ({
       <div className="relative mb-4 group cursor-pointer">
         <div className="relative flex items-center justify-center w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[#FFFFFF] border-3 border-[#636B2F] shadow-lg p-2 animate-float">
           <img
-            src="/ksnuahs_logo.png"
+            src={ksnuahsLogo}
             alt="KSNUAHS University Logo"
             className="w-full h-full object-contain"
           />

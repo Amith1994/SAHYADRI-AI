@@ -55,30 +55,35 @@ export function detectCrop(text: string, provided?: string | null): CropId {
 // ─── Intent Detection ───────────────────────────────────────────────────────
 const INTENT_KEYWORDS: Record<Intent, string[]> = {
   crop_production: [
-    'seed rate', 'sowing', 'spacing', 'variety', 'planting', 'transplant',
+    'seed rate', 'sowing', 'sow', 'spacing', 'variety', 'planting', 'transplant',
     'land preparation', 'nursery', 'germination', 'establishment', 'cultivation',
-    'ಬಿತ್ತನೆ', 'ತಳಿ', 'ಸಸಿ', 'ಅಂತರ',
+    'seed treatment', 'season', 'kharif', 'rabi', 'summer', 'time to sow',
+    'ಬಿತ್ತನೆ', 'ತಳಿ', 'ಸಸಿ', 'ಅಂತರ', 'ಬಿತ್ತನೆ ಕಾಲ',
   ],
   nutrient_soil: [
     'fertilizer', 'npk', 'nutrient', 'manure', 'soil', 'urea', 'dap', 'potash',
     'micronutrient', 'deficiency', 'compost', 'organic', 'gypsum', 'lime', 'ph',
-    'ಗೊಬ್ಬರ', 'ಮಣ್ಣು', 'ಪೋಷಕಾಂಶ',
+    'zinc', 'boron', 'foliar', 'top dressing', 'basal',
+    'ಗೊಬ್ಬರ', 'ಮಣ್ಣು', 'ಪೋಷಕಾಂಶ', 'ಜಿಪ್ಸಮ್', 'ರಸಗೊಬ್ಬರ',
   ],
   pest_disease: [
     'pest', 'disease', 'insect', 'fungus', 'blight', 'spot', 'rot', 'wilt',
     'control', 'spray', 'pesticide', 'fungicide', 'ipm', 'biological', 'armyworm',
     'blast', 'leafspot', 'tikka', 'koleroga', 'yellow leaf', 'virus', 'symptom',
-    'ರೋಗ', 'ಕೀಟ', 'ಸಿಂಪಡಣೆ', 'ಹಳದಿ ಎಲೆ',
+    'borer', 'hopper', 'rust', 'cercospora', 'spodoptera', 'etls',
+    'ರೋಗ', 'ಕೀಟ', 'ಸಿಂಪಡಣೆ', 'ಹಳದಿ ಎಲೆ', 'ಕೊಳೆರೋಗ', 'ಟಿಕ್ಕಾ',
   ],
   irrigation_water: [
-    'irrigat', 'water', 'moisture', 'rainfall', 'drought', 'drip', 'flood',
-    'furrow', 'schedule', 'critical stage', 'waterlogging', 'drainage',
-    'ನೀರಾವರಿ', 'ನೀರು', 'ಮಳೆ',
+    'weather', 'forecast', 'rain', 'rainfall', 'climate', 'monsoon', 'cloud', 'humidity',
+    'wind', 'irrigat', 'water', 'moisture', 'drought', 'drip', 'flood',
+    'furrow', 'schedule', 'critical stage', 'waterlogging', 'drainage', 'awd',
+    'ಹವಾಮಾನ', 'ಮುನ್ಸೂಚನೆ', 'ಮಳೆ', 'ನೀರಾವರಿ', 'ನೀರು', 'ತೇವಾಂಶ',
   ],
   harvest_postharvest: [
     'harvest', 'yield', 'maturity', 'storage', 'post-harvest', 'drying',
     'processing', 'threshing', 'milling', 'shelf life', 'ready', 'picking',
-    'ಕಟಾವು', 'ಸಂಗ್ರಹ', 'ಬೆಳೆ ಸಾರ',
+    'moisture content', 'black layer', 'grain moisture',
+    'ಕಟಾವು', 'ಸಂಗ್ರಹ', 'ಬೆಳೆ ಸಾರ', 'ಇಳುವರಿ',
   ],
   general: [],
 };

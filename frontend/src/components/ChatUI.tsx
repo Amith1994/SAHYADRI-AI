@@ -7,6 +7,7 @@ import {
   CloudSun,
   BookOpen,
 } from 'lucide-react';
+import ksnuahsLogo from '../assets/ksnuahs_logo.png';
 import type { Message, Crop, Citation, FarmContextData, IMDWeatherAdvisory } from '../types';
 import { sendChatMessage, fetchCrops } from '../services/api';
 import { CropSelector } from './CropSelector';
@@ -219,7 +220,7 @@ export const ChatUI: React.FC = () => {
           <div className="flex items-center gap-3">
             <div className="relative flex items-center justify-center w-11 h-11 rounded-full bg-[#FFFFFF] border-2 border-[#636B2F] shadow-sm p-0.5 shrink-0">
               <img
-                src="/ksnuahs_logo.png"
+                src={ksnuahsLogo}
                 alt="KSNUAHS University Logo"
                 className="w-full h-full object-contain"
               />
@@ -329,7 +330,7 @@ export const ChatUI: React.FC = () => {
             {/* Header Mini University Logo */}
             <div className="hidden sm:flex items-center justify-center w-8 h-8 rounded-full bg-[#FFFFFF] border border-[#DDD4C4] p-0.5 shadow-sm">
               <img
-                src="/ksnuahs_logo.png"
+                src={ksnuahsLogo}
                 alt="KSNUAHS"
                 className="w-full h-full object-contain"
               />
