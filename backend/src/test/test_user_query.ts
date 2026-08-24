@@ -41,6 +41,41 @@ async function main() {
   console.log('PROVIDER:', res2.provider);
   console.log('CROP:', res2.crop);
   console.log('ANSWER:\n' + res2.answer);
+  console.log('\n--- TEST 3: 45 DAS Pest and Disease Query (English) ---');
+  const res3 = await runRAGPipeline({
+    crop: 'groundnut',
+    question: 'my crop is at 45 DAS. WHAT ARE THE PEST AND DISEASES?',
+    language: 'en',
+    sessionId: 'test_session_45das_en',
+    farmContext: {
+      district: 'Shivamogga',
+      block: 'Shivamogga',
+      season: 'Kharif',
+      variety: 'TMV-2',
+      soil: 'Sandy Loam'
+    }
+  });
+  console.log('PROVIDER:', res3.provider);
+  console.log('CROP:', res3.crop);
+  console.log('ANSWER:\n' + res3.answer);
+
+  console.log('\n--- TEST 4: 45 DAS Pest and Disease Query (Kannada) ---');
+  const res4 = await runRAGPipeline({
+    crop: 'groundnut',
+    question: 'ನನ್ನ ಬೆಳೆ 45 ದಿನಗಳ ಹಂತದಲ್ಲಿದೆ (45 DAS). ಯಾವ ಕೀಟ ಮತ್ತು ರೋಗಗಳು ಬರುತ್ತವೆ?',
+    language: 'kn',
+    sessionId: 'test_session_45das_kn',
+    farmContext: {
+      district: 'Shivamogga',
+      block: 'Shivamogga',
+      season: 'Kharif',
+      variety: 'TMV-2',
+      soil: 'Sandy Loam'
+    }
+  });
+  console.log('PROVIDER:', res4.provider);
+  console.log('CROP:', res4.crop);
+  console.log('ANSWER:\n' + res4.answer);
 }
 
 main().catch(console.error);
