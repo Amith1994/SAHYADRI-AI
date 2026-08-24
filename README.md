@@ -57,17 +57,68 @@ An enterprise-grade, **Retrieval-Augmented Generation (RAG)** Agricultural AI As
 
 ## 🧠 ChatGPT / Claude-Level Agronomic Intelligence
 
-Sahyadri is engineered to think and respond with the depth, nuance, and contextual understanding of state-of-the-art AI models, specifically fine-tuned for Karnataka crops and agro-climatic conditions.
+Sahyadri is engineered to think and respond with the depth, nuance, and contextual precision of state-of-the-art AI models, fine-tuned specifically for Karnataka crops, physiological growth stages (DAS), and agro-climatic conditions.
 
-### 🎯 Crop Growth Stage Awareness
-When a farmer asks a question specifying crop age (e.g., *"my groundnut crop is 30 days old and looking at the rainfall what operations should I do for higher yield"*), the assistant does **not** output irrelevant pre-sowing seed rates or land preparation. Instead, it provides:
-1. **Critical Growth Stage Identification**: Identifies that 30 DAS represents the vegetative-to-pegging transition.
-2. **Key Yield Operations**:
-   - **Gypsum Application**: Top dressing Gypsum @ 500 kg/ha (200 kg/acre) at 30–35 DAS + light earthing up for calcium availability and pod filling.
-   - **Intercultivation Timing**: Final hand weeding and shallow hoeing before 35 DAS; **strict warning against deep hoeing after peg initiation (35+ DAS)** to protect developing pegs.
-   - **Foliar Nutrition**: Spraying 2% DAP or Planofix (NAA) @ 20 ppm / 0.25 mL/L at flowering to prevent flower drop.
-   - **Pest/Disease Surveillance**: Scouting thresholds for Tikka leaf spot (Cercospora) and leaf miner (ETL: 1 mine/leaf).
-3. **5-Day Weather Synthesis**: Synchronizing gypsum broadcasting and foliar sprays with forecast rainfall, humidity (>85%), wind speed (<8 km/h), and drainage requirements.
+### 📐 Standardized 5-Part Agricultural Response Framework
+
+Every query is answered following a strict, structured agronomic framework designed to deliver direct, actionable, and scientific advice:
+
+```markdown
+### Diagnosis & Direct Answer
+Direct, empathetic diagnosis that explicitly identifies the current physiological growth stage (e.g. Peak Flowering to Active Pegging at 45 DAS), explains the transition to the next upcoming growth stage (e.g. Pod Development & Kernel Filling at 55–75 DAS), and directly addresses the farmer's question with respect to variety and location.
+
+### What to do & Recommended Field Operations
+1. **[Core Stage Operation & Higher Yield Priority — Stage & Fertilizer Dosages]**:
+   - Explicitly names the growth stage.
+   - Prescribes exact fertilizer schedules: NPK split ratios, secondary nutrients (Gypsum @ 500 kg/ha or 200 kg/acre for pod filling and calcium/sulfur), micronutrients (Zinc Sulphate @ 2 g/L, Borax @ 1 g/L), and foliar boosters (2% DAP @ 20 g/L or Planofix NAA @ 0.25 mL/L or 19:19:19 @ 5 g/L).
+2. **[Field & Soil Management]**:
+   - Actionable physical field management, weeding windows, and drainage precautions (e.g. strictly NO mechanical hoeing after peg entry to protect gynophores; clear furrows for drainage).
+3. **[Pest & Disease Management — 3 Approaches]**:
+   - **Major Pests & Diseases at this Stage**: Explicit scientific & common names (e.g., Tikka Leaf Spot, Rust, Spodoptera caterpillar, Leaf miner, Thrips).
+   - **Chemical Control (PoP 2026)**: Specific approved chemical molecules with exact dosages in g/L or mL/L and spray volumes (500 L/ha).
+   - **Biological & Organic Control**: Bio-agents (*Trichoderma*, *Pseudomonas fluorescens* @ 10 g/L, *Nomuraea rileyi* @ 2 kg/ha, NSKE 5% @ 50 mL/L, *Verticillium* @ 5 g/L).
+   - **IPM & Cultural Practices**: Pointwise IPM recommendations (4–5 pheromone traps/acre for *Spodoptera*, 10–12 yellow sticky traps/acre, hand destruction of egg masses, border barrier crops).
+
+### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
+1. **[Question-Specific Weather Advisory]**: Direct advisory synthesizing the 5-day rainfall in mm and forecast with the farmer's exact question and current stage (Point 1 in this section).
+2. **[Field Operation / Spray Window]**: Precise spray timing (6:30–9:00 AM or 4:30–6:30 PM) under calm winds (<8 km/h).
+3. **[Micro-Climate & Agronomic Risk Alert]**: Microclimate risk warnings (e.g., morning RH >85–95% and overcast skies accelerating fungal epidemics).
+
+### ⚠️ Important Message for Farmer
+Crucial golden rule, stage-specific precaution, or critical safety warning.
+
+### Sources
+[1] University / ICAR verified source references
+```
+
+---
+
+### 🇮🇳 Kannada Standardized Framework (ಕನ್ನಡ ಮಾದರಿ)
+
+```markdown
+### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
+ಪ್ರಸ್ತುತ ಬೆಳೆಯ ಬೆಳವಣಿಗೆಯ ನಿರ್ದಿಷ್ಟ ಹಂತದ ಹೆಸರು (ಉದಾ: 45 ದಿನಗಳಲ್ಲಿ ಗರಿಷ್ಠ ಹೂವಾಡುವಿಕೆಯಿಂದ ಸಕ್ರಿಯ ಕಾಯಿ ಇಳಿಯುವ ಹಂತ), ಮುಂದಿನ ಹಂತಕ್ಕೆ ಬದಲಾವಣೆಯ ವಿವರ ಮತ್ತು ರೈತರ ಪ್ರಶ್ನೆಗೆ ನೇರವಾದ ಸಮಗ್ರ ಉತ್ತರ.
+
+### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
+1. **[ಪ್ರಸ್ತುತ ಹಂತದ ಮುಖ್ಯ ಕ್ರಮ ಮತ್ತು ಪೋಷಕಾಂಶ/ಗೊಬ್ಬರದ ನಿಖರ ಪ್ರಮಾಣ]**: ಹಂತದ ಹೆಸರು, NPK ರಸಗೊಬ್ಬರದ ಪ್ರಮಾಣ, ಜಿಪ್ಸಮ್/ದ್ವಿತೀಯ ಪೋಷಕಾಂಶ (200 ಕೆಜಿ/ಎಕರೆ), ಲಘು ಪೋಷಕಾಂಶಗಳು (ಸತು/ಬೋರಾನ್) ಮತ್ತು ಸಿಂಪಡಣೆ ಪ್ರಮಾಣ.
+2. **[ಕ್ಷೇತ್ರ ಮತ್ತು ಮಣ್ಣಿನ ನಿರ್ವಹಣೆ]**: ಮಣ್ಣು ಏರಿಸುವುದು, ಕಳೆ ನಿರ್ವಹಣೆ ಹಾಗೂ ಬಸಿಗಾಲುವೆ ಸಿದ್ಧತೆ (ಕಾಯಿ ಇಳಿಯುವಾಗ ಎಡೆಕುಂಟೆ ನಿಷೇಧ).
+3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
+   - **ಈ ಹಂತದ ಪ್ರಮುಖ ಕೀಟ ಮತ್ತು ರೋಗಗಳು**: ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ, ತುಕ್ಕು ರೋಗ, ತಂಬಾಕು ಕಂಬಳಿಹುಳು (ಸ್ಪೊಡೋಪ್ಟೆರಾ), ಎಲೆ ಸುರುಳಿ ಹುಳು, ಥ್ರಿಪ್ಸ್.
+   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**: ಶಿಫಾರಸು ಮಾಡಿದ ಕೀಟನಾಶಕ/ಶಿಲೀಂಧ್ರನಾಶಕಗಳು ಮತ್ತು ನಿಖರ ಪ್ರಮಾಣ ಗ್ರಾಂ/ಮಿ.ಲೀ ಪ್ರತಿ ಲೀಟರ್ ನೀರಿಗೆ.
+   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**: ಜೈವಿಕ ಪೀಡೆನಾಶಕಗಳು (ಟ್ರೈಕೋಡರ್ಮಾ, ಸ್ಯೂಡೋಮೊನಾಸ್, ಬೇವಿನ ಕಷಾಯ NSKE 5%) ನಿಖರ ಪ್ರಮಾಣದೊಂದಿಗೆ.
+   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**: ಮೋಹಕ ಬಲೆಗಳ ಸಂಖ್ಯೆ, ಹಳದಿ ಅಂಟು ಬಲೆ, ಬಲೆ ಬೆಳೆಗಳು ಮತ್ತು ಕೃಷಿ ಪದ್ಧತಿಗಳು.
+
+### 🌦️ ಐಎಂಡಿ 5-ದಿನಗಳ ಹವಾಮಾನ ಆಧಾರಿತ ಕೃಷಿ ಸಲಹೆ
+1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ಮುನ್ಸೂಚನೆಯ 5 ದಿನಗಳ ಮಳೆ (ಮಿ.ಮೀ) ಮತ್ತು ಹವಾಮಾನಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಕೇಳಿದ ಪ್ರಶ್ನೆ ಮತ್ತು ಬೆಳೆಯ ಹಂತಕ್ಕೆ ನೇರ ಸಲಹೆ.
+2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಮಳೆ, ತಾಪಮಾನ ಮತ್ತು ಶಾಂತ ಗಾಳಿಯ ವೇಳೆಯಲ್ಲಿ (6:30–9:00 AM) ಸಿಂಪಡಣೆ ಸಮಯ.
+3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ಆರ್ದ್ರತೆ (>85%), ಮೋಡ ಮತ್ತು ತಾಪಮಾನಕ್ಕೆ ಅನುಗುಣವಾಗಿ ರೋಗ/ಕೀಟ ಬಾಧೆಯ ಮುನ್ನೆಚ್ಚರಿಕೆ.
+
+### ⚠️ ರೈತರಿಗೆ ಪ್ರಮುಖ ಸಂದೇಶ
+ರೈತರು ಕಡ್ಡಾಯವಾಗಿ ಪಾಲಿಸಬೇಕಾದ ಮುಖ್ಯ ಎಚ್ಚರಿಕೆ ಅಥವಾ ಮಹತ್ವದ ನಿಯಮ.
+
+### ಮೂಲಗಳು
+[1] ಅಧಿಕೃತ ವಿಶ್ವವಿದ್ಯಾಲಯ ಮೂಲಗಳು (KSNUAHS ಶಿವಮೊಗ್ಗ, UAS ಧಾರವಾಡ, ICAR)
+```
 
 ---
 
@@ -289,7 +340,7 @@ The chatbot interface adheres to academic publishing and extension report aesthe
 - **Request Body**:
 ```json
 {
-  "question": "my groundnut crop is 30 days what i need to do operation for getting higher yield",
+  "question": "my crop is at 45 DAS. WHAT ARE THE PEST AND DISEASES?",
   "crop": "groundnut",
   "language": "en",
   "sessionId": "session-12345",
@@ -305,18 +356,25 @@ The chatbot interface adheres to academic publishing and extension report aesthe
 - **Response**:
 ```json
 {
-  "answer": "### Answer\nAt 30 days after sowing (DAS), your groundnut crop is entering the critical flowering and early pegging stage...\n\n### What to do & Recommended Field Operations\n1. **Gypsum Application**: Apply 500 kg/ha of gypsum at 30–35 DAS...\n2. **Weeding & Intercultivation**: Complete shallow hoeing before 35 DAS...\n\n### 🌦️ Weather-Based Agro-Advisory\n1. **Field Operation Window**: ...\n\n### ⚠️ Important Message for Farmer\nGypsum application is non-negotiable at 30–35 DAS...\n\n### Sources\n[1] ICAR-IIGR...",
+  "answer": "### Diagnosis & Direct Answer\nAt 45 Days After Sowing (DAS), your TMV-2 Groundnut crop in Shivamogga is at the Peak Flowering to Active Peg Penetration & Early Pod Development / Pegging Stage...\n\n### What to do & Recommended Field Operations\n1. **[Core Stage Operation & Higher Yield Priority — Gypsum & Foliar Nutrition at 40–45 DAS]**:\n   - Top-Dress Gypsum @ 500 kg/ha (200 kg/acre)...\n   - Foliar Booster: 2% DAP (20 g/L) + Planofix (0.25 mL/L)...\n2. **[Field & Soil Management]**: Strictly STOP all mechanical hoeing...\n3. **[Pest & Disease Management — 3 Approaches]**:\n   - **Major Pests & Diseases**: Tikka Leaf Spot, Rust, Spodoptera, Leaf Miner, Thrips...\n   - **Chemical Control (PoP 2026)**: Hexaconazole 5% EC @ 1 mL/L, Chlorantraniliprole 18.5% SC @ 0.3 mL/L...\n   - **Biological & Organic Control**: Pseudomonas fluorescens @ 10 g/L, Nomuraea rileyi @ 2 kg/ha, NSKE 5%...\n   - **IPM & Cultural Practices**: 4–5 Spodoptera pheromone traps/acre, 10–12 yellow sticky traps...\n\n### 🌦️ IMD Agromet 5-Day Weather-Based Advisory\n1. **[Question-Specific Weather Advisory]**: With 34.6 mm cumulative rainfall...\n2. **[Field Operation / Spray Window]**: Morning window (6:30–9:00 AM) under wind <8 km/h...\n3. **[Micro-Climate & Agronomic Risk Alert]**: High humidity (>85%) triggers Tikka risk...\n\n### ⚠️ Important Message for Farmer\nStrictly avoid mechanical hoeing from 45 DAS onwards...\n\n### Sources\n[1] KSNUAHS Shivamogga — Groundnut PoP 2026\n    https://uahs.edu.in/\n[2] ICAR-IIGR Directorate of Groundnut Research\n    https://www.icar-iigr.org.in/",
   "crop": "groundnut",
-  "intent": "crop_production",
+  "intent": "pest_disease",
   "language": "en",
   "provider": "gemini",
   "citations": [
     {
       "id": 1,
-      "title": "ICAR-Indian Institute of Groundnut Research",
-      "url": "https://www.icar-iigr.org.in/",
-      "sourceId": "iigr_groundnut",
+      "title": "KSNUAHS Shivamogga — PoP 2026",
+      "url": "https://uahs.edu.in/",
+      "sourceId": "ksnuahs",
       "relevance": 0.98
+    },
+    {
+      "id": 2,
+      "title": "ICAR-IIGR Directorate of Groundnut Research",
+      "url": "https://www.icar-iigr.org.in/",
+      "sourceId": "icar",
+      "relevance": 0.95
     }
   ]
 }
