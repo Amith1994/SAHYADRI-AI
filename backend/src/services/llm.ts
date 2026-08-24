@@ -4,7 +4,7 @@ import { generateIMDWeatherBulletin } from './weather';
 
 export interface LLMResponse {
   answer: string;
-  provider: 'gemini' | 'claude' | 'mock';
+  provider: 'gemini' | 'openai' | 'claude' | 'mock';
   model: string;
   isDemo?: boolean;
 }
@@ -25,22 +25,48 @@ export async function callLLM(params: {
     variety?: string;
     soil?: string;
   };
-  preferredProvider?: 'gemini' | 'claude' | 'auto';
+  preferredProvider?: 'gemini' | 'openai' | 'claude' | 'auto';
 }): Promise<LLMResponse> {
-  const provider = params.preferredProvider || (process.env.LLM_PROVIDER as any) || 'gemini';
+  const provider = params.preferredProvider || (process.env.LLM_PROVIDER as any) || 'auto';
 
-  if (provider === 'gemini') {
-    try {
-      return await callGemini(params);
-    } catch (err: any) {
-      console.warn('[LLM] Gemini call failed, falling back to mock PoP database:', err?.message || err);
-      return callMock(params);
+  // 1. If explicit Gemini or Auto: Try Gemini first
+  if (provider === 'gemini' || provider === 'auto') {
+    if (process.env.GEMINI_API_KEY) {
+      try {
+        return await callGemini(params);
+      } catch (err: any) {
+        console.warn('[LLM] Gemini call failed, trying next provider:', err?.message || err);
+      }
     }
   }
 
+  // 2. If explicit OpenAI or Auto fallback: Try OpenAI (GPT-4o)
+  if (provider === 'openai' || provider === 'auto') {
+    if (process.env.OPENAI_API_KEY) {
+      try {
+        return await callOpenAI(params);
+      } catch (err: any) {
+        console.warn('[LLM] OpenAI call failed, trying next provider:', err?.message || err);
+      }
+    }
+  }
+
+  // 3. If explicit Claude or Auto fallback: Try Anthropic Claude
+  if (provider === 'claude' || provider === 'auto') {
+    if (process.env.ANTHROPIC_API_KEY) {
+      try {
+        return await callClaude(params);
+      } catch (err: any) {
+        console.warn('[LLM] Claude call failed, falling back to mock PoP database:', err?.message || err);
+      }
+    }
+  }
+
+  // 4. Fallback to high-precision institutional PoP 2026 database
   return callMock(params);
 }
 
+// ─── Google Gemini API Integration ──────────────────────────────────────────
 async function callGemini(params: {
   question: string;
   crop: string | null;
@@ -57,7 +83,12 @@ async function callGemini(params: {
   }
 
   const userMessage = buildUserMessage(params);
-  const models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
+  const models = [
+    process.env.GEMINI_MODEL || 'gemini-2.5-flash',
+    'gemini-2.5-flash-lite',
+    'gemini-2.0-flash',
+    'gemini-1.5-flash',
+  ];
   let lastError: any = null;
 
   for (const model of models) {
@@ -75,7 +106,7 @@ async function callGemini(params: {
         ],
         generationConfig: {
           temperature: 0.1,
-          maxOutputTokens: 1500,
+          maxOutputTokens: 1600,
         },
       };
 
@@ -99,6 +130,103 @@ async function callGemini(params: {
   }
 
   throw lastError || new Error('All Gemini API models failed');
+}
+
+// ─── OpenAI (ChatGPT / GPT-4o) API Integration ──────────────────────────────
+async function callOpenAI(params: {
+  question: string;
+  crop: string | null;
+  intent: string;
+  language: string;
+  context: string;
+  sourceList: string;
+  weatherContext?: string;
+  farmContext?: any;
+}): Promise<LLMResponse> {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    throw new Error('OPENAI_API_KEY is not set');
+  }
+
+  const userMessage = buildUserMessage(params);
+  const model = process.env.OPENAI_MODEL || 'gpt-4o-mini';
+
+  const res = await axios.post(
+    'https://api.openai.com/v1/chat/completions',
+    {
+      model,
+      messages: [
+        { role: 'system', content: AGRICULTURAL_SYSTEM_PROMPT },
+        { role: 'user', content: userMessage },
+      ],
+      temperature: 0.1,
+      max_tokens: 1600,
+    },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      timeout: 20000,
+    }
+  );
+
+  const text = res.data?.choices?.[0]?.message?.content;
+  if (!text) throw new Error('Empty response from OpenAI');
+
+  return {
+    answer: text,
+    provider: 'openai',
+    model,
+  };
+}
+
+// ─── Anthropic Claude API Integration ───────────────────────────────────────
+async function callClaude(params: {
+  question: string;
+  crop: string | null;
+  intent: string;
+  language: string;
+  context: string;
+  sourceList: string;
+  weatherContext?: string;
+  farmContext?: any;
+}): Promise<LLMResponse> {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) {
+    throw new Error('ANTHROPIC_API_KEY is not set');
+  }
+
+  const userMessage = buildUserMessage(params);
+  const model = process.env.ANTHROPIC_MODEL || 'claude-3-5-sonnet-20241022';
+
+  const res = await axios.post(
+    'https://api.anthropic.com/v1/messages',
+    {
+      model,
+      system: AGRICULTURAL_SYSTEM_PROMPT,
+      messages: [{ role: 'user', content: userMessage }],
+      max_tokens: 1600,
+      temperature: 0.1,
+    },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+      },
+      timeout: 20000,
+    }
+  );
+
+  const text = res.data?.content?.[0]?.text;
+  if (!text) throw new Error('Empty response from Claude');
+
+  return {
+    answer: text,
+    provider: 'claude',
+    model,
+  };
 }
 
 /**
