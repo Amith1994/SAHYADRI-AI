@@ -915,21 +915,23 @@ Never skip the pre-monsoon prophylactic spray. Always add sticker/adherent to Bo
 
   // 6. Generic Context-Aware Fallback
   if (isKn) {
+    const cropNameKn = crop === 'groundnut' ? 'ಕಡಲೆಕಾಯಿ' : crop === 'rice' ? 'ಭತ್ತ' : crop === 'maize' ? 'ಮೆಕ್ಕೆಜೋಳ' : 'ಅಡಿಕೆ';
     return {
       answer: `### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
-${district} ಜಿಲ್ಲೆಯಲ್ಲಿ ನಿಮ್ಮ **${variety}** ${crop === 'groundnut' ? 'ಕಡಲೆಕಾಯಿ' : crop === 'rice' ? 'ಭತ್ತದ' : crop === 'maize' ? 'ಮೆಕ್ಕೆಜೋಳದ' : 'ಅಡಿಕೆ'} ಬೆಳೆಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಕೃಷಿ ಕೈಪಿಡಿ ೨೦೨೬ ರ ಪ್ರಕಾರ ಶಿಫಾರಸು ಮಾಡಿದ ಪರಿಹಾರ ಕ್ರಮಗಳು ಇಲ್ಲಿವೆ. 5 ದಿನಗಳ ಹವಾಮಾನ ಮುನ್ಸೂಚನೆಯಲ್ಲಿ ಒಟ್ಟು **${rainTotal} ಮಿ.ಮೀ ಮಳೆ** ನಿರೀಕ್ಷೆಯಿದ್ದು, ಮಣ್ಣಿನ ತೇವಾಂಶಕ್ಕೆ ಅನುಗುಣವಾಗಿ ರಸಗೊಬ್ಬರ ಮತ್ತು ಸಸ್ಯ ಸಂರಕ್ಷಣಾ ಕ್ರಮಗಳನ್ನು ಕೈಗೊಳ್ಳಿ.
+${district} ಜಿಲ್ಲೆಯಲ್ಲಿ ನಿಮ್ಮ **${variety}** ${cropNameKn} ಬೆಳೆಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಕೃಷಿ ಕೈಪಿಡಿ (PoP 2026) ಆಧಾರಿತ ಶಿಫಾರಸುಗಳು ಇಲ್ಲಿವೆ. 5 ದಿನಗಳ ಹವಾಮಾನ ಮುನ್ಸೂಚನೆಯಲ್ಲಿ ಒಟ್ಟು **${rainTotal} ಮಿ.ಮೀ ಮಳೆ** ನಿರೀಕ್ಷೆಯಿದ್ದು, ಪ್ರಸ್ತುತ ಬೆಳವಣಿಗೆಯ ಹಂತದಲ್ಲಿ ಸಮತೋಲನ ಪೋಷಕಾಂಶ ಮತ್ತು ರೋಗ ಕಣ್ಗಾವಲು ನಿರ್ವಹಣೆ ಅತ್ಯಂತ ಮಹತ್ವದ್ದಾಗಿದೆ.
 
 ### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
-1. **[ಅಧಿಕ ಇಳುವರಿ ಪ್ರಮುಖ ಕ್ರಮ]**: ಬೆಳೆಯ ಪ್ರಸ್ತುತ ಬೆಳವಣಿಗೆ ಹಂತಕ್ಕೆ ತಕ್ಕಂತೆ ಶಿಫಾರಸು ಮಾಡಿದ ಸಮತೋಲನ NPK ರಸಗೊಬ್ಬರ ಮತ್ತು ಲಘು ಪೋಷಕಾಂಶಗಳನ್ನು ನೀಡಿ.
-2. **[ಕಳೆ ಮತ್ತು ತೇವಾಂಶ ನಿರ್ವಹಣೆ]**: ಹೊಲದಲ್ಲಿ ಕಳೆ ಬೆಳೆಯದಂತೆ ನಿಯಂತ್ರಿಸಿ ಹಾಗೂ ಮಳೆ ನೀರಿನ ಸರಾಗ ಹರಿವಿಗೆ ಬಸಿಗಾಲುವೆಗಳನ್ನು ಸಿದ್ಧವಾಗಿಡಿ.
+1. **[ಪ್ರಸ್ತುತ ಹಂತದ ಮುಖ್ಯ ಕ್ರಮ ಮತ್ತು ಪೋಷಕಾಂಶ/ಗೊಬ್ಬರದ ನಿಖರ ಪ್ರಮಾಣ]**: ಬೆಳೆಯ ಹಂತಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಶಿಫಾರಸು ಮಾಡಿದ ಸಮತೋಲನ NPK ರಸಗೊಬ್ಬರ, ಲಘು ಪೋಷಕಾಂಶಗಳು (ಸತು/ಬೋರಾನ್) ಮತ್ತು 19:19:19 @ 5 ಗ್ರಾಂ/ಲೀಟರ್ ಎಲೆ ಸಿಂಪಡಣೆ ನೀಡಿ.
+2. **[ಕ್ಷೇತ್ರ ಮತ್ತು ಮಣ್ಣಿನ ನಿರ್ವಹಣೆ]**: ಹೊಲದಲ್ಲಿ ಮಳೆ ನೀರು ನಿಲ್ಲದಂತೆ ಬಸಿಗಾಲುವೆಗಳನ್ನು ಸಿದ್ಧವಾಗಿಡಿ ಹಾಗೂ ಸಕಾಲದಲ್ಲಿ ಕಳೆ ನಿರ್ವಹಣೆ ಮುಗಿಸಿ.
 3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
-   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**: ಕೀಟ/ರೋಗದ ಬಾಧೆಗೆ ತಕ್ಕಂತೆ ವಿಶ್ವವಿದ್ಯಾಲಯ ಶಿಫಾರಸು ಮಾಡಿದ ನಿಖರ ಕೀಟನಾಶಕವನ್ನು ನಿಗದಿತ ಪ್ರಮಾಣದಲ್ಲಿ ಮಾತ್ರ ಬಳಸಿ.
-   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**: ಆರಂಭಿಕ ಹಂತದಲ್ಲಿ ಬೇವಿನ ಕಷಾಯ (NSKE 5%) ಅಥವಾ ಜೈವಿಕ ನಿಯಂತ್ರಣ ಕಾರಕಗಳನ್ನು ಬಳಸಿ.
-   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**: ತೋಟದಲ್ಲಿ ಕೀಟ ಕಣ್ಗಾವಲಿಗೆ ಮೋಹಕ ಬಲೆಗಳನ್ನು ಅಳವಡಿಸಿ, ನಿಯಮಿತವಾಗಿ ಬೆಳೆ ಪರಿಶೀಲಿಸಿ.
+   - **ಈ ಹಂತದ ಪ್ರಮುಖ ಕೀಟ ಮತ್ತು ರೋಗಗಳು**: ಎಲೆಚುಕ್ಕೆ ರೋಗ, ಕಾಂಡಕೊರಕ, ಕಂಬಳಿಹುಳು, ರಸಹೀರುವ ಕೀಟಗಳು.
+   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**: ಕೀಟ/ರೋಗದ ತೀವ್ರತೆಗೆ ತಕ್ಕಂತೆ ವಿಶ್ವವಿದ್ಯಾಲಯ ಶಿಫಾರಸು ಮಾಡಿದ ಕೀಟನಾಶಕವನ್ನು ನಿಗದಿತ ಪ್ರಮಾಣದಲ್ಲಿ (500 ಲೀ/ಹೆ ನೀರಿನಲ್ಲಿ) ಬಳಸಿ.
+   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**: ಆರಂಭಿಕ ಹಂತದಲ್ಲಿ ಬೇವಿನ ಕಷಾಯ (NSKE 5% @ 50 ಮಿ.ಲೀ/ಲೀಟರ್) ಅಥವಾ *ಟ್ರೈಕೋಡರ್ಮಾ / ಸ್ಯೂಡೋಮೊನಾಸ್* @ 10 ಗ್ರಾಂ/ಲೀಟರ್ ಬಳಸಿ.
+   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**: ತೋಟದಲ್ಲಿ ಕೀಟ ಕಣ್ಗಾವಲಿಗೆ ಎಕರೆಗೆ 4–5 ಮೋಹಕ ಬಲೆಗಳು ಮತ್ತು 10–12 ಹಳದಿ ಅಂಟು ಬಲೆಗಳನ್ನು ಅಳವಡಿಸಿ.
 
 ### 🌦️ ಐಎಂಡಿ 5-ದಿನಗಳ ಹವಾಮಾನ ಆಧಾರಿತ ಕೃಷಿ ಸಲಹೆ
-1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ${district} ಜಿಲ್ಲೆಯಲ್ಲಿ ಮುಂದಿನ 5 ದಿನಗಳಲ್ಲಿ ಒಟ್ಟು ${rainTotal} ಮಿ.ಮೀ ಮಳೆ ಮುನ್ಸೂಚನೆಯಿರುವುದರಿಂದ ಮಣ್ಣಿನ ಹದ ನೋಡಿಕೊಂಡು ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳನ್ನು ನಡೆಸಿ.
-2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಸಿಂಪಡಣೆಯನ್ನು ಶಾಂತವಾದ ಮುಂಜಾನೆ (6:30–9:00 AM) ಗಾಳಿಯ ವೇಗ <8 ಕಿ.ಮೀ/ಗಂಟೆ ಇದ್ದಾಗ ಮಾತ್ರ ಕೈಗೊಳ್ಳಿ.
+1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ${district} ಜಿಲ್ಲೆಯಲ್ಲಿ ಮುಂದಿನ 5 ದಿನಗಳಲ್ಲಿ ಒಟ್ಟು ${rainTotal} ಮಿ.ಮೀ ಮಳೆ ಮುನ್ಸೂಚನೆಯಿರುವುದರಿಂದ ಮಣ್ಣಿನ ತೇವಾಂಶದ ಹದ ನೋಡಿಕೊಂಡು ಗೊಬ್ಬರ ಮತ್ತು ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳನ್ನು ನಡೆಸಿ.
+2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಸಿಂಪಡಣೆಯನ್ನು ಶಾಂತವಾದ ಮುಂಜಾನೆ (6:30–9:00 AM) ವೇಳೆಯಲ್ಲಿ ಗಾಳಿಯ ವೇಗ <8 ಕಿ.ಮೀ/ಗಂಟೆ ಇದ್ದಾಗ ಮಾತ್ರ ಕೈಗೊಳ್ಳಿ.
 3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ಹೆಚ್ಚಿನ ಆರ್ದ್ರತೆಯ ಸಮಯದಲ್ಲಿ ಶಿಲೀಂಧ್ರ ರೋಗಗಳ ಬಾಧೆ ಹೆಚ್ಚಾಗುವುದರಿಂದ ಮುನ್ನೆಚ್ಚರಿಕೆ ವಹಿಸಿ.
 
 ### ⚠️ ರೈತರಿಗೆ ಪ್ರಮುಖ ಸಂದೇಶ
@@ -960,17 +962,18 @@ ${district} ಜಿಲ್ಲೆಯಲ್ಲಿ ನಿಮ್ಮ **${variety}** ${c
 For your **${variety}** ${crop} crop in **${district}**, following the official Package of Practices (PoP 2026) is recommended to maximize yield and prevent stress. Based on current 5-day weather forecast (${rainTotal} mm rainfall expected), ensure proper balanced nutrition, moisture management, and proactive pest monitoring.
 
 ### What to do & Recommended Field Operations
-1. **[Core Stage Operation & Higher Yield Priority]**: Apply recommended split NPK doses and micronutrients according to the current crop growth stage.
-2. **[Drainage & Water Management]**: Maintain clear field drainage furrows to prevent waterlogging around root zones during rainfall.
+1. **[Core Stage Operation & Higher Yield Priority — Stage & Fertilizer Dosages]**: Apply recommended split NPK doses and micronutrients according to the current crop growth stage. Foliar spray 19:19:19 @ 5 g/L or 2% DAP @ 20 g/L for rapid uptake.
+2. **[Field & Soil Management]**: Maintain clear field drainage furrows to prevent waterlogging around root zones during rainfall. Complete weeding within recommended windows.
 3. **[Pest & Disease Management — 3 Approaches]**:
-   - **Chemical Control (PoP 2026)**: Apply university-approved molecules at exact dosages upon reaching economic threshold levels.
-   - **Biological & Organic Control**: Utilize *Trichoderma*, *Pseudomonas*, or botanical neem extract (NSKE 5%) for early preventative control.
-   - **IPM & Cultural Practices**: Set up pheromone traps for pest monitoring and maintain field sanitation.
+   - **Major Pests & Diseases at this Stage**: Foliar blights, stem borers, defoliating caterpillars, and sucking pests.
+   - **Chemical Control (PoP 2026)**: Apply university-approved molecules at exact dosages (g/L or mL/L in 500 L/ha) upon reaching economic threshold levels.
+   - **Biological & Organic Control**: Utilize *Trichoderma*, *Pseudomonas*, or botanical neem extract (NSKE 5% @ 50 mL/L) for early preventative control.
+   - **IPM & Cultural Practices**: Set up 4–5 pheromone traps per acre for pest monitoring, 10–12 sticky traps, and maintain field sanitation.
 
 ### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
-1. **[Question-Specific Weather Advisory]**: With ${rainTotal} mm cumulative rainfall expected in ${district}, plan farm operations according to soil workable moisture.
+1. **[Question-Specific Weather Advisory]**: With ${rainTotal} mm cumulative rainfall expected in ${district}, plan farm operations according to soil workable moisture tilth.
 2. **[Field Operation / Spray Window]**: Schedule foliar nutritional or pest management sprays during calm morning hours (6:30–9:00 AM) under low wind conditions (<8 km/h).
-3. **[Micro-Climate & Agronomic Risk Alert]**: Elevated relative humidity favors fungal spore multiplication; scout lower leaves regularly.
+3. **[Micro-Climate & Agronomic Risk Alert]**: Elevated relative humidity (>85%) favors fungal spore multiplication; scout lower leaves regularly.
 
 ### ⚠️ Important Message for Farmer
 Always follow balanced fertilizer schedules and avoid excess nitrogen which causes lush growth vulnerable to disease. Consult your local KVK for farm-specific diagnostic checks.
