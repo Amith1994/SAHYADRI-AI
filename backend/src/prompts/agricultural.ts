@@ -178,13 +178,58 @@ FARMER'S EXACT QUESTION: ${params.question}
 ${languageDirective}
 
 INSTRUCTION: 
-1. Direct Answer: Provide a precise, empathetic agronomic diagnosis and direct answer strictly framed to the farmer's question, crop stage, and farm situation.
-2. What to do: Highlight the #1 critical yield-determining factor at this stage. Include all 3 pest/disease management strategies (Chemical with dosage, Biological/Organic, and IPM/Cultural) when pest/disease is relevant.
-3. Weather Advisory: Under "### 🌦️ IMD Agromet 5-Day Weather-Based Advisory", provide 3 points:
-   - Point 1 MUST be a dedicated Weather Advisory framed directly with respect to the asked question.
-   - Point 2: [Field Operation / Spray Window] (morning 6:30–9:00 AM / calm wind <8 km/h).
-   - Point 3: [Micro-Climate & Agronomic Risk Alert] (humidity / cloud / temperature risk).
-4. Important Message: Crucial golden safety or yield rule for the farmer.
+Follow this EXACT 5-part response structure:
+
+${isKannada ? `### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
+- ಬೆಳೆಯ ಪ್ರಸ್ತುತ ಬೆಳವಣಿಗೆಯ ಹಂತವನ್ನು (ಉದಾ. 45 DAS ಹೂವಾಡುವಿಕೆ / ಕಾಯಿ ಇಳಿಯುವ ಹಂತ) ಸ್ಪಷ್ಟವಾಗಿ ತಿಳಿಸಿ.
+- ಮುಂದಿನ ಹಂತಕ್ಕೆ ಬದಲಾವಣೆಯ ವಿವರ ಹಾಗೂ ರೈತರ ಪ್ರಶ್ನೆಗೆ ನೇರವಾದ ಉತ್ತರವನ್ನು ತಳಿ ಮತ್ತು ಸ್ಥಳಕ್ಕೆ ಅನುಗುಣವಾಗಿ ನೀಡಿ.
+
+### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
+1. **[ಪ್ರಸ್ತುತ ಹಂತದ ಮುಖ್ಯ ಕ್ರಮ ಮತ್ತು ಪೋಷಕಾಂಶ/ಗೊಬ್ಬರದ ನಿಖರ ಪ್ರಮಾಣ]**:
+   - ಪ್ರಸ್ತುತ ಹಂತದ ಹೆಸರು.
+   - NPK, ಜಿಪ್ಸಮ್ (ಕಡಲೆಕಾಯಿಗೆ 200 ಕೆಜಿ/ಎಕರೆ), ಸತು, ಬೋರಾನ್ ಮತ್ತು ಎಲೆ ಪೋಷಕಾಂಶಗಳ ನಿಖರ ಪ್ರಮಾಣ (2% DAP / Planofix / 19:19:19).
+2. **[ಕ್ಷೇತ್ರ ಮತ್ತು ಮಣ್ಣಿನ ನಿರ್ವಹಣೆ]**:
+   - ಕಳೆ ನಿರ್ವಹಣೆ, ಮಣ್ಣು ಏರಿಸುವುದು, ಬಸಿಗಾಲುವೆ ಹಾಗೂ ಎಡೆಕುಂಟೆ ಮುನ್ನೆಚ್ಚರಿಕೆ.
+3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
+   - **ಈ ಹಂತದ ಪ್ರಮುಖ ಕೀಟ ಮತ್ತು ರೋಗಗಳು**: ವೈಜ್ಞಾನಿಕ ಮತ್ತು ಸಾಮಾನ್ಯ ಹೆಸರುಗಳು.
+   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**: ನಿಖರ ಕೀಟನಾಶಕ/ಶಿಲೀಂಧ್ರನಾಶಕ ಪ್ರಮಾಣ (ಗ್ರಾಂ/ಮಿ.ಲೀ ಪ್ರತಿ ಲೀಟರ್ ನೀರಿಗೆ).
+   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**: ಟ್ರೈಕೋಡರ್ಮಾ, ಸ್ಯೂಡೋಮೊನಾಸ್, NSKE 5%, ಮೆಟಾರೈಜಿಯಂ.
+   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**: ಮೋಹಕ ಬಲೆಗಳು (4-5/ಎಕರೆ), ಹಳದಿ ಅಂಟು ಬಲೆ, ಬಲೆ ಬೆಳೆಗಳು.
+
+### 🌦️ ಐಎಂಡಿ 5-ದಿನಗಳ ಹವಾಮಾನ ಆಧಾರಿತ ಕೃಷಿ ಸಲಹೆ
+1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: 5 ದಿನಗಳ ಮಳೆ (ಮಿ.ಮೀ) ಮತ್ತು ಪ್ರಶ್ನೆಗೆ ಅನುಗುಣವಾದ ನೇರ ಸಲಹೆ.
+2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಸಿಂಪಡಣೆ ಸಮಯ (6:30–9:00 AM / ಗಾಳಿ <8 ಕಿ.ಮೀ/ಗಂಟೆ).
+3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ಆರ್ದ್ರತೆ (>85%) ಮತ್ತು ಮೋಡದಿಂದ ರೋಗ ಬಾಧೆಯ ಮುನ್ನೆಚ್ಚರಿಕೆ.
+
+### ⚠️ ರೈತರಿಗೆ ಪ್ರಮುಖ ಸಂದೇಶ
+- ಪ್ರಮುಖ ಎಚ್ಚರಿಕೆ ಅಥವಾ ಮಹತ್ವದ ನಿಯಮ.
+
+### ಮೂಲಗಳು` : `### Diagnosis & Direct Answer
+- Directly and empathetically identify the current physiological growth stage (e.g. Peak Flowering to Active Pegging at 45 DAS).
+- Explain the transition to the next upcoming growth stage (e.g. Pod Development & Kernel Filling at 55–75 DAS).
+- Directly address the farmer's question with respect to variety, soil, and location.
+
+### What to do & Recommended Field Operations
+1. **[Core Stage Operation & Higher Yield Priority — Stage & Fertilizer Dosages]**:
+   - Explicitly name the growth stage.
+   - Prescribe exact fertilizer schedules: NPK split ratios, secondary nutrients (Gypsum @ 500 kg/ha or 200 kg/acre for pod filling and calcium/sulfur), micronutrients (Zinc Sulphate @ 2 g/L, Borax @ 1 g/L), and foliar boosters (2% DAP @ 20 g/L or Planofix NAA @ 0.25 mL/L or 19:19:19 @ 5 g/L).
+2. **[Field & Soil Management]**:
+   - Actionable physical field management, weeding windows, and drainage precautions (e.g. strictly NO mechanical hoeing after peg entry to protect gynophores; clear furrows for drainage).
+3. **[Pest & Disease Management — 3 Approaches]**:
+   - **Major Pests & Diseases at this Stage**: Explicit scientific & common names (e.g., Tikka Leaf Spot, Rust, Spodoptera caterpillar, Leaf miner, Thrips).
+   - **Chemical Control (PoP 2026)**: Specific approved chemical molecules with exact dosages in g/L or mL/L and spray volumes (500 L/ha).
+   - **Biological & Organic Control**: Bio-agents (*Trichoderma*, *Pseudomonas fluorescens* @ 10 g/L, *Nomuraea rileyi* @ 2 kg/ha, NSKE 5% @ 50 mL/L, *Verticillium* @ 5 g/L).
+   - **IPM & Cultural Practices**: Pointwise IPM recommendations (4–5 pheromone traps/acre for *Spodoptera*, 10–12 yellow sticky traps/acre, hand destruction of egg masses, border barrier crops).
+
+### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
+1. **[Question-Specific Weather Advisory]**: Direct advisory synthesizing the 5-day rainfall in mm and forecast with the farmer's exact question and current stage (Point 1 in this section).
+2. **[Field Operation / Spray Window]**: Precise spray timing (6:30–9:00 AM or 4:30–6:30 PM) under calm winds (<8 km/h).
+3. **[Micro-Climate & Agronomic Risk Alert]**: Microclimate risk warnings (e.g., morning RH >85–95% and overcast skies accelerating fungal epidemics).
+
+### ⚠️ Important Message for Farmer
+- Crucial golden rule, stage-specific precaution, or critical safety warning.
+
+### Sources`}
 
 RETRIEVED CONTEXT (use ONLY this verified information):
 ${params.context}
