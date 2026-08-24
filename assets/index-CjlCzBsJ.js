@@ -19,373 +19,326 @@ ${x}
 | Date | Max Temp | Min Temp | Rainfall | Morning RH | Afternoon RH | Wind (Speed & Dir) | Cloud Cover |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 ${x}
-`,C=y?`ಐಎಂಡಿ ಬೆಂಗಳೂರು ಮುನ್ಸೂಚನೆ: ${a} ಜಿಲ್ಲೆಯ ${o} ತಾಲೂಕಿನಲ್ಲಿ (${s} ರಿಂದ ${c}) ${parseFloat(p)>0?`ಒಟ್ಟು ${p} ಮಿ.ಮೀ ಲಘು/ಸಾಧಾರಣ ಮಳೆ ನಿರೀಕ್ಷೆಯಿದೆ`:`ಮುಖ್ಯವಾಗಿ ಒಣ ಹವೆ ಇರಲಿದೆ`}. ತಾಪಮಾನ: ಗರಿಷ್ಠ ${l}°C–${u}°C, ಕನಿಷ್ಠ ${d}°C–${f}°C. ಆರ್ದ್ರತೆ: ಬೆಳಿಗ್ಗೆ ${m}%, ಮಧ್ಯಾಹ್ನ ${h}%. ಗಾಳಿಯ ವೇಗ: ಗಂಟೆಗೆ 8–${g} ಕಿ.ಮೀ (${_}). ಮೋಡ ಕವಚ: ${v}/8 ಅಷ್ಟಕ.`:`IMD Bengaluru Forecast for ${a} (${o}) from ${s} to ${c}: ${parseFloat(p)>0?`Cumulative light to moderate rainfall of ${p} mm expected during the period`:`Predominantly dry weather conditions prevailing throughout the forecast window`}. Temperatures: Max ${l}°C–${u}°C, Min ${d}°C–${f}°C. Relative Humidity: Morning ${m}%, Afternoon ${h}%. Wind: 8–${g} km/h from ${_}. Cloud Cover: ${v}/8 octas.`;return{district:a,block:o,records:i,weatherTableMarkdown:S,summary150to200Words:C,impactsAdvisories5Points:y?[`**ಮುಖ್ಯ ಬೆಳೆಗಳು (${b})**: ಬೆಳಿಗ್ಗೆ ಅಥವಾ ಸಂಜೆ ಲಘು ನೀರಾವರಿ ಒದಗಿಸಿ; ${p} ಮಿ.ಮೀ ಮಳೆಯ ನಂತರ ತಗ್ಗು ಪ್ರದೇಶಗಳಲ್ಲಿ ನೀರು ನಿಲ್ಲದಂತೆ ಬಸಿಗಾಲುವೆಗಳನ್ನು ಸದಾ ತೆರೆದಿಡಿ.`,`**ತೋಟಗಾರಿಕೆ ಬೆಳೆಗಳು (ತರಕಾರಿ/ಹಣ್ಣು)**: ಗಂಟೆಗೆ ${g} ಕಿ.ಮೀ ವೇಗದ ಗಾಳಿಗೆ ಬೆಳೆಗಳು ವಾಲದಂತೆ ಟೊಮೆಟೊ, ಮೆಣಸಿನಕಾಯಿ ಮತ್ತು ಬಳ್ಳಿ ಬೆಳೆಗಳಿಗೆ ಆಸರೆ ಕೊಡಿ. ನರ್ಸರಿಗಳಲ್ಲಿ ನೀರು ಬಸಿದು ಹೋಗುವಂತೆ ನೋಡಿಕೊಳ್ಳಿ.`,`**ಪಶುಸಂಗೋಪನೆ ಮತ್ತು ಜಾನುವಾರು**: ಹೈನು ರಾಸುಗಳನ್ನು ಸ್ವಚ್ಛ, ಒಣ ಕೊಟ್ಟಿಗೆಗಳಲ್ಲಿ ರಕ್ಷಿಸಿ; ಕುಡಿಯುವ ನೀರಿನಲ್ಲಿ ಖನಿಜ ಲವಣ ಮಿಶ್ರಣ ಒದಗಿಸಿ ಮತ್ತು ಹೆಚ್ಚಿನ ಬೆಳಗಿನ ತೇವಾಂಶದಿಂದ (${m}%) ಮೇವನ್ನು ರಕ್ಷಿಸಿ.`,`**ಸಸ್ಯ ಸಂರಕ್ಷಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ**: ಕೀಟನಾಶಕ/ಶಿಲೀಂಧ್ರನಾಶಕ ಸಿಂಪಡಣೆಯನ್ನು ಬೆಳಿಗ್ಗೆ (6:30–9:00 AM) ಅಥವಾ ಸಂಜೆ (4:30–6:30 PM) ಗಾಳಿಯ ವೇಗ ಶಾಂತವಾಗಿದ್ದಾಗ (<8-10 ಕಿ.ಮೀ/ಗಂಟೆ) ಮಾತ್ರ ಕೈಗೊಳ್ಳಿ.`,`**ರೋಗ ಮತ್ತು ಕೀಟ ಕಣ್ಗಾವಲು**: ಬೆಳಗಿನ ಹೆಚ್ಚಿನ ಆರ್ದ್ರತೆ (${m}%) ಮತ್ತು ತಾಪಮಾನವು (${u}°C) ಶಿಲೀಂಧ್ರ ರೋಗಗಳಿಗೆ ಅನುಕೂಲಕರ; ಬೆಳೆ ಪರಿಶೀಲಿಸಿ ಆರಂಭಿಕ ಹಂತದಲ್ಲೇ ಜೈವಿಕ ನಿಯಂತ್ರಣ ಕೈಗೊಳ್ಳಿ.`]:[`**Field Crops (${n})**: Provide light irrigation in morning/evening; avoid water stagnation in low-lying crop zones following localized rain (${p} mm).`,`**Horticulture (Vegetables & Fruits)**: Provide vegetative staking for tomato, chili, and vine crops against wind gusts up to ${g} km/h. Ensure proper drainage in nursery beds.`,`**Livestock & Dairy**: Shelter cattle and small ruminants in clean, dry sheds; add mineral mixture in drinking water and protect feed from morning humidity (${m}%).`,`**Plant Protection & Spray Window**: Spray chemicals strictly during early morning (6:30–9:00 AM) or late evening (4:30–6:30 PM) under calm winds (<8-10 km/h) to prevent drift.`,`**Disease & Pest Surveillance**: High morning humidity (${m}%) and warm temperatures (${u}°C) favor foliar leaf spots; scout canopy and apply bio-agents early.`],smsAdvisory160Chars:y?`${a}: 5 ದಿನಗಳಲ್ಲಿ ${p}mm ಮಳೆ. ${b} ಬಿತ್ತನೆಗೆ ಹದವಾದ ತೇವಾಂಶ ಬಳಸಿ. ಬೀಜೋಪಚಾರ ಕಡ್ಡಾಯ. ಕೃಷಿ ಇಲಾಖೆ.`:`${a}: ${p}mm rain forecast. Favorable moisture for ${n} sowing. Follow seed treatment. Sahyadri AI.`,generalImpacts3Points:y?[`ಮುಂಗಾರು ಮಳೆ ಮುನ್ಸೂಚನೆ: ಒಟ್ಟು ${p} ಮಿ.ಮೀ ಮಳೆ ನಿರೀಕ್ಷೆಯಿದೆ.`,`ಮಣ್ಣಿನಲ್ಲಿ ಹದವಾದ ತೇವಾಂಶವಿರುವಾಗ ಮಾತ್ರ ಬಿತ್ತನೆ ಮತ್ತು ಎಡೆಕುಂಟೆ ಕಾರ್ಯಗಳನ್ನು ಕೈಗೊಳ್ಳಿ.`,`ಕೃಷಿ ವಿಶ್ವವಿದ್ಯಾಲಯ (KSNUAHS ಶಿವಮೊಗ್ಗ) ಪ್ರಮಾಣೀಕೃತ ಬೀಜಗಳನ್ನು ಮಾತ್ರ ಬಳಸಿ.`]:[`Southwest monsoon activity: ${p} mm cumulative rainfall expected.`,`Conduct sowing and intercultivation operations only when soil reaches workable moisture (vapsa).`,`Procure certified high-germination seeds from University (KSNUAHS Shivamogga) seed centers.`],generalSms160Chars:y?`${a}: 5 ದಿನಗಳಲ್ಲಿ ${p}mm ಮಳೆ ನಿರೀಕ್ಷೆ. ಬಿತ್ತನೆಗೆ ಜಮೀನು ಸಿದ್ಧತೆ ನಡೆಸಿ.`:`${a}: ${p}mm rainfall expected in 5 days. Prepare land for sowing.`,fullMarkdown:`${S}\n\n${C}`}}async function Xe(e){try{let t=await fetch(`${We}/chat`,{method:`POST`,headers:{"Content-Type":`application/json`},body:JSON.stringify(e)});if(t.ok)return await t.json()}catch(e){console.warn(`[API] Backend unreachable, utilizing client-side PoP knowledge engine:`,e)}let t=e.language===`kn`||/[\u0C80-\u0CFF]/.test(e.question),n=e.question.toLowerCase(),r=e.crop;r||=n.includes(`rice`)||n.includes(`paddy`)||n.includes(`ಭತ್ತ`)||n.includes(`transplant`)||n.includes(`blast`)?`rice`:n.includes(`maize`)||n.includes(`corn`)||n.includes(`ಮೆಕ್ಕೆಜೋಳ`)||n.includes(`armyworm`)?`maize`:n.includes(`areca`)||n.includes(`adike`)||n.includes(`ಅಡಿಕೆ`)||n.includes(`koleroga`)||n.includes(`mahali`)?`arecanut`:`groundnut`;let i=e.farmContext?.district||`Shivamogga`,a=Ye(i,e.farmContext?.block||i,r,t?`kn`:`en`),o=a.records.reduce((e,t)=>e+t.rainfallMm,0).toFixed(1),s=e.farmContext?.variety||{groundnut:`TMV-2`,rice:`Jyothi`,maize:`NK-6240`,arecanut:`Mohitnagar`}[r]||`Recommended Regional Variety`;return(n.includes(`sow`)||n.includes(`sowing`)||n.includes(`ಬಿತ್ತನೆ`))&&(n.includes(`weather`)||n.includes(`forecast`)||n.includes(`rain`)||n.includes(`ಮಳೆ`)||n.includes(`ಹವಾಮಾನ`))?t?r===`rice`?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
-${i} ಜಿಲ್ಲೆಯ 5 ದಿನಗಳ ಹವಾಮಾನ ಮುನ್ಸೂಚನೆಯ ಪ್ರಕಾರ ಒಟ್ಟು **${o} ಮಿ.ಮೀ ಮಳೆ**, 21°C–28°C ತಾಪಮಾನ ಮತ್ತು 88%–95% ಹೆಚ್ಚಿನ ಆರ್ದ್ರತೆ ನಿರೀಕ್ಷಿಸಲಾಗಿದೆ. ಮುಂಗಾರು ಮಳೆಯ ಆರಂಭದ ಈ ಹಂತವು **ಭತ್ತದ (${s})** ನರ್ಸರಿ (ಸಸಿಮಡಿ) ಬಿತ್ತನೆ ಅಥವಾ ನೇರ ಬಿತ್ತನೆಗೆ ಅತ್ಯಂತ ಪ್ರಶಸ್ತವಾದ ಸಮಯವಾಗಿದೆ.
+`,C=y?`ಐಎಂಡಿ ಬೆಂಗಳೂರು ಮುನ್ಸೂಚನೆ: ${a} ಜಿಲ್ಲೆಯ ${o} ತಾಲೂಕಿನಲ್ಲಿ (${s} ರಿಂದ ${c}) ${parseFloat(p)>0?`ಒಟ್ಟು ${p} ಮಿ.ಮೀ ಲಘು/ಸಾಧಾರಣ ಮಳೆ ನಿರೀಕ್ಷೆಯಿದೆ`:`ಮುಖ್ಯವಾಗಿ ಒಣ ಹವೆ ಇರಲಿದೆ`}. ತಾಪಮಾನ: ಗರಿಷ್ಠ ${l}°C–${u}°C, ಕನಿಷ್ಠ ${d}°C–${f}°C. ಆರ್ದ್ರತೆ: ಬೆಳಿಗ್ಗೆ ${m}%, ಮಧ್ಯಾಹ್ನ ${h}%. ಗಾಳಿಯ ವೇಗ: ಗಂಟೆಗೆ 8–${g} ಕಿ.ಮೀ (${_}). ಮೋಡ ಕವಚ: ${v}/8 ಅಷ್ಟಕ.`:`IMD Bengaluru Forecast for ${a} (${o}) from ${s} to ${c}: ${parseFloat(p)>0?`Cumulative light to moderate rainfall of ${p} mm expected during the period`:`Predominantly dry weather conditions prevailing throughout the forecast window`}. Temperatures: Max ${l}°C–${u}°C, Min ${d}°C–${f}°C. Relative Humidity: Morning ${m}%, Afternoon ${h}%. Wind: 8–${g} km/h from ${_}. Cloud Cover: ${v}/8 octas.`;return{district:a,block:o,records:i,weatherTableMarkdown:S,summary150to200Words:C,impactsAdvisories5Points:y?[`**ಮುಖ್ಯ ಬೆಳೆಗಳು (${b})**: ಬೆಳಿಗ್ಗೆ ಅಥವಾ ಸಂಜೆ ಲಘು ನೀರಾವರಿ ಒದಗಿಸಿ; ${p} ಮಿ.ಮೀ ಮಳೆಯ ನಂತರ ತಗ್ಗು ಪ್ರದೇಶಗಳಲ್ಲಿ ನೀರು ನಿಲ್ಲದಂತೆ ಬಸಿಗಾಲುವೆಗಳನ್ನು ಸದಾ ತೆರೆದಿಡಿ.`,`**ತೋಟಗಾರಿಕೆ ಬೆಳೆಗಳು (ತರಕಾರಿ/ಹಣ್ಣು)**: ಗಂಟೆಗೆ ${g} ಕಿ.ಮೀ ವೇಗದ ಗಾಳಿಗೆ ಬೆಳೆಗಳು ವಾಲದಂತೆ ಟೊಮೆಟೊ, ಮೆಣಸಿನಕಾಯಿ ಮತ್ತು ಬಳ್ಳಿ ಬೆಳೆಗಳಿಗೆ ಆಸರೆ ಕೊಡಿ. ನರ್ಸರಿಗಳಲ್ಲಿ ನೀರು ಬಸಿದು ಹೋಗುವಂತೆ ನೋಡಿಕೊಳ್ಳಿ.`,`**ಪಶುಸಂಗೋಪನೆ ಮತ್ತು ಜಾನುವಾರು**: ಹೈನು ರಾಸುಗಳನ್ನು ಸ್ವಚ್ಛ, ಒಣ ಕೊಟ್ಟಿಗೆಗಳಲ್ಲಿ ರಕ್ಷಿಸಿ; ಕುಡಿಯುವ ನೀರಿನಲ್ಲಿ ಖನಿಜ ಲವಣ ಮಿಶ್ರಣ ಒದಗಿಸಿ ಮತ್ತು ಹೆಚ್ಚಿನ ಬೆಳಗಿನ ತೇವಾಂಶದಿಂದ (${m}%) ಮೇವನ್ನು ರಕ್ಷಿಸಿ.`,`**ಸಸ್ಯ ಸಂರಕ್ಷಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ**: ಕೀಟನಾಶಕ/ಶಿಲೀಂಧ್ರನಾಶಕ ಸಿಂಪಡಣೆಯನ್ನು ಬೆಳಿಗ್ಗೆ (6:30–9:00 AM) ಅಥವಾ ಸಂಜೆ (4:30–6:30 PM) ಗಾಳಿಯ ವೇಗ ಶಾಂತವಾಗಿದ್ದಾಗ (<8-10 ಕಿ.ಮೀ/ಗಂಟೆ) ಮಾತ್ರ ಕೈಗೊಳ್ಳಿ.`,`**ರೋಗ ಮತ್ತು ಕೀಟ ಕಣ್ಗಾವಲು**: ಬೆಳಗಿನ ಹೆಚ್ಚಿನ ಆರ್ದ್ರತೆ (${m}%) ಮತ್ತು ತಾಪಮಾನವು (${u}°C) ಶಿಲೀಂಧ್ರ ರೋಗಗಳಿಗೆ ಅನುಕೂಲಕರ; ಬೆಳೆ ಪರಿಶೀಲಿಸಿ ಆರಂಭಿಕ ಹಂತದಲ್ಲೇ ಜೈವಿಕ ನಿಯಂತ್ರಣ ಕೈಗೊಳ್ಳಿ.`]:[`**Field Crops (${n})**: Provide light irrigation in morning/evening; avoid water stagnation in low-lying crop zones following localized rain (${p} mm).`,`**Horticulture (Vegetables & Fruits)**: Provide vegetative staking for tomato, chili, and vine crops against wind gusts up to ${g} km/h. Ensure proper drainage in nursery beds.`,`**Livestock & Dairy**: Shelter cattle and small ruminants in clean, dry sheds; add mineral mixture in drinking water and protect feed from morning humidity (${m}%).`,`**Plant Protection & Spray Window**: Spray chemicals strictly during early morning (6:30–9:00 AM) or late evening (4:30–6:30 PM) under calm winds (<8-10 km/h) to prevent drift.`,`**Disease & Pest Surveillance**: High morning humidity (${m}%) and warm temperatures (${u}°C) favor foliar leaf spots; scout canopy and apply bio-agents early.`],smsAdvisory160Chars:y?`${a}: 5 ದಿನಗಳಲ್ಲಿ ${p}mm ಮಳೆ. ${b} ಬಿತ್ತನೆಗೆ ಹದವಾದ ತೇವಾಂಶ ಬಳಸಿ. ಬೀಜೋಪಚಾರ ಕಡ್ಡಾಯ. ಕೃಷಿ ಇಲಾಖೆ.`:`${a}: ${p}mm rain forecast. Favorable moisture for ${n} sowing. Follow seed treatment. Sahyadri AI.`,generalImpacts3Points:y?[`ಮುಂಗಾರು ಮಳೆ ಮುನ್ಸೂಚನೆ: ಒಟ್ಟು ${p} ಮಿ.ಮೀ ಮಳೆ ನಿರೀಕ್ಷೆಯಿದೆ.`,`ಮಣ್ಣಿನಲ್ಲಿ ಹದವಾದ ತೇವಾಂಶವಿರುವಾಗ ಮಾತ್ರ ಬಿತ್ತನೆ ಮತ್ತು ಎಡೆಕುಂಟೆ ಕಾರ್ಯಗಳನ್ನು ಕೈಗೊಳ್ಳಿ.`,`ಕೃಷಿ ವಿಶ್ವವಿದ್ಯಾಲಯ (KSNUAHS ಶಿವಮೊಗ್ಗ) ಪ್ರಮಾಣೀಕೃತ ಬೀಜಗಳನ್ನು ಮಾತ್ರ ಬಳಸಿ.`]:[`Southwest monsoon activity: ${p} mm cumulative rainfall expected.`,`Conduct sowing and intercultivation operations only when soil reaches workable moisture (vapsa).`,`Procure certified high-germination seeds from University (KSNUAHS Shivamogga) seed centers.`],generalSms160Chars:y?`${a}: 5 ದಿನಗಳಲ್ಲಿ ${p}mm ಮಳೆ ನಿರೀಕ್ಷೆ. ಬಿತ್ತನೆಗೆ ಜಮೀನು ಸಿದ್ಧತೆ ನಡೆಸಿ.`:`${a}: ${p}mm rainfall expected in 5 days. Prepare land for sowing.`,fullMarkdown:`${S}\n\n${C}`}}async function Xe(e){try{let t=await fetch(`${We}/chat`,{method:`POST`,headers:{"Content-Type":`application/json`},body:JSON.stringify(e)});if(t.ok)return await t.json()}catch(e){console.warn(`[API] Backend unreachable, utilizing client-side PoP knowledge engine:`,e)}let t=e.language===`kn`||/[\u0C80-\u0CFF]/.test(e.question),n=e.question.toLowerCase(),r=e.crop;r||=n.includes(`rice`)||n.includes(`paddy`)||n.includes(`ಭತ್ತ`)||n.includes(`transplant`)||n.includes(`blast`)?`rice`:n.includes(`maize`)||n.includes(`corn`)||n.includes(`ಮೆಕ್ಕೆಜೋಳ`)||n.includes(`armyworm`)?`maize`:n.includes(`areca`)||n.includes(`adike`)||n.includes(`ಅಡಿಕೆ`)||n.includes(`koleroga`)||n.includes(`mahali`)?`arecanut`:`groundnut`;let i=e.farmContext?.district||`Ballari`,a=Ye(i,e.farmContext?.block||i,r,t?`kn`:`en`),o=a.records.reduce((e,t)=>e+t.rainfallMm,0).toFixed(1),s=e.farmContext?.variety||{groundnut:`TMV-2`,rice:`Jyothi`,maize:`NK-6240`,arecanut:`Mohitnagar`}[r]||`TMV-2`,c=n.match(/(\d+)\s*(das|day|days|ದಿನ)/),l=c?parseInt(c[1],10):null;if(r===`groundnut`&&(l!==null&&l>=25&&l<=55||n.includes(`gypsum`)||n.includes(`pegging`)||n.includes(`ಜಿಪ್ಸಮ್`)||n.includes(`35`)||n.includes(`45`)||n.includes(`30`)||n.includes(`40`)||n.includes(`higher yield`)||n.includes(`fertilizer`))){let n=l?`${l} DAS`:`35–45 DAS`,c=l?`${l} ದಿನಗಳ (DAS)`:`35–45 ದಿನಗಳ`;return t?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
+ರೈತ ಬಾಂಧವರೇ, ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ ನಿಮ್ಮ **${s}** ಕಡಲೆಕಾಯಿ ಬೆಳೆಯು ಪ್ರಸ್ತುತ **${c} ಹಂತದಲ್ಲಿದ್ದು, ಅತ್ಯಂತ ನಿರ್ಣಾಯಕವಾದ ಗರಿಷ್ಠ ಹೂವಾಡುವಿಕೆಯಿಂದ ಸಕ್ರಿಯ ಕಾಯಿ ಇಳಿಯುವ (Peak Flowering to Active Pegging & Pod Initiation Stage)** ಘಟ್ಟದಲ್ಲಿದೆ. ಈ ಹಂತದಲ್ಲಿ ಪರಾಗಸ್ಪರ್ಶಗೊಂಡ ಹೂವುಗಳಿಂದ ಕಾಯಿ ಇಳಿಯುವ ಕಡ್ಡಿಗಳು (Pegs/Gynophores) ಮಣ್ಣಿನೊಳಗೆ ೪–೭ ಸೆಂ.ಮೀ ಆಳಕ್ಕೆ ಇಳಿಯುತ್ತಿವೆ.
+
+ಈ ಹಂತವು ಮುಂದಿನ **ಕಾಯಿ ಬೆಳವಣಿಗೆ ಮತ್ತು ಕಾಳು ತುಂಬುವ ಹಂತಕ್ಕೆ (Pod Development & Kernel Filling @ 55–75 DAS)** ಸಾಗುತ್ತಿದ್ದು, ಈ ಸಮಯದಲ್ಲಿ ಕಾಯಿಗಳ ವಲಯಕ್ಕೆ ಕ್ಯಾಲ್ಸಿಯಂ ಒದಗಿಸಲು **ಜಿಪ್ಸಮ್ ಬಳಕೆ**, ಮಣ್ಣಿನ ತೇವಾಂಶ ಮತ್ತು ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ರೋಗ ಕಣ್ಗಾವಲು ನಿಮ್ಮ ಅಂತಿಮ ಇಳುವರಿಯನ್ನು ನಿರ್ಧರಿಸುವ #1 ಪ್ರಮುಖ ಅಂಶವಾಗಿದೆ.
 
 ### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
-1. **[ಅಧಿಕ ಇಳುವರಿ ಮುಖ್ಯ ಕ್ರಮ — ಬಿತ್ತನೆ ಬೀಜ ಮತ್ತು ತಳಿ]**: ಪ್ರತಿ ಹೆಕ್ಟೇರ್‌ಗೆ **20–25 ಕೆಜಿ** ಪ್ರಮಾಣೀಕೃತ ಬೀಜವನ್ನು ಬಳಸಿ (${s}). ಮೊಳಕೆ ಸಾಮರ್ಥ್ಯ >80% ಇರುವಂತೆ ನೋಡಿಕೊಳ್ಳಿ.
-2. **[ಸಸಿಮಡಿ ತಯಾರಿ ಮತ್ತು ನಾಟಿ ಅಂತರ]**: ಎತ್ತರಿಸಿದ ಸಸಿಮಡಿಗಳಲ್ಲಿ ಬಿತ್ತನೆ ಮಾಡಿ. 20–25 ದಿನಗಳ ಸಸಿಗಳನ್ನು ಮುಖ್ಯ ಹೊಲದಲ್ಲಿ **20 x 10 ಸೆಂ.ಮೀ** ಅಂತರದಲ್ಲಿ ನಾಟಿ ಮಾಡಿ.
-3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
-   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**: ಬೆಂಕಿ ರೋಗ ತಡೆಯಲು ಪ್ರತಿ ಕೆಜಿ ಬೀಜಕ್ಕೆ **ಕಾರ್ಬೆಂಡಾಜಿಮ್ 50 WP @ 2 ಗ್ರಾಂ** ಬೆರೆಸಿ ಉಪಚರಿಸಿ.
-   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**: ಪ್ರತಿ ಕೆಜಿ ಬೀಜಕ್ಕೆ **ಟ್ರೈಕೋಡರ್ಮಾ ವಿರಿಡೆ @ 4 ಗ್ರಾಂ** ಮತ್ತು **ಅಜೋಸ್ಪಿರಿಲಮ್ (600 ಗ್ರಾಂ/ಹೆ) + ಪಿಎಸ್‌ಬಿ (600 ಗ್ರಾಂ/ಹೆ)** ಜೈವಿಕ ಗೊಬ್ಬರಗಳಿಂದ ಉಪಚರಿಸಿ.
-   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**: ಸಸಿಮಡಿ ಸುತ್ತ ನೀರು ಸರಾಗವಾಗಿ ಹರಿಯಲು ಬಸಿಗಾಲುವೆ ನಿರ್ಮಿಸಿ, ಕಳೆ ರಹಿತ ಶುದ್ಧ ಸಸಿಮಡಿ ಕಾಪಾಡಿ.
-
-### 🌦️ ಐಎಂಡಿ 5-ದಿನಗಳ ಹವಾಮಾನ ಆಧಾರಿತ ಕೃಷಿ ಸಲಹೆ
-1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ 5 ದಿನಗಳಲ್ಲಿ ಒಟ್ಟು ${o} ಮಿ.ಮೀ ಮಳೆಯಾಗುವ ಸಾಧ್ಯತೆಯಿರುವುದರಿಂದ ಮಣ್ಣಿನಲ್ಲಿ ಹದವಾದ ತೇವಾಂಶ ಸಿಕ್ಕ ಕೂಡಲೇ ನರ್ಸರಿ ಬಿತ್ತನೆ ಮುಗಿಸಿಕೊಳ್ಳಿ.
-2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಸಿಂಪಡಣೆಯನ್ನು ಬೆಳಿಗ್ಗೆ (6:30–9:00 AM) ಅಥವಾ ಸಂಜೆ (4:30–6:30 PM) ಗಾಳಿಯ ವೇಗ ಶಾಂತವಾಗಿದ್ದಾಗ (<8 ಕಿ.ಮೀ/ಗಂಟೆ) ನಡೆಸಿ.
-3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ಹೆಚ್ಚಿನ ಆರ್ದ್ರತೆಯು ಬೆಂಕಿ ರೋಗ (ಬ್ಲಾಸ್ಟ್) ಉಲ್ಬಣಕ್ಕೆ ಕಾರಣವಾಗುವುದರಿಂದ ಬೀಜೋಪಚಾರವನ್ನು ಕಡ್ಡಾಯವಾಗಿ ಕೈಗೊಳ್ಳಿ.
-
-### ⚠️ ರೈತರಿಗೆ ಪ್ರಮುಖ ಸಂದೇಶ
-ಸಸಿಮಡಿಯಲ್ಲಿ ನೀರು ನಿಲ್ಲದಂತೆ ನೋಡಿಕೊಳ್ಳಿ. ಮುಖ್ಯ ಹೊಲದಲ್ಲಿ ನಾಟಿಯ ಸಮಯದಲ್ಲಿ ಸಮತೋಲನ ರಸಗೊಬ್ಬರವನ್ನು (100:50:50 NPK) ಶಿಫಾರಸಿನಂತೆ ನೀಡಿ.
-
-### ಮೂಲಗಳು
-[1] KSNUAHS Shivamogga — Rice Package of Practices (PoP 2026)
-    https://uahs.edu.in/
-[2] ICAR-IIRR Hyderabad — Rice Cultivation Directives
-    https://icar-iirr.org/`,crop:r,intent:`crop_production`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIRR Hyderabad`,url:`https://icar-iirr.org/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`kn`,outOfScope:!1,farmContext:e.farmContext,weather:a}:r===`maize`?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
-${i} ಜಿಲ್ಲೆಯ 5 ದಿನಗಳ ಹವಾಮಾನ ಮುನ್ಸೂಚನೆಯ ಪ್ರಕಾರ ಸುಮಾರು **${o} ಮಿ.ಮೀ ಮಳೆ** ಮತ್ತು 20°C–29°C ತಾಪಮಾನ ನಿರೀಕ್ಷೆಯಿದೆ. ಈ ಮಳೆಯಿಂದ ಮಣ್ಣಿನಲ್ಲಿ ಉತ್ತಮ ತೇವಾಂಶ ಶೇಖರಣೆಯಾಗುವುದರಿಂದ **ಮೆಕ್ಕೆಜೋಳ (${s})** ಬಿತ್ತನೆ ಮಾಡಲು ಇದು ಸಕಾಲವಾಗಿದೆ.
-
-### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
-1. **[ಅಧಿಕ ಇಳುವರಿ ಮುಖ್ಯ ಕ್ರಮ — ಬಿತ್ತನೆ ಸಾಲು ಅಂತರ ಮತ್ತು ಗಿಡಗಳ ಸಂಖ್ಯೆ]**: ಎಕರೆಗೆ **7.5–8 ಕೆಜಿ** (ಹೆಕ್ಟೇರಿಗೆ 18–20 ಕೆಜಿ) ಹೈಬ್ರಿಡ್ ಬೀಜ ಬಳಸಿ. ಸಾಲಿನಿಂದ ಸಾಲಿಗೆ **60 ಸೆಂ.ಮೀ** ಮತ್ತು ಗಿಡದಿಂದ ಗಿಡಕ್ಕೆ **20 ಸೆಂ.ಮೀ** ಅಂತರದಲ್ಲಿ 4-5 ಸೆಂ.ಮೀ ಆಳಕ್ಕೆ ಬಿತ್ತಿ (ಹೆಕ್ಟೇರಿಗೆ 66,666 ಗಿಡಗಳನ್ನು ಕಾಪಾಡಿ).
-2. **[ಬುಡ ಗೊಬ್ಬರ (Basal Dose)]**: ಬಿತ್ತನೆ ಸಮಯದಲ್ಲಿ ಶಿಫಾರಸು ಮಾಡಿದ ಸಾರಜನಕದ 30%, ಪೂರ್ಣ ಪ್ರಮಾಣದ ರಂಜಕ (75 ಕೆಜಿ/ಹೆ) ಮತ್ತು ಪೊಟ್ಯಾಷ್ (40 ಕೆಜಿ/ಹೆ) + ಸತು ಸಲ್ಫೇಟ್ (25 ಕೆಜಿ/ಹೆ) ಸಾಲುಗಳಲ್ಲಿ ಹಾಕಿ.
-3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
-   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**: ಸೈನಿಕ ಹುಳು (FAW) ಬಾಧೆ ತಡೆಯಲು **ಸಯಾಂಟ್ರಾನಿಲಿಪ್ರೋಲ್ 19.8% + ಥಿಯಾಮೆಥಾಕ್ಸಮ್ 19.8% FS @ 6 ಮಿ.ಲೀ/ಕೆಜಿ** ಬೀಜಕ್ಕೆ ಬೆರೆಸಿ ಉಪಚರಿಸಿ.
-   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**: ಬಿತ್ತನೆಗೆ ಮುನ್ನ **ಟ್ರೈಕೋಡರ್ಮಾ @ 4 ಗ್ರಾಂ/ಕೆಜಿ** ಮತ್ತು 5% ಬೇವಿನ ಬೀಜದ ಕಷಾಯ (NSKE) ತಯಾರಿಸಿಟ್ಟುಕೊಳ್ಳಿ.
-   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**: ಹೊಲದ ಬದುಗಳಲ್ಲಿ 3-4 ಸಾಲು ಜೋಳ ಅಥವಾ ನೇಪಿಯರ್ ಹುಲ್ಲನ್ನು ಬಲೆ ಬೆಳೆಯಾಗಿ (Trap crop) ಬಿತ್ತಿ.
-
-### 🌦️ ಐಎಂಡಿ 5-ದಿನಗಳ ಹವಾಮಾನ ಆಧಾರಿತ ಕೃಷಿ ಸಲಹೆ
-1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ಮುನ್ಸೂಚನೆಯ ${o} ಮಿ.ಮೀ ಮಳೆಯ ನಂತರ ಮಣ್ಣು ಹದವಾದ ತಕ್ಷಣ (ಅತಿಯಾದ ಕೆಸರು ಇರದಂತೆ) ಬಿತ್ತನೆ ಕೈಗೊಳ್ಳಿ. ಭಾರಿ ಮಳೆ ಸುರಿಯುವ ದಿನ ಬಿತ್ತನೆ ತಪ್ಪಿಸಿ.
-2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ರಾಸಾಯನಿಕ ಸಿಂಪಡಣೆಯನ್ನು ಶಾಂತ ಗಾಳಿಯ ವೇಳೆಯಲ್ಲಿ (ಗಂಟೆಗೆ <8 ಕಿ.ಮೀ) ಮುಂಜಾನೆ ಕೈಗೊಳ್ಳಿ.
-3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ಮೊಳಕೆ ಬಂದ 10–15 ದಿನಗಳಲ್ಲಿ ಸುಳಿಯಲ್ಲಿ ಸೈನಿಕ ಹುಳುವಿನ (FAW) ಪಿನ್‌ಹೋಲ್ ರಂಧ್ರಗಳನ್ನು ಸೂಕ್ಷ್ಮವಾಗಿ ಗಮನಿಸಿ.
-
-### ⚠️ ರೈತರಿಗೆ ಪ್ರಮುಖ ಸಂದೇಶ
-ಸಾಲಿನಲ್ಲಿ ಒಂದೇ ಗಿಡವನ್ನು ಉಳಿಸಿಕೊಂಡು ನಿಖರ ಗಿಡಗಳ ಸಂಖ್ಯೆಯನ್ನು ಕಾಪಾಡುವುದು ಮೆಕ್ಕೆಜೋಳದ ಗರಿಷ್ಠ ಇಳುವರಿಗೆ ಮೊದಲ ಮೆಟ್ಟಿಲು.
-
-### ಮೂಲಗಳು
-[1] UAS Dharwad — Maize Package of Practices Karnataka (PoP 2026)
-    https://www.uasd.edu/
-[2] ICAR-IIMR Ludhiana — Maize Cultivation Guidelines
-    https://iimr.icar.gov.in/`,crop:r,intent:`crop_production`,citations:[{id:1,title:`UAS Dharwad — Maize PoP 2026`,url:`https://www.uasd.edu/`,sourceId:`uasd`,relevance:.98},{id:2,title:`ICAR-IIMR Ludhiana`,url:`https://iimr.icar.gov.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`kn`,outOfScope:!1,farmContext:e.farmContext,weather:a}:{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
-${i} ಜಿಲ್ಲೆಯ 5 ದಿನಗಳ ಹವಾಮಾನ ಮುನ್ಸೂಚನೆಯ ಪ್ರಕಾರ ಒಟ್ಟು **${o} ಮಿ.ಮೀ ಮಳೆ**, 20°C–26°C ತಾಪಮಾನ, 85%–95% ಬೆಳಗಿನ ಆರ್ದ್ರತೆ ಮತ್ತು 8–12 ಕಿ.ಮೀ/ಗಂಟೆ ಗಾಳಿಯ ವೇಗ ನಿರೀಕ್ಷಿಸಲಾಗಿದೆ. ಮುಂಗಾರು ಮಳೆಯ ಈ ಹದವಾದ ತೇವಾಂಶವು **ಕಡಲೆಕಾಯಿ (${s})** ಬಿತ್ತನೆ ಮಾಡಲು ಅತ್ಯಂತ ಪ್ರಶಸ್ತವಾದ ಸಮಯವಾಗಿದೆ.
-
-### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
-1. **[ಅಧಿಕ ಇಳುವರಿ ಮುಖ್ಯ ಕ್ರಮ — ಬಿತ್ತನೆ ಬೀಜ ಪ್ರಮಾಣ ಮತ್ತು ಸಾಲು ಅಂತರ]**: ಎಕರೆಗೆ **50 ಕೆಜಿ** (ಹೆಕ್ಟೇರಿಗೆ 125 ಕೆಜಿ) ಬೀಜದ ಕಾಳುಗಳನ್ನು ಬಳಸಿ. ಸಾಲಿನಿಂದ ಸಾಲಿಗೆ **30 ಸೆಂ.ಮೀ** ಮತ್ತು ಗಿಡದಿಂದ ಗಿಡಕ್ಕೆ **10 ಸೆಂ.ಮೀ** ಅಂತರದಲ್ಲಿ 4–5 ಸೆಂ.ಮೀ ಆಳಕ್ಕೆ ಬಿತ್ತಿ.
-2. **[ಬುಡ ಗೊಬ್ಬರ ಮತ್ತು ಪೋಷಕಾಂಶ]**: ಬಿತ್ತನೆ ಕಾಲದಲ್ಲಿ ಎಕರೆಗೆ **10 ಕೆಜಿ ಸಾರಜನಕ, 20 ಕೆಜಿ ರಂಜಕ ಮತ್ತು 10 ಕೆಜಿ ಪೊಟ್ಯಾಷ್ (NPK 25:50:25 kg/ha)** + ಸತು ಸಲ್ಫೇಟ್ (10 ಕೆಜಿ/ಎಕರೆ) ಸಾಲುಗಳಲ್ಲಿ ಹಾಕಿ.
-3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
-   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**: ಕೊಳೆರೋಗ ತಡೆಯಲು ಪ್ರತಿ ಕೆಜಿ ಬೀಜಕ್ಕೆ **ಮ್ಯಾಂಕೋಜೆಬ್ ಅಥವಾ ಕಾರ್ಬೆಂಡಾಜಿಮ್ 50 WP @ 2 ಗ್ರಾಂ** ಬೆರೆಸಿ ನೆರಳಿನಲ್ಲಿ ಒಣಗಿಸಿ.
-   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**: ಪ್ರತಿ ಕೆಜಿ ಬೀಜಕ್ಕೆ **ಟ್ರೈಕೋಡರ್ಮಾ @ 4 ಗ್ರಾಂ**, ನಂತರ **ರೈಜೋಬಿಯಂ (600 ಗ್ರಾಂ/ಹೆ)** ಮತ್ತು **ಪಿಎಸ್‌ಬಿ (600 ಗ್ರಾಂ/ಹೆ)** ಬೆರೆಸಿ ಬಿತ್ತಿ.
-   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**: ಬಿತ್ತನೆ ಸಾಲುಗಳಲ್ಲಿ ಬಸಿಗಾಲುವೆ ನಿರ್ಮಿಸಿ ಮತ್ತು ಹೊಲದ ಸುತ್ತಲೂ 3 ಸಾಲು ಸಜ್ಜೆ ಅಥವಾ ಜೋಳವನ್ನು ಗಡಿ ಬೆಳೆಯಾಗಿ ಬಿತ್ತಿ.
-
-### 🌦️ ಐಎಂಡಿ 5-ದಿನಗಳ ಹವಾಮಾನ ಆಧಾರಿತ ಕೃಷಿ ಸಲಹೆ
-1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ 5 ದಿನಗಳಲ್ಲಿ ಒಟ್ಟು ${o} ಮಿ.ಮೀ ಮಳೆ ಮುನ್ಸೂಚನೆಯಿರುವುದರಿಂದ ಮಣ್ಣಿನಲ್ಲಿ ಹದವಾದ ತೇವಾಂಶ (ವಪ್ಸ ಸ್ಥಿತಿ) ಸಿಕ್ಕ ತಕ್ಷಣ ಬಿತ್ತನೆ ಮುಗಿಸಿಕೊಳ್ಳಿ.
-2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಸಿಂಪಡಣೆಯನ್ನು ಮುಂಜಾನೆ (6:30–9:00 AM) ಶಾಂತ ಗಾಳಿಯ ವೇಳೆಯಲ್ಲಿ (<8 ಕಿ.ಮೀ/ಗಂಟೆ) ನಡೆಸಿ.
-3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ಹೆಚ್ಚಿನ ತೇವಾಂಶದಿಂದ ಕೊಳೆರೋಗ (Collar Rot) ಬರದಂತೆ ತಡೆಯಲು ಕಡ್ಡಾಯವಾಗಿ ಶಿಲೀಂಧ್ರನಾಶಕ ಬೀಜೋಪಚಾರ ಮಾಡಿ. ಹೊಲದಲ್ಲಿ ನೀರು ನಿಲ್ಲದಂತೆ ನೋಡಿಕೊಳ್ಳಿ.
-
-### ⚠️ ರೈತರಿಗೆ ಪ್ರಮುಖ ಸಂದೇಶ
-ಪ್ರಮಾಣೀಕೃತ ಬೀಜಗಳನ್ನು ಮಾತ್ರ ಬಳಸಿ. ಬಿತ್ತನೆ ಮಾಡಿದ 30–35 ದಿನಗಳ ಹಂತದಲ್ಲಿ ಎಕರೆಗೆ 200 ಕೆಜಿ ಜಿಪ್ಸಮ್ ಮಣ್ಣಿಗೆ ಸೇರಿಸುವುದನ್ನು ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ಮರೆಯಬೇಡಿ.
-
-### ಮೂಲಗಳು
-[1] KSNUAHS Shivamogga — Groundnut Package of Practices (PoP 2026)
-    https://uahs.edu.in/
-[2] ICAR-IIGR — Directorate of Groundnut Research
-    https://www.icar-iigr.org.in/`,crop:r,intent:`crop_production`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIGR Groundnut Research`,url:`https://www.icar-iigr.org.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`kn`,outOfScope:!1,farmContext:e.farmContext,weather:a}:r===`rice`?{answer:`### Diagnosis & Direct Answer
-The 5-day IMD weather forecast for **${i}** indicates cumulative rainfall of **${o} mm**, temperatures between **21°C–28°C**, morning relative humidity of **88%–95%**, and moderate winds of **8–14 km/h**. This rainfall and atmospheric moisture create highly favorable soil conditions to commence **Rice (${s})** nursery sowing or direct seeded rice (DSR) operations for the Kharif season.
-
-### What to do & Recommended Field Operations
-1. **[Core Stage Operation & Higher Yield Priority]**: Use certified seed @ **20–25 kg/ha** for transplanted paddy or **40–50 kg/ha** for direct seeding. Recommended regional varieties include **${s}**. Ensure high germination (>80%).
-2. **[Nursery Raising & Spacing]**: Sow pre-germinated seeds on raised nursery beds. Transplant 20–25 day-old seedlings at **20 x 10 cm spacing** with 2–3 seedlings per hill.
-3. **[Pest & Disease Management — 3 Approaches]**:
-   - **Chemical Control (PoP 2026)**: Treat seeds with **Carbendazim 50 WP @ 2 g/kg seed** to prevent seed-borne blast and seedling rot.
-   - **Biological & Organic Control**: Inoculate with **Trichoderma viride @ 4 g/kg seed**, followed by **Azospirillum @ 600 g/ha** and **Phosphate Solubilizing Bacteria (PSB) @ 600 g/ha** bio-fertilizers.
-   - **IPM & Cultural Practices**: Maintain clean raised nursery beds with surrounding 30 cm drainage channels to prevent seedling submergence.
-
-### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
-1. **[Question-Specific Weather Advisory]**: With ${o} mm cumulative rainfall expected in ${i}, commence nursery sowing immediately once soil achieves workable moisture tilth.
-2. **[Field Operation / Spray Window]**: Carry out sprays strictly during calm morning hours (6:30–9:00 AM) or late evening (4:30–6:30 PM) under wind speeds <8 km/h.
-3. **[Micro-Climate & Agronomic Risk Alert]**: High relative humidity (>90%) combined with overcast skies accelerates fungal spore germination; complete seed treatment prior to sowing.
-
-### ⚠️ Important Message for Farmer
-Always test seed germination before sowing. Incorporate basal fertilizer (50% N + 100% P & K) during final puddling.
-
-### Sources
-[1] KSNUAHS Shivamogga — Rice Package of Practices (PoP 2026)
-    https://uahs.edu.in/
-[2] ICAR-IIRR Hyderabad — Rice Cultivation Directives
-    https://icar-iirr.org/`,crop:r,intent:`crop_production`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIRR Hyderabad`,url:`https://icar-iirr.org/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}:r===`maize`?{answer:`### Diagnosis & Direct Answer
-The 5-day IMD weather forecast for **${i}** shows total expected rainfall of **${o} mm**, temperatures ranging between **20°C–29°C**, and morning relative humidity of **85%–92%**. With adequate soil moisture accumulating from these rains, it is an optimal time to proceed with **Hybrid Maize (${s})** sowing for the Kharif season.
-
-### What to do & Recommended Field Operations
-1. **[Core Stage Operation & Higher Yield Priority]**: Use hybrid seed @ **18–20 kg/ha (7.5–8 kg/acre)**. Dibble single seeds at **60 cm row-to-row and 20 cm plant-to-plant spacing** at a depth of 4–5 cm to achieve the optimum plant population of 66,666 plants/ha.
-2. **[Basal Fertilizer Application]**: Broadcast and incorporate basal fertilizer @ **50 kg N, 75 kg P2O5, and 40 kg K2O per hectare** along with **Zinc Sulphate @ 25 kg/ha** before sowing.
-3. **[Pest & Disease Management — 3 Approaches]**:
-   - **Chemical Control (PoP 2026)**: Treat seeds with **Cyantraniliprole 19.8% + Thiamethoxam 19.8% FS @ 6 mL/kg seed** for early 20-day protection against Fall Armyworm, followed by **Thiram @ 2.5 g/kg seed**.
-   - **Biological & Organic Control**: Apply *Trichoderma harzianum* @ 4 g/kg seed and prepare 5% Neem Seed Kernel Extract (NSKE) for early whorl protection.
-   - **IPM & Cultural Practices**: Plant 3–4 border rows of fodder sorghum or pearl millet as a barrier crop against pest migration.
-
-### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
-1. **[Question-Specific Weather Advisory]**: Utilize the ${o} mm rainfall window to sow when soil has received good soaking moisture. Avoid sowing on days with torrential rain forecasts.
-2. **[Field Operation / Spray Window]**: Plan any foliar applications during calm morning periods (6:30–9:00 AM) under low wind (<8 km/h).
-3. **[Micro-Climate & Agronomic Risk Alert]**: Warm, humid conditions favor rapid germination (4–5 days). Scout the whorls of newly emerged seedlings at 10–12 DAS for early Fall Armyworm pinhole damage.
-
-### ⚠️ Important Message for Farmer
-Do not broadcast seeds; dibble single seeds per hill at uniform spacing to achieve the recommended plant population and prevent competition.
-
-### Sources
-[1] UAS Dharwad — Maize Package of Practices Karnataka (PoP 2026)
-    https://www.uasd.edu/
-[2] ICAR-IIMR Ludhiana — Maize Cultivation Guidelines
-    https://iimr.icar.gov.in/`,crop:r,intent:`crop_production`,citations:[{id:1,title:`UAS Dharwad — Maize PoP 2026`,url:`https://www.uasd.edu/`,sourceId:`uasd`,relevance:.98},{id:2,title:`ICAR-IIMR Ludhiana`,url:`https://iimr.icar.gov.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}:{answer:`### Diagnosis & Direct Answer
-The 5-day IMD weather forecast for **${i}** indicates cumulative rainfall of **${o} mm**, temperatures ranging from **20.8°C to 26°C**, high morning humidity of **90%–97%**, and moderate wind speeds of **8–13 km/h**. This rainfall provides adequate soil moisture, making it an **ideal and opportune window to proceed with sowing Groundnut (${s})** for the Kharif season.
-
-### What to do & Recommended Field Operations
-1. **[Core Stage Operation & Higher Yield Priority]**: Use certified kernels @ **125 kg/ha (50 kg/acre)** for spreading/semi-spreading varieties (${s}). Sow at a spacing of **30 cm between rows and 10 cm between plants** at a depth of 4–5 cm in sandy loam soil.
-2. **[Basal Fertilizer Placement]**: Apply NPK @ **25:50:25 kg/ha (10:20:10 kg/acre)** + **Zinc Sulphate @ 25 kg/ha** as basal placement in seed furrows.
-3. **[Pest & Disease Management — 3 Approaches]**:
-   - **Chemical Control (PoP 2026)**: Treat kernels first with **Carbendazim 50 WP @ 2 g/kg seed** or **Mancozeb 75 WP @ 3 g/kg seed** and shade dry to prevent seed rot and collar rot (*Aspergillus niger*).
-   - **Biological & Organic Control**: Inoculate shade-dried seeds with **Rhizobium @ 600 g/ha** and **Phosphate Solubilizing Bacteria (PSB) @ 600 g/ha** using jaggery water as sticker.
-   - **IPM & Cultural Practices**: Form ridges and furrows every 3–4 meters to facilitate drainage and sow 3 border rows of pearl millet as barrier.
-
-### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
-1. **[Question-Specific Weather Advisory]**: With ${o} mm rainfall expected over 5 days in ${i}, sow immediately when soil moisture reaches workable capacity (vapsa). Do not sow in waterlogged or sticky wet soil.
-2. **[Field Operation / Spray Window]**: Conduct field operations and spray applications during early morning (6:30–9:00 AM) when wind is calm (<8 km/h).
-3. **[Micro-Climate & Agronomic Risk Alert]**: High morning humidity (>95%) accelerates seed germination within 5–7 days, but increases collar rot vulnerability if fungicide seed treatment is neglected.
-
-### ⚠️ Important Message for Farmer
-Always use certified seeds with >80% germination rate. Plan for **Gypsum top-dressing @ 500 kg/ha (200 kg/acre) at 30–35 DAS** for superior pod filling and oil synthesis.
-
-### Sources
-[1] KSNUAHS Shivamogga — Groundnut Package of Practices (PoP 2026)
-    https://uahs.edu.in/
-[2] ICAR-IIGR — Directorate of Groundnut Research
-    https://www.icar-iigr.org.in/`,crop:r,intent:`crop_production`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIGR Groundnut Research`,url:`https://www.icar-iigr.org.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}:r===`groundnut`&&(n.includes(`45 das`)||n.includes(`45 day`)||n.includes(`40 das`)||n.includes(`50 das`)||n.includes(`das`)&&(n.includes(`pest`)||n.includes(`disease`)))?t?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
-${i} ಜಿಲ್ಲೆಯಲ್ಲಿ ನಿಮ್ಮ **${s}** ಕಡಲೆಕಾಯಿ ಬೆಳೆಯು **45 ದಿನಗಳ (45 DAS)** ಹಂತದಲ್ಲಿದ್ದು, ಪ್ರಸ್ತುತ **ಗರಿಷ್ಠ ಹೂವಾಡುವಿಕೆಯಿಂದ ಸಕ್ರಿಯ ಕಾಯಿ ಇಳಿಯುವ (Peak Flowering to Active Pegging & Pod Initiation) ಹಂತದಲ್ಲಿದೆ**. ಈ ಹಂತದಲ್ಲಿ ಗಿಡಗಳ ಹೂವಿನಿಂದ ಹೊರಬರುವ ಕಡ್ಡಿಗಳು (Pegs/Gynophores) 4–7 ಸೆಂ.ಮೀ ಆಳಕ್ಕೆ ಮಣ್ಣಿಗೆ ಇಳಿದು ಕಾಯಿಗಳಾಗಿ ಮಾರ್ಪಡುತ್ತವೆ. ಬೆಳೆಯು ಮುಂದಿನ **ಕಾಯಿ ಬೆಳವಣಿಗೆ ಮತ್ತು ಕಾಳು ತುಂಬುವ ಹಂತಕ್ಕೆ (55–75 DAS)** ಸಾಗುತ್ತಿದ್ದು, ಈ ನಿರ್ಣಾಯಕ ಸಮಯದಲ್ಲಿ ಕಾಯಿಗಳಿಗೆ ಕ್ಯಾಲ್ಸಿಯಂ ಒದಗಿಸುವುದು, ಮಣ್ಣಿನ ಸಡಿಲತೆ ಕಾಪಾಡುವುದು ಮತ್ತು ಎಲೆ ತಿನ್ನುವ ಕೀಟ ಹಾಗೂ ಎಲೆಚುಕ್ಕೆ ರೋಗಗಳಿಂದ ರಕ್ಷಿಸುವುದು ಅಧಿಕ ಇಳುವರಿಗೆ ಅತ್ಯಂತ ನಿರ್ಣಾಯಕವಾಗಿದೆ.
-
-### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
-1. **[ಪ್ರಸ್ತುತ ಹಂತದ ಮುಖ್ಯ ಕ್ರಮ ಮತ್ತು ಪೋಷಕಾಂಶ/ಗೊಬ್ಬರದ ನಿಖರ ಪ್ರಮಾಣ — 45 DAS]**:
-   - **ಜಿಪ್ಸಮ್ ಬಳಕೆ (Gypsum Application)**: ಎಕರೆಗೆ **200 ಕೆಜಿ (ಹೆಕ್ಟೇರಿಗೆ 500 ಕೆಜಿ)** ಜಿಪ್ಸಮ್ ಅನ್ನು ಗಿಡಗಳ ಬುಡಕ್ಕೆ ಹಾಕಿ ಲಘು ಮಣ್ಣು ಏರಿಸಿ. ಜಿಪ್ಸಮ್‌ನಲ್ಲಿರುವ ಕ್ಯಾಲ್ಸಿಯಂ ಮತ್ತು ಗಂಧಕವು ಕಾಯಿಗಳಲ್ಲಿ ಕಾಳು ಗಟ್ಟಿಯಾಗಲು ಮತ್ತು ಜೊಳ್ಳು ಕಾಯಿಗಳನ್ನು (Pops) ತಡೆಯಲು #1 ಪ್ರಮುಖ ಪೋಷಕಾಂಶವಾಗಿದೆ.
-   - **ಎಲೆಗಳ ಪೋಷಕಾಂಶ ಮತ್ತು ಹೂವು ಉಳಿಸುವ ಸಿಂಪಡಣೆ**: ಹೂವು ಮತ್ತು ಕಡ್ಡಿಗಳ ಉದುರುವಿಕೆ ತಡೆಯಲು **2% ಡಿಎಪಿ (DAP @ 20 ಗ್ರಾಂ/ಲೀಟರ್)** + **ಪ್ಲಾನೋಫಿಕ್ಸ್ (NAA @ 0.25 ಮಿ.ಲೀ/ಲೀಟರ್)** ಅಥವಾ **19:19:19 @ 5 ಗ್ರಾಂ/ಲೀಟರ್ + ಬೋರಾಕ್ಸ್ @ 1 ಗ್ರಾಂ/ಲೀಟರ್** ಬೆರೆಸಿ ಸಿಂಪಡಿಸಿ.
-   - **ಲಘು ಪೋಷಕಾಂಶಗಳು**: ಎಲೆಗಳು ಹಳದಿಯಾಗಿದ್ದರೆ **ಸತು ಸಲ್ಫೇಟ್ (Zinc Sulphate) @ 2 ಗ್ರಾಂ/ಲೀಟರ್ + ಫೆರಸ್ ಸಲ್ಫೇಟ್ @ 2 ಗ್ರಾಂ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
+1. **[ಪ್ರಸ್ತುತ ಹಂತದ ಮುಖ್ಯ ಕ್ರಮ ಮತ್ತು ಪೋಷಕಾಂಶ/ಗೊಬ್ಬರದ ನಿಖರ ಪ್ರಮಾಣ — ${c} ಹೂವಾಡುವಿಕೆ ಮತ್ತು ಕಾಯಿ ಇಳಿಯುವ ಹಂತ]**:
+   - **ಹಂತ**: ಗರಿಷ್ಠ ಹೂವಾಡುವಿಕೆಯಿಂದ ಸಕ್ರಿಯ ಕಾಯಿ ಇಳಿಯುವ ಹಂತ (30–45 DAS).
+   - **ಜಿಪ್ಸಮ್ ಗೊಬ್ಬರದ ನಿಖರ ವೇಳಾಪಟ್ಟಿ (Gypsum Top-Dressing)**: 30 ರಿಂದ 40 ದಿನಗಳ ಹಂತದಲ್ಲಿ ಎಕರೆಗೆ **200 ಕೆಜಿ (ಹೆಕ್ಟೇರಿಗೆ 500 ಕೆಜಿ) ಜಿಪ್ಸಮ್** ಅನ್ನು ಗಿಡಗಳ ಬುಡದ ಸುತ್ತಲೂ ಹಾಕಿ ಲಘುವಾಗಿ ಮಣ್ಣು ಏರಿಸಬೇಕು. ಕಡಲೆಕಾಯಿಯಲ್ಲಿ ಕ್ಯಾಲ್ಸಿಯಂ (29%) ಮತ್ತು ಗಂಧಕ (19%) ಅಂಶವು ಕಾಯಿಗಳ ಮೂಲಕ ನೇರವಾಗಿ ಹೀರಲ್ಪಟ್ಟು ಟೊಳ್ಳು ಕಾಯಿಗಳನ್ನು (Pops) ತಡೆದು, ಗರಿಷ್ಠ ಕಾಳು ತುಂಬಲು ಮತ್ತು ಎಣ್ಣೆ ಅಂಶ ಹೆಚ್ಚಿಸಲು ಅತ್ಯಂತ ಅನಿವಾರ್ಯ.
+   - **ಸಮಗ್ರ NPK ವೇಳಾಪಟ್ಟಿ**: ಬಿತ್ತನೆ ಕಾಲದಲ್ಲಿ ಎಕರೆಗೆ 10:20:10 ಕೆಜಿ NPK (ಹೆಕ್ಟೇರಿಗೆ 25:50:25 ಕೆಜಿ) + ಸತು ಸಲ್ಫೇಟ್ 10 ಕೆಜಿ ಬುಡಗೊಬ್ಬರವಾಗಿ ನೀಡಲಾಗುತ್ತದೆ; 30–40 ದಿನಗಳಲ್ಲಿ ಜಿಪ್ಸಮ್ ಪ್ರಮುಖ ಮೇಲುಗೊಬ್ಬರವಾಗಿದೆ.
+   - **ಎಲೆಗಳ ಪೋಷಕಾಂಶ ಮತ್ತು ಹೂವು ಉಳಿಸುವ ಸಿಂಪಡಣೆ**: ಹೂವು ಉದುರುವುದನ್ನು ತಡೆಯಲು **2% ಡಿಎಪಿ (DAP @ 20 ಗ್ರಾಂ/ಲೀಟರ್)** ಅಥವಾ **ಪ್ಲಾನೋಫಿಕ್ಸ್ (NAA @ 0.25 ಮಿ.ಲೀ/ಲೀಟರ್)** ಅಥವಾ **19:19:19 @ 5 ಗ್ರಾಂ + ಬೋರಾಕ್ಸ್ @ 1 ಗ್ರಾಂ/ಲೀಟರ್** ಬೆರೆಸಿ ಸಿಂಪಡಿಸಿ.
+   - **ಲಘು ಪೋಷಕಾಂಶ**: ಎಲೆಗಳು ಹಳದಿಯಾಗಿದ್ದರೆ **ಜಿಂಕ್ ಸಲ್ಫೇಟ್ (Zinc Sulphate) @ 2 ಗ್ರಾಂ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
 2. **[ಕ್ಷೇತ್ರ ಮತ್ತು ಮಣ್ಣಿನ ನಿರ್ವಹಣೆ]**:
-   - **ಕಡ್ಡಾಯ ನಿಯಮ**: ಕಾಯಿ ಇಳಿಯುವ ಕಡ್ಡಿಗಳು (Pegs) ಮಣ್ಣಿಗೆ ಇಳಿಯಲು ಪ್ರಾರಂಭಿಸಿರುವುದರಿಂದ **ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ಆಳವಾದ ಎಡೆಕುಂಟೆ ಅಥವಾ ಯಾಂತ್ರಿಕ ಕಳೆ ತೆಗೆಯುವುದನ್ನು ಮಾಡಬೇಡಿ**. ಕಡ್ಡಿಗಳು ತುಂಡಾದರೆ ಶೇ. 30–40 ರಷ್ಟು ಇಳುವರಿ ಕುಸಿಯುತ್ತದೆ.
-   - ಮಣ್ಣು ಸದಾ ಸಡಿಲವಾಗಿರುವಂತೆ ನೋಡಿಕೊಳ್ಳಿ ಮತ್ತು ಮಳೆ ನೀರು ನಿಲ್ಲದಂತೆ ಬಸಿಗಾಲುವೆಗಳನ್ನು ಸದಾ ತೆರೆದಿಡಿ.
+   - **ಕಟ್ಟುನಿಟ್ಟಿನ ಎಚ್ಚರಿಕೆ**: ಕಾಯಿ ಇಳಿಯುವ ಕಡ್ಡಿಗಳು (Pegs) ಮಣ್ಣಿಗೆ ಇಳಿಯಲು ಪ್ರಾರಂಭಿಸಿರುವುದರಿಂದ **35 ದಿನಗಳ ನಂತರ ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ಆಳವಾದ ಎಡೆಕುಂಟೆ ಅಥವಾ ಯಾಂತ್ರಿಕ ಕಳೆ ತೆಗೆಯುವುದನ್ನು ಮಾಡಬೇಡಿ**. ಕಡ್ಡಿಗಳು ತುಂಡಾದರೆ ಶೇ. 30–40 ರಷ್ಟು ಇಳುವರಿ ಕುಸಿಯುತ್ತದೆ. ಕಳೆಗಳನ್ನು ಕೈಯಿಂದ ಮಾತ್ರ ಕೀಳಿ.
+   - ಕಡ್ಡಿಗಳು ಮಣ್ಣಿಗೆ ಸುಲಭವಾಗಿ ಇಳಿಯಲು ಸಾಲುಗಳಲ್ಲಿ ಲಘು ನೀರಾವರಿ (25–30 ಮಿ.ಮೀ) ಒದಗಿಸಿ ಮಣ್ಣನ್ನು ಮೃದುವಾಗಿಡಿ ಮತ್ತು ಮಳೆ ನೀರು ನಿಲ್ಲದಂತೆ ಬಸಿಗಾಲುವೆಗಳನ್ನು ಸದಾ ತೆರೆದಿಡಿ.
 3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
-   - **ಈ ಹಂತದ ಪ್ರಮುಖ ಕೀಟ ಮತ್ತು ರೋಗಗಳು**:
-     1. **ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ರೋಗ** (*Cercospora arachidicola / Phaeoisariopsis personata*): ಎಲೆಗಳ ಮೇಲೆ ಕಂದು/ಕಪ್ಪು ದುಂಡಗಿನ ಚುಕ್ಕೆಗಳು.
-     2. **ತುಕ್ಕು ರೋಗ** (*Puccinia arachidis*): ಎಲೆಗಳ ಕೆಳಭಾಗದಲ್ಲಿ ಕಿತ್ತಳೆ-ಕಂದು ಬಣ್ಣದ ರೇಣು ಗುಳ್ಳೆಗಳು.
-     3. **ತಂಬಾಕು ಕಂಬಳಿಹುಳು / ಸ್ಪೊಡೋಪ್ಟೆರಾ** (*Spodoptera litura*): ಎಲೆಗಳನ್ನು ಜರಡಿಯಂತೆ ತಿನ್ನುವ ಹಸಿರು/ಕಂದು ಹುಳುಗಳು.
-     4. **ಎಲೆ ಸುರುಳಿ ಹುಳು (Leaf Miner)** (*Aproaerema modicella*): ಎಲೆಗಳ ಒಳಗೆ ಗೂಡು ಕಟ್ಟಿ ಎಲೆ ಒಣಗಿಸುವುದು.
-     5. **ನುಸಿ ಮತ್ತು ಥ್ರಿಪ್ಸ್ (Thrips)**: ಎಲೆ ಮುದುರುವಿಕೆ ಹಾಗೂ ಮೊಗ್ಗು ಕೊಳೆ ರೋಗ (PBND) ಹರಡುವ ಕೀಟಗಳು.
+   - **ಈ ಹಂತದ ಪ್ರಮುಖ ಕೀಟ ಮತ್ತು ರೋಗಗಳು**: ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ರೋಗ (*Cercospora*), ತುಕ್ಕು ರೋಗ (*Puccinia*), ತಂಬಾಕು ಕಂಬಳಿಹುಳು (*Spodoptera litura*), ಎಲೆ ಸುರುಳಿ ಹುಳು (*Aproaerema modicella*), ಥ್ರಿಪ್ಸ್.
    - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**:
-     - *ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ಮತ್ತು ತುಕ್ಕು ರೋಗಕ್ಕೆ*: **ಹೆಕ್ಸಾಕೊನಾಜೋಲ್ 5% EC @ 1 ಮಿ.ಲೀ/ಲೀಟರ್** (ಎಕರೆಗೆ 200 ಮಿ.ಲೀ) ಅಥವಾ **ಟೆಬುಕೊನಾಜೋಲ್ 25.9% EC @ 1 ಮಿ.ಲೀ/ಲೀಟರ್** ಅಥವಾ **ಮ್ಯಾಂಕೋಜೆಬ್ 75% WP @ 2 ಗ್ರಾಂ/ಲೀಟರ್** ನೀರಿಗೆ ಬೆರೆಸಿ ಸಿಂಪಡಿಸಿ.
-     - *ಸ್ಪೊಡೋಪ್ಟೆರಾ ಮತ್ತು ಎಲೆ ಸುರುಳಿ ಹುಳುವಿಗೆ*: **ಕ್ಲೋರಾಂಟ್ರಾನಿಲಿಪ್ರೋಲ್ 18.5% SC @ 0.3 ಮಿ.ಲೀ/ಲೀಟರ್** (ಎಕರೆಗೆ 60 ಮಿ.ಲೀ) ಅಥವಾ **ಎಮಾಮೆಕ್ಟಿನ್ ಬೆಂಜೊಯೇಟ್ 5% SG @ 0.4 ಗ್ರಾಂ/ಲೀಟರ್** (ಎಕರೆಗೆ 80 ಗ್ರಾಂ) ಸಿಂಪಡಿಸಿ.
-     - *ಥ್ರಿಪ್ಸ್ ಮತ್ತು ನುಸಿ ಕೀಟಗಳಿಗೆ*: **ಇಮಿಡಾಕ್ಲೋಪ್ರಿಡ್ 17.8% SL @ 0.3 ಮಿ.ಲೀ/ಲೀಟರ್** ಅಥವಾ **ಡೈಮೆಥೋಯೇಟ್ 30% EC @ 1.7 ಮಿ.ಲೀ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
+     * ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ಮತ್ತು ತುಕ್ಕು ರೋಗಕ್ಕೆ: **ಮ್ಯಾಂಕೋಜೆಬ್ 75 WP @ 2 ಗ್ರಾಂ/ಲೀಟರ್** ಅಥವಾ **ಹೆಕ್ಸಾಕೊನಾಜೋಲ್ 5 EC @ 1 ಮಿ.ಲೀ/ಲೀಟರ್** ಅಥವಾ **ಟೆಬುಕೊನಾಜೋಲ್ 25.9 EC @ 1 ಮಿ.ಲೀ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ (ಹೆಕ್ಟೇರಿಗೆ 500 ಲೀಟರ್ ನೀರು).
+     * ಕಂಬಳಿಹುಳು / ಎಲೆ ಸುರುಳಿ ಹುಳುಗೆ: **ಕ್ಲೋರಾಂಟ್ರಾನಿಲಿಪ್ರೋಲ್ 18.5 SC @ 0.3 ಮಿ.ಲೀ/ಲೀಟರ್** (ಎಕರೆಗೆ 60 ಮಿ.ಲೀ) ಅಥವಾ **ಎಮಾಮೆಕ್ಟಿನ್ ಬೆಂಜೊಯೆಟ್ 5 SG @ 0.4 ಗ್ರಾಂ/ಲೀಟರ್** (ಎಕರೆಗೆ 80 ಗ್ರಾಂ) ಸಿಂಪಡಿಸಿ.
+     * ಥ್ರಿಪ್ಸ್ ಮತ್ತು ನುಸಿ ಕೀಟಗಳಿಗೆ: **ಇಮಿಡಾಕ್ಲೋಪ್ರಿಡ್ 17.8 SL @ 0.3 ಮಿ.ಲೀ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
    - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**:
-     - *ಟಿಕ್ಕಾ ಮತ್ತು ಶಿಲೀಂಧ್ರ ರೋಗಗಳಿಗೆ*: **ಸ್ಯೂಡೋಮೊನಾಸ್ ಫ್ಲೋರೊಸೆನ್ಸ್ 1% WP @ 10 ಗ್ರಾಂ/ಲೀಟರ್** ಅಥವಾ **ಟ್ರೈಕೋಡರ್ಮಾ ವಿರಿಡೆ @ 10 ಗ್ರಾಂ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
-     - *ಸ್ಪೊಡೋಪ್ಟೆರಾ ಮತ್ತು ಕಂಬಳಿಹುಳುವಿಗೆ*: **ನೊಮುರಿಯಾ ರಿಲೈ (Nomuraea rileyi) @ 2 ಕೆಜಿ/ಹೆ** ಅಥವಾ **5% ಬೇವಿನ ಬೀಜದ ಕಷಾಯ (NSKE @ 50 ಮಿ.ಲೀ/ಲೀಟರ್)** ಅಥವಾ **SlNPV @ 250 LE/ಹೆ** ಸಿಂಪಡಿಸಿ.
-     - *ಥ್ರಿಪ್ಸ್ ಕೀಟಕ್ಕೆ*: **ವರ್ಟಿಸಿಲಿಯಂ ಲೆಕಾನಿ (Verticillium lecanii) @ 5 ಗ್ರಾಂ/ಲೀಟರ್** ಅಥವಾ **ಅಜಾಡಿರಾಕ್ಟಿನ್ 1500 ppm @ 5 ಮಿ.ಲೀ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
+     * **5% ಬೇವಿನ ಬೀಜದ ಕಷಾಯ (NSKE @ 50 ಮಿ.ಲೀ/ಲೀಟರ್)** ಅಥವಾ *ಸ್ಯೂಡೋಮೊನಾಸ್ ಫ್ಲೋರೊಸೆನ್ಸ್* 1% WP @ 10 ಗ್ರಾಂ/ಲೀಟರ್ ಸಿಂಪಡಿಸಿ.
+     * ಕಂಬಳಿಹುಳು ನಿಯಂತ್ರಣಕ್ಕೆ *ನೊಮುರಿಯಾ ರಿಲೈ* (Nomuraea rileyi) ಜೈವಿಕ ಶಿಲೀಂಧ್ರ @ 2 ಕೆಜಿ/ಹೆಕ್ಟೇರ್‌ಗೆ ಬಳಸಿ.
    - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**:
-     - ಎಕರೆಗೆ **4–5 ಸ್ಪೊಡೋಪ್ಟೆರಾ ಮೋಹಕ ಬಲೆಗಳನ್ನು (Pheromone traps)** ಅಳವಡಿಸಿ.
-     - ಥ್ರಿಪ್ಸ್ ಮತ್ತು ಎಲೆ ಸುರುಳಿ ಕೀಟ ಕಣ್ಗಾವಲಿಗೆ ಎಕರೆಗೆ **10–12 ಹಳದಿ ಅಂಟು ಬಲೆಗಳನ್ನು** ಅಳವಡಿಸಿ.
-     - ಕಂಬಳಿಹುಳುವಿನ ಮೊಟ್ಟೆಯ ಗುಂಪುಗಳು ಮತ್ತು ಎಳೆಯ ಮರಿಹುಳುಗಳನ್ನು ಕೈಯಿಂದ ಆರಿಸಿ ನಾಶಪಡಿಸಿ.
-     - ಹೊಲದ ಸುತ್ತ 3 ಸಾಲು ಸಜ್ಜೆ ಅಥವಾ ಜೋಳವನ್ನು ಗಡಿ ಬೆಳೆಯಾಗಿ ಬಿತ್ತಿ ಕೀಟಗಳ ಚಲನೆಯನ್ನು ತಡೆಯಿರಿ.
+     * ಸ್ಪೊಡೋಪ್ಟೆರಾ ಕೀಟ ಕಣ್ಗಾವಲಿಗೆ ಎಕರೆಗೆ **4–5 ಮೋಹಕ ಬಲೆಗಳನ್ನು (Pheromone traps)** ಅಳವಡಿಸಿ.
+     * ಥ್ರಿಪ್ಸ್ ಮತ್ತು ರಸಹೀರುವ ಕೀಟಗಳಿಗೆ ಎಕರೆಗೆ **10–12 ಹಳದಿ ಮತ್ತು ನೀಲಿ ಅಂಟು ಬಲೆಗಳನ್ನು** ಅಳವಡಿಸಿ.
+     * ಮೊಟ್ಟೆಯ ಗುಂಪುಗಳನ್ನು ಕೈಯಿಂದ ಆರಿಸಿ ನಾಶಪಡಿಸಿ ಮತ್ತು ಹೊಲದ ಸುತ್ತ 3 ಸಾಲು ಸಜ್ಜೆ/ಜೋಳವನ್ನು ಗಡಿ ಬೆಳೆಯಾಗಿ ಬೆಳೆಯಿರಿ.
 
 ### 🌦️ ಐಎಂಡಿ 5-ದಿನಗಳ ಹವಾಮಾನ ಆಧಾರಿತ ಕೃಷಿ ಸಲಹೆ
-1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ 5 ದಿನಗಳಲ್ಲಿ ಒಟ್ಟು ${o} ಮಿ.ಮೀ ಮಳೆ ಮುನ್ಸೂಚನೆಯಿರುವುದರಿಂದ ಮಣ್ಣಿನಲ್ಲಿ ತೇವಾಂಶ ಹದವಾಗಿದ್ದಾಗ ಕಾಯಿ ಇಳಿಯಲು (Pegging) ಅನುಕೂಲವಾಗುವಂತೆ ಜಿಪ್ಸಮ್ ಬುಡಕ್ಕೆ ಹಾಕಿ. 
-2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಕೀಟನಾಶಕ/ಶಿಲೀಂಧ್ರನಾಶಕ ಸಿಂಪಡಣೆಯನ್ನು ಮಳೆ ಇಲ್ಲದ ಶುಷ್ಕ ಮುಂಜಾನೆ (6:30–9:00 AM) ವೇಳೆಯಲ್ಲಿ ಗಾಳಿಯ ವೇಗ <8 ಕಿ.ಮೀ/ಗಂಟೆ ಇದ್ದಾಗ ಮಾತ್ರ ಕೈಗೊಳ್ಳಿ.
-3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ಹೆಚ್ಚಿನ ಬೆಳಗಿನ ಆರ್ದ್ರತೆ (>85–97%) ಮತ್ತು ಮೋಡ ಕವಿದ ವಾತಾವರಣವು ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ಮತ್ತು ಸ್ಪೊಡೋಪ್ಟೆರಾ ಹುಳುಗಳ ಉಲ್ಬಣಕ್ಕೆ ಪೂರಕವಾಗಿದೆ; ಪ್ರತಿ 3 ದಿನಗಳಿಗೊಮ್ಮೆ ಕೆಳ ಎಲೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.
+1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ 5 ದಿನಗಳಲ್ಲಿ ಒಟ್ಟು ${o} ಮಿ.ಮೀ ಮಳೆ ಮುನ್ಸೂಚನೆಯಿರುವುದರಿಂದ ಮಣ್ಣಿನಲ್ಲಿ ತೇವಾಂಶವಿರುವಾಗ ಜಿಪ್ಸಮ್ ಅನ್ನು ಗಿಡಗಳ ಬುಡಕ್ಕೆ ಹಾಕಿ ಲಘು ಮಣ್ಣು ಏರಿಸಿ, ಇದರಿಂದ ಕ್ಯಾಲ್ಸಿಯಂ ಬೇಗನೆ ಕರಗಿ ಕಾಯಿಗಳ ವಲಯಕ್ಕೆ ತಲುಪುತ್ತದೆ.
+2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಎಲೆ ಪೋಷಕಾಂಶ (2% DAP / Planofix) ಅಥವಾ ಕೀಟನಾಶಕ ಸಿಂಪಡಣೆಯನ್ನು ಮಳೆ ಇಲ್ಲದ ಶುಷ್ಕ ಮುಂಜಾನೆ (6:30–9:00 AM) ವೇಳೆಯಲ್ಲಿ ಗಾಳಿಯ ವೇಗ <8 ಕಿ.ಮೀ/ಗಂಟೆ ಇದ್ದಾಗ ನಡೆಸಿ.
+3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ಹೆಚ್ಚಿನ ಬೆಳಗಿನ ಆರ್ದ್ರತೆ (>85%) ಮತ್ತು ಮೋಡ ಕವಿದ ವಾತಾವರಣವು ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ರೋಗ ಮತ್ತು ಸ್ಪೊಡೋಪ್ಟೆರಾ ಹುಳುಗಳ ಉಲ್ಬಣಕ್ಕೆ ಪೂರಕವಾಗಿದೆ; ಪ್ರತಿ 3 ದಿನಗಳಿಗೊಮ್ಮೆ ಕೆಳ ಎಲೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.
 
 ### ⚠️ ರೈತರಿಗೆ ಪ್ರಮುಖ ಸಂದೇಶ
-45 ದಿನಗಳ ನಂತರ ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ಆಳವಾದ ಎಡೆಕುಂಟೆ ಹೊಡೆಯಬೇಡಿ. ಕಾಯಿ ಇಳಿಯುವ ಕಡ್ಡಿಗಳಿಗೆ ಹಾನಿಯಾಗದಂತೆ ಕೈಯಿಂದ ಮಾತ್ರ ಕಳೆ ಕೀಳಿ.
+**ಬಂಗಾರದ ನಿಯಮ**: 35 ದಿನಗಳ ನಂತರ ಗಿಡಗಳ ಕಾಯಿ ಇಳಿಯುವ ಕಡ್ಡಿಗಳಿಗೆ ಹಾನಿಯಾಗದಂತೆ ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ಆಳವಾದ ಎಡೆಕುಂಟೆ ಹೊಡೆಯಬೇಡಿ. 30–40 ದಿನಗಳ ಹಂತದಲ್ಲಿ ಎಕರೆಗೆ 200 ಕೆಜಿ ಜಿಪ್ಸಮ್ ನೀಡುವುದು ಕಡಲೆಕಾಯಿಯ ಇಳುವರಿ ನಿರ್ಧರಿಸುವ ಅತಿ ಮುಖ್ಯ ಅಂಶವಾಗಿದೆ.
 
 ### ಮೂಲಗಳು
-[1] KSNUAHS Shivamogga — Groundnut Package of Practices (PoP 2026)
+[1] KSNUAHS ಶಿವಮೊಗ್ಗ — ಕಡಲೆಕಾಯಿ ಕೃಷಿ ಕೈಪಿಡಿ (PoP 2026)
     https://uahs.edu.in/
-[2] ICAR-IIGR — Directorate of Groundnut Research
-    https://www.icar-iigr.org.in/`,crop:r,intent:`pest_disease`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIGR Groundnut Research`,url:`https://www.icar-iigr.org.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`kn`,outOfScope:!1,farmContext:e.farmContext,weather:a}:{answer:`### Diagnosis & Direct Answer
-At **45 Days After Sowing (DAS)**, your **${s} Groundnut crop** in **${i}** is at the **Peak Flowering to Active Peg Penetration & Early Pod Development / Pegging Stage**. In this physiological stage, aerial pegs (gynophores) are actively elongating and penetrating 4–7 cm into the soil to initiate subterranean pod expansion. The crop is transitioning into the upcoming **Pod Development and Kernel Filling Stage (55–75 DAS)**. Safeguarding peg entry, supplying calcium, and preventing canopy defoliation now is decisive for achieving maximum pod filling and preventing empty pods ("pops").
-
-### What to do & Recommended Field Operations
-1. **[Core Stage Operation & Higher Yield Priority — Gypsum & Foliar Nutrition at 40–45 DAS]**:
-   - **Top-Dress Gypsum @ 500 kg/ha (200 kg/acre)**: Broadcast gypsum around the root zone followed by light earthing up. Calcium (Ca) and Sulfur (S) are absorbed directly by developing pods from the moist soil solution to form strong shells, maximize kernel weight, and synthesize oil.
-   - **Foliar Booster Nutrition**: Spray **2% DAP (20 g/L)** + **Planofix (NAA) @ 0.25 mL/L water** (or 19:19:19 @ 5 g/L + Borax @ 1 g/L) at 40–45 DAS to arrest flower/peg drop and stimulate uniform pod setting.
-   - **Micronutrient Correction**: If foliage shows interveinal yellowing (chlorosis), spray **Zinc Sulphate @ 2 g/L + Ferrous Sulphate @ 2 g/L + Citric acid @ 0.5 g/L**.
-2. **[Field & Soil Management]**:
-   - **CRITICAL CULTURAL RULE**: Strictly **STOP all mechanical hoeing, cultivation, and deep intercultivation** after 35–40 DAS to prevent severing or dislodging tender pegs entering the soil (which causes 30–40% pod loss).
-   - Maintain light, friable moisture in the top 10 cm soil layer for easy peg penetration. Keep field drainage furrows open to avoid waterlogging after rain.
-3. **[Pest & Disease Management — 3 Approaches]**:
-   - **Major Pests & Diseases at 45 DAS**:
-     1. **Tikka Leaf Spot** (*Cercospora arachidicola / Phaeoisariopsis personata*): Circular reddish-brown/black necrotic leaf lesions with yellow halos.
-     2. **Rust** (*Puccinia arachidis*): Orange-brown powdery pustules on the lower leaf surface.
-     3. **Tobacco Caterpillar / Spodoptera** (*Spodoptera litura*): Defoliation and skeletonization of leaves.
-     4. **Groundnut Leaf Miner** (*Aproaerema modicella*): Blotch mines and leaf webbing.
-     5. **Thrips & Jassids**: Leaf margin curling and transmission of Peanut Bud Necrosis Virus (PBNV).
-   - **Chemical Control (PoP 2026)**:
-     - *For Tikka Leaf Spot & Rust*: Spray **Hexaconazole 5% EC @ 1 mL/L (500 mL/ha)** or **Tebuconazole 25.9% EC @ 1 mL/L** or **Mancozeb 75% WP @ 2 g/L (1 kg/ha)** in 500 L water/ha.
-     - *For Spodoptera & Leaf Miner*: Spray **Chlorantraniliprole 18.5% SC @ 0.3 mL/L (150 mL/ha)** or **Emamectin Benzoate 5% SG @ 0.4 g/L (200 g/ha)**.
-     - *For Thrips & Sucking Pests*: Spray **Imidacloprid 17.8% SL @ 0.3 mL/L** or **Dimethoate 30% EC @ 1.7 mL/L**.
-   - **Biological & Organic Control**:
-     - *For Tikka & Rust*: Foliar spray of **Pseudomonas fluorescens 1% WP @ 10 g/L (2 kg/ha)** or **Trichoderma viride @ 10 g/L**.
-     - *For Spodoptera & Leaf Miner*: Spray **Nomuraea rileyi @ 2 kg/ha** or **5% Neem Seed Kernel Extract (NSKE @ 50 mL/L)** or **SlNPV @ 250 LE/ha**.
-     - *For Thrips*: Spray **Verticillium lecanii 1.15% WP @ 5 g/L** or **Azadirachtin 1500 ppm @ 5 mL/L**.
-   - **IPM & Cultural Practices**:
-     - Install **4–5 Spodoptera litura Pheromone traps/acre** to monitor moth population.
-     - Erect **10–12 Yellow Sticky Traps/acre** for continuous thrips and leaf miner monitoring.
-     - Manually collect and destroy egg masses and gregarious young caterpillars.
-     - Plant 3 border rows of pearl millet or sorghum as an insect barrier crop.
-
-### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
-1. **[Question-Specific Weather Advisory]**: With ${o} mm cumulative rainfall expected in ${i}, utilize moist soil conditions to ensure easy peg penetration. If gypsum has not yet been applied, broadcast immediately when soil is moist to enable rapid calcium uptake.
-2. **[Field Operation / Spray Window]**: Carry out fungicide or insecticide sprays strictly during calm morning hours (6:30–9:00 AM) or late evening (4:30–6:30 PM) when wind speed is <8 km/h.
-3. **[Micro-Climate & Agronomic Risk Alert]**: Forecasted high relative humidity (>85–97%) combined with warm day temperatures elevates micro-climatic risk of Tikka leaf spot and Spodoptera outbreaks; scout the lower canopy every 3 days.
-
-### ⚠️ Important Message for Farmer
-Strictly avoid mechanical hoeing or deep intercultivation from 45 DAS onwards. Only remove weeds manually by hand without pulling soil away from plant crowns.
-
-### Sources
-[1] KSNUAHS Shivamogga — Groundnut Package of Practices (PoP 2026)
-    https://uahs.edu.in/
-[2] ICAR-IIGR — Directorate of Groundnut Research
-    https://www.icar-iigr.org.in/`,crop:r,intent:`pest_disease`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIGR Groundnut Research`,url:`https://www.icar-iigr.org.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}:r===`groundnut`&&(n.includes(`30 day`)||n.includes(`30 days`)||n.includes(`pegging`)||n.includes(`higher yield`)||n.includes(`rainfall`))?t?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
-30 ದಿನಗಳ ವಯಸ್ಸಿನ ಕಡಲೆಕಾಯಿ ಬೆಳೆಯು **ಕವಲೊಡೆಯುವಿಕೆಯಿಂದ ಆರಂಭಿಕ ಹೂವಾಡುವಿಕೆ ಹಂತದಲ್ಲಿದ್ದು (Vegetative to Early Flowering Stage)**, ಅಧಿಕ ಇಳುವರಿ ಪಡೆಯಲು ಅತ್ಯಂತ ಪ್ರಮುಖ ಘಟ್ಟದಲ್ಲಿದೆ. ಈ ಸಮಯದಲ್ಲಿ ಮಳೆ ಮುನ್ಸೂಚನೆಗೆ ಅನುಗುಣವಾಗಿ ಸಮರ್ಪಕ ಕಳೆ ನಿಯಂತ್ರಣ, ಜಿಪ್ಸಮ್ ಬಳಕೆ ಹಾಗೂ ರೋಗ ಕಣ್ಗಾವಲು ನಿರ್ವಹಣೆ ಮಾಡುವುದು ಅನಿವಾರ್ಯ.
-
-### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
-1. **[ಪ್ರಸ್ತುತ ಹಂತದ ಮುಖ್ಯ ಕ್ರಮ ಮತ್ತು ಪೋಷಕಾಂಶ/ಗೊಬ್ಬರದ ನಿಖರ ಪ್ರಮಾಣ — 30 DAS]**: 30 ರಿಂದ 40 ದಿನಗಳ ಹಂತದಲ್ಲಿ ಎಕರೆಗೆ **200 ಕೆಜಿ (ಹೆಕ್ಟೇರಿಗೆ 500 ಕೆಜಿ)** ಜಿಪ್ಸಮ್ ಅನ್ನು ಗಿಡಗಳ ಬುಡಕ್ಕೆ ಹಾಕಿ ಮಣ್ಣು ಏರಿಸಬೇಕು. ಕ್ಯಾಲ್ಸಿಯಂ ಅಂಶವು ಕಾಯಿಗಳಲ್ಲಿ ಕಾಳು ತುಂಬಲು (Pod Filling) ಮತ್ತು ಎಣ್ಣೆ ಅಂಶ ಹೆಚ್ಚಿಸಲು #1 ನಿರ್ಣಾಯಕ ಅಂಶವಾಗಿದೆ. ಹೂವಾಡುವಿಕೆ ಉತ್ತೇಜಿಸಲು **2% ಡಿಎಪಿ (DAP @ 20 ಗ್ರಾಂ/ಲೀಟರ್)** ಅಥವಾ **ಪ್ಲಾನೋಫಿಕ್ಸ್ (NAA @ 0.25 ಮಿ.ಲೀ/ಲೀಟರ್)** ಸಿಂಪಡಿಸಿ.
-2. **[ಕಳೆ ನಿರ್ವಹಣೆ ಹಾಗೂ ಎಡೆಕುಂಟೆ]**: 30 ದಿನಗಳೊಳಗೆ ಕೊನೆಯ ಕೈಕಳೆ ಮತ್ತು ಲಘು ಎಡೆಕುಂಟೆ ಮುಗಿಸಿಕೊಳ್ಳಿ. **ಗಮನಿಸಿ**: ಕಾಯಿ ಇಳಿಯುವ ಕಡ್ಡಿಗಳು (Pegs) ಮಣ್ಣಿಗೆ ಇಳಿಯಲು ಪ್ರಾರಂಭಿಸಿದ ನಂತರ (35 ದಿನಗಳ ನಂತರ) ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ಆಳವಾದ ಎಡೆಕುಂಟೆ ಹೊಡೆಯಬಾರದು.
-3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
-   - **ಪ್ರಮುಖ ರೋಗ/ಕೀಟಗಳು**: ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ರೋಗ, ತುಕ್ಕು ರೋಗ, ಎಲೆ ಸುರುಳಿ ಹುಳು.
-   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**: ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ರೋಗ ಕಂಡುಬಂದರೆ **ಮ್ಯಾಂಕೋಜೆಬ್ 75 WP @ 2 ಗ್ರಾಂ/ಲೀಟರ್** ಅಥವಾ **ಹೆಕ್ಸಾಕೊನಾಜೋಲ್ 5 EC @ 1 ಮಿ.ಲೀ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
-   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**: 5% ಬೇವಿನ ಕಷಾಯ (NSKE @ 50 ಮಿ.ಲೀ/ಲೀಟರ್) ಅಥವಾ *ಸ್ಯೂಡೋಮೊನಾಸ್ ಫ್ಲೋರೊಸೆನ್ಸ್* @ 10 ಗ್ರಾಂ/ಲೀಟರ್ ಸಿಂಪಡಿಸಿ.
-   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**: ಎಲೆ ಸುರುಳಿ ಹುಳು ಮತ್ತು ಸ್ಪೊಡೋಪ್ಟೆರಾ ಕೀಟಕ್ಕೆ ಎಕರೆಗೆ 4-5 ಮೋಹಕ ಬಲೆಗಳನ್ನು (Pheromone traps) ಅಳವಡಿಸಿ.
-
-### 🌦️ ಐಎಂಡಿ 5-ದಿನಗಳ ಹವಾಮಾನ ಆಧಾರಿತ ಕೃಷಿ ಸಲಹೆ
-1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ 5 ದಿನಗಳಲ್ಲಿ ಒಟ್ಟು ${o} ಮಿ.ಮೀ ಮಳೆ ನಿರೀಕ್ಷೆಯಿರುವುದರಿಂದ ಜಿಪ್ಸಮ್ ಅನ್ನು ಮಣ್ಣಿನಲ್ಲಿ ತೇವಾಂಶವಿರುವಾಗ ಬುಡಕ್ಕೆ ಹಾಕಿ ಲಘು ಮಣ್ಣು ಏರಿಸಿ.
-2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಎಲೆಗಳ ಪೋಷಕಾಂಶ (2% DAP / Planofix) ಅಥವಾ ಶಿಲೀಂಧ್ರನಾಶಕ ಸಿಂಪಡಣೆಯನ್ನು ಮಳೆ ಇಲ್ಲದ ಶುಷ್ಕ ಮುಂಜಾನೆ (6:30–9:00 AM) ವೇಳೆಯಲ್ಲಿ ಗಾಳಿಯ ವೇಗ <8 ಕಿ.ಮೀ/ಗಂಟೆ ಇದ್ದಾಗ ನಡೆಸಿ.
-3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ಹೆಚ್ಚಿನ ಆರ್ದ್ರತೆಯಿಂದಾಗಿ ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ರೋಗ ಮತ್ತು ಎಲೆ ತಿನ್ನುವ ಹುಳುಗಳ ಬಾಧೆ ಹೆಚ್ಚಾಗುವ ಸಾಧ್ಯತೆಯಿದ್ದು, ತೋಟವನ್ನು ನಿರಂತರವಾಗಿ ಪರಿಶೀಲಿಸಿ.
-
-### ⚠️ ರೈತರಿಗೆ ಪ್ರಮುಖ ಸಂದೇಶ
-**${s}** ತಳಿಯಲ್ಲಿ 30-40 ದಿನಗಳ ಹಂತದಲ್ಲಿ ಜಿಪ್ಸಮ್ ನೀಡುವುದನ್ನು ಮರೆಯಬೇಡಿ. 35 ದಿನಗಳ ನಂತರ ಗಿಡಗಳ ಬೇರು/ಕಡ್ಡಿಗಳಿಗೆ ಹಾನಿಯಾಗದಂತೆ ಎಡೆಕುಂಟೆ ನಿಲ್ಲಿಸಿ. ಹೊಲದಲ್ಲಿ ನೀರು ನಿಲ್ಲದಂತೆ ಬಸಿಗಾಲುವೆಗಳನ್ನು ಸದಾ ತೆರೆದಿಡಿ.
-
-### ಮೂಲಗಳು
-[1] KSNUAHS Shivamogga — Groundnut Package of Practices (PoP 2026)
-    https://uahs.edu.in/
-[2] ICAR-IIGR — Directorate of Groundnut Research
+[2] ICAR-ಕಡಲೆಕಾಯಿ ಸಂಶೋಧನಾ ನಿರ್ದೇಶನಾಲಯ (ICAR-DGR)
     https://www.icar-iigr.org.in/`,crop:r,intent:`nutrient_soil`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIGR Groundnut Research`,url:`https://www.icar-iigr.org.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`kn`,outOfScope:!1,farmContext:e.farmContext,weather:a}:{answer:`### Diagnosis & Direct Answer
-At **30 days after sowing (DAS)**, your groundnut crop is in the **Vegetative Branching to Early Flowering Stage** and is actively preparing for pegging. Based on current rainfall and soil moisture conditions in **${i}**, executing timely gypsum application, final light intercultivation, and stage-specific foliar nutrition is decisive for achieving maximum pod filling and yield.
+Dear farmer, your **${s}** groundnut crop in **${i}** at **${n}** is currently in the critical **Peak Flowering to Active Pegging & Early Pod Initiation Stage**. Physiologically, fertilized flowers have developed into specialized peg structures (gynophores) that are actively growing downward and penetrating 4–7 cm into the soil to begin subterranean pod expansion.
+
+This stage is preparing to transition into **Pod Development & Kernel Filling (55–75 DAS)**. In sandy loam soils, adequate calcium in the pod zone is critical because developing pods absorb calcium directly from the moist soil solution, not from the root system. Executing timely gypsum application, providing foliar nutritional boosters, and strictly avoiding mechanical hoeing right now is the #1 determinant of high shell weight, filled kernels, and final yield.
 
 ### What to do & Recommended Field Operations
-1. **[Core Stage Operation & Higher Yield Priority — Gypsum Top-Dressing @ 500 kg/ha (200 kg/acre)]**: Apply gypsum at 30–40 DAS around the root zone followed by light earthing up. Calcium from gypsum is indispensable for pod development and preventing empty pods ("pops"). Foliar spray **2% DAP (20 g/L)** or **Planofix (NAA) @ 0.25 mL/L water** at flowering to arrest flower drop.
-2. **[Final Weeding & Intercultivation]**: Complete all hand weeding and light hoeing now (25–30 DAS). **Crucial Warning**: Stop all mechanical intercultivation after 35–40 DAS to avoid severing delicate developing pegs entering the soil.
+1. **[Core Stage Operation & Higher Yield Priority — ${n} Stage & Fertilizer/Gypsum Schedule]**:
+   - **Growth Stage**: Peak Flowering to Active Pegging (30–45 DAS).
+   - **Gypsum Top-Dressing Schedule**: Broadcast **Gypsum @ 500 kg/ha (200 kg/acre)** around the plant root basins at 30–40 DAS, followed immediately by light earthing up. Gypsum provides 29% Calcium and 19% Sulfur, which eliminates empty pods ("pops"), hardens pod shells, and significantly boosts kernel oil content.
+   - **Complete Fertilizer Schedule**: Basal dose was NPK @ 25:50:25 kg/ha (10:20:10 kg/acre) + Zinc Sulphate @ 25 kg/ha at sowing; Gypsum at 30–40 DAS serves as the primary secondary nutrient top-dressing.
+   - **Foliar Yield Boosters**: Foliar spray **2% DAP (20 g/L)** OR **Planofix (NAA) @ 0.25 mL/L water** (or **19:19:19 @ 5 g/L + Borax @ 1 g/L**) at 35–45 DAS to prevent flower/peg abortion and stimulate uniform pod setting.
+   - **Micronutrient Correction**: If interveinal chlorosis is visible, spray **Zinc Sulphate @ 2 g/L + Ferrous Sulphate @ 2 g/L**.
+2. **[Field & Soil Management]**:
+   - **CRITICAL CULTURAL RULE**: Strictly **STOP all mechanical hoeing and deep intercultivation after 35–40 DAS**. Cultivator tines will cut and mutilate tender gynophores entering the soil, causing 30–40% pod loss. Hand weed gently if needed.
+   - Provide light furrow irrigation (25–30 mm) to keep the top 10 cm soil moist and friable for easy peg penetration. Keep field drainage furrows open to avoid waterlogging after rainfall.
 3. **[Pest & Disease Management — 3 Approaches]**:
-   - **Major Pests & Diseases**: Early Tikka leaf spot, Collar rot, Leaf miner.
-   - **Chemical Control (PoP 2026)**: If early Tikka leaf spot lesions appear, spray **Mancozeb 75 WP @ 2 g/L** or **Hexaconazole 5% EC @ 1 mL/L water** (in 500 L/ha).
-   - **Biological & Organic Control**: Spray **5% Neem Seed Kernel Extract (NSKE @ 50 mL/L)** or *Pseudomonas fluorescens* 1% WP @ 10 g/L water.
-   - **IPM & Cultural Practices**: Install 4–5 pheromone traps per acre for *Spodoptera litura* and ensure clear field furrows for excess water evacuation.
+   - **Major Pests & Diseases at this Stage**: Tikka Leaf Spot (*Cercospora arachidicola / Phaeoisariopsis personata*), Rust (*Puccinia arachidis*), Tobacco Caterpillar (*Spodoptera litura*), Leaf miner (*Aproaerema modicella*), Thrips.
+   - **Chemical Control (PoP 2026)**:
+     * For Tikka Leaf Spot & Rust: Spray **Mancozeb 75 WP @ 2 g/L (1 kg/ha)** OR **Hexaconazole 5% EC @ 1 mL/L (500 mL/ha)** OR **Tebuconazole 25.9% EC @ 1 mL/L** in 500 L water/ha.
+     * For *Spodoptera* & Leaf miner: Spray **Chlorantraniliprole 18.5% SC @ 0.3 mL/L (60 mL/acre)** OR **Emamectin Benzoate 5% SG @ 0.4 g/L (80 g/acre)**.
+     * For Thrips & Sucking Pests: Spray **Imidacloprid 17.8% SL @ 0.3 mL/L** or **Dimethoate 30% EC @ 1.7 mL/L**.
+   - **Biological & Organic Control**:
+     * Spray **5% Neem Seed Kernel Extract (NSKE @ 50 mL/L)** or *Pseudomonas fluorescens* 1% WP @ 10 g/L water.
+     * For *Spodoptera*, apply *Nomuraea rileyi* bio-fungicide @ 2 kg/ha or *SlNPV @ 250 LE/ha*.
+   - **IPM & Cultural Practices**:
+     * Install **4–5 Pheromone traps/acre** for *Spodoptera litura* monitoring.
+     * Install **10–12 Yellow sticky traps/acre** for thrips and leaf miner monitoring.
+     * Hand-collect and destroy egg masses and skeletonized leaves. Plant 3 border rows of pearl millet or sorghum as an insect barrier.
 
 ### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
-1. **[Question-Specific Weather Advisory]**: With ${o} mm cumulative rainfall expected across ${i}, broadcast gypsum when soil is moist to facilitate calcium solubilization into the pod zone.
-2. **[Field Operation / Spray Window]**: Schedule foliar nutritional (2% DAP / Planofix) or protective sprays strictly during dry morning windows (6:30–9:00 AM) under calm winds (<8 km/h).
-3. **[Micro-Climate & Agronomic Risk Alert]**: Forecasted high relative humidity (>85%) combined with warm temperatures elevates micro-climatic risk of early Tikka leaf spot. Ensure field drainage furrows are clear to prevent waterlogging around root zones.
+1. **[Question-Specific Weather Advisory]**: With ${o} mm cumulative rainfall forecasted in ${i}, top-dress Gypsum while soil has good workable moisture tilth so that calcium rapidly solubilizes into the pegging zone.
+2. **[Field Operation / Spray Window]**: Carry out foliar nutritional (2% DAP / Planofix) or protective sprays strictly during dry morning windows (6:30–9:00 AM) under calm winds (<8 km/h).
+3. **[Micro-Climate & Agronomic Risk Alert]**: High morning relative humidity (>85%) combined with warm day temperatures accelerates the microclimatic risk of Tikka leaf spot and *Spodoptera* larval feeding; inspect lower canopy leaves regularly.
 
 ### ⚠️ Important Message for Farmer
-For **${s}**, ensure soil is sufficiently friable for peg penetration. Strictly avoid deep intercultivation once gynophores (pegs) begin entering the soil. Timely gypsum at 30–40 DAS is the #1 yield-determining factor in groundnut.
+**Crucial Golden Rule**: Strictly avoid deep mechanical intercultivation after 35–40 DAS once gynophores (pegs) enter the soil. Top-dressing Gypsum @ 200 kg/acre at 30–40 DAS is the single most decisive operation for maximum pod yield.
 
 ### Sources
 [1] KSNUAHS Shivamogga — Groundnut Package of Practices (PoP 2026)
     https://uahs.edu.in/
-[2] ICAR-IIGR — Directorate of Groundnut Research
-    https://www.icar-iigr.org.in/`,crop:r,intent:`nutrient_soil`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIGR Groundnut Research`,url:`https://www.icar-iigr.org.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}:n.includes(`blast`)||n.includes(`disease`)&&r===`rice`?{answer:`### Diagnosis & Direct Answer
-Rice blast (*Magnaporthe oryzae*) attacks foliage and panicle necks in **${i}**, presenting as spindle-shaped lesions with grey centers and brown margins. Timely university-approved fungicidal sprays along with balanced nitrogen management provide complete control.
+[2] ICAR-Directorate of Groundnut Research (ICAR-DGR)
+    https://www.icar-iigr.org.in/`,crop:r,intent:`nutrient_soil`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIGR Groundnut Research`,url:`https://www.icar-iigr.org.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}}if(r===`rice`&&(l!==null&&l>=35&&l<=70||n.includes(`blast`)||n.includes(`tillering`)||n.includes(`panicle`)||n.includes(`fertilizer`)||n.includes(`nutrient`)||n.includes(`urea`)||n.includes(`ಗೊಬ್ಬರ`)||n.includes(`ಬ್ಲಾಸ್ಟ್`))){let n=l?`${l} DAT`:`40–50 DAT`,c=l?`${l} ದಿನಗಳ (DAT)`:`40–50 ದಿನಗಳ`;return t?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
+ರೈತ ಬಾಂಧವರೇ, ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ ನಿಮ್ಮ **${s}** ಭತ್ತದ ಬೆಳೆಯು ನಾಟಿ ಮಾಡಿದ **${c} ಹಂತದಲ್ಲಿದ್ದು, ಗರಿಷ್ಠ ಕವಲೊಡೆಯುವಿಕೆಯಿಂದ ತೆನೆ ಮೂಡುವ (Panicle Initiation - PI / Stem Elongation) ಹಂತದಲ್ಲಿದೆ**. ಪ್ರಸ್ತುತ ಕಾಂಡದ ಒಳಭಾಗದಲ್ಲಿ ಎಳೆಯ ತೆನೆಯು (Embryonic Panicle) ರೂಪುಗೊಳ್ಳಲು ಆರಂಭಿಸಿದೆ.
 
-### What to do & Recommended Field Operations
-1. **[Core Stage Operation & Higher Yield Priority — Blast Suppression & Panicle Protection]**: Arrest blast lesions before flowering to safeguard grain filling and prevent neck blast.
-2. **[Nutrient & Water Balance]**: Immediately stop further urea/nitrogen top-dressing while active spindle lesions are expanding; apply potassium to enhance leaf sheath resistance.
-3. **[Pest & Disease Management — 3 Approaches]**:
-   - **Chemical Control (PoP 2026)**: Spray **Tricyclazole 75% WP @ 0.6 g/L water** (300 g/ha in 500 L water) or **Isoprothiolane 40% EC @ 1.5 mL/L water** at first appearance.
-   - **Biological & Organic Control**: Foliar spray of *Pseudomonas fluorescens* 1% WP @ 10 g/L water at 30 and 45 DAT.
-   - **IPM & Cultural Practices**: Maintain 5 cm shallow water level without draining into adjacent fields; avoid excessive dense planting.
-
-### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
-1. **[Question-Specific Weather Advisory]**: With ${o} mm rainfall and overcast conditions in ${i}, inspect lower leaf canopy daily for expanding spindle lesions.
-2. **[Field Operation / Spray Window]**: Carry out Tricyclazole foliar sprays strictly during clear morning hours (6:30–9:00 AM) when wind speed is <8 km/h to prevent spray drift.
-3. **[Micro-Climate & Agronomic Risk Alert]**: High morning relative humidity (>90%) with intermittent cloud cover strongly accelerates fungal blast spore multiplication; inspect lower leaf whorls immediately.
-
-### ⚠️ Important Message for Farmer
-If cultivating **${s}**, monitor leaf sheath and neck closely during cloudy weather. Maintain strict spray intervals and never apply nitrogen when active lesions are spreading.
-
-### Sources
-[1] ICAR-NRRI & KSNUAHS — Rice Blast Management
-    https://icar-iirr.org/
-[2] UAS Bengaluru — Package of Practices Karnataka
-    https://www.uasbangalore.edu.in/`,crop:r,intent:`pest_disease`,citations:[{id:1,title:`ICAR-NRRI & KSNUAHS — Rice Blast`,url:`https://icar-iirr.org/`,sourceId:`icar`,relevance:.98},{id:2,title:`UAS Bengaluru — PoP Karnataka`,url:`https://www.uasbangalore.edu.in/`,sourceId:`uasb`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}:n.includes(`fall armyworm`)||r===`maize`&&(n.includes(`pest`)||n.includes(`worm`))?{answer:`### Diagnosis & Direct Answer
-Fall Armyworm (*Spodoptera frugiperda*) is the most destructive pest in maize in **${i}**, exhibiting characteristic windowing of leaves and central whorl destruction. Early whorl-directed intervention yields maximum efficacy.
-
-### What to do & Recommended Field Operations
-1. **[Core Stage Operation & Higher Yield Priority — Whorl Protection]**: Protect central whorls during knee-high (15–30 DAS) to prevent tassel and cob damage.
-2. **[Field Sanitation & Scouting]**: Scout 20 consecutive plants in 5 locations; initiate control when 5–10% of plants show early pinhole leaf damage.
-3. **[Pest & Disease Management — 3 Approaches]**:
-   - **Chemical Control (PoP 2026)**: Spray **Emamectin benzoate 5% SG @ 0.4 g/L water** or **Spinetoram 11.7% SC @ 0.5 mL/L water** directly directed into the plant whorls.
-   - **Biological & Organic Control**: Apply *Nomuraea rileyi* @ 2 kg/ha or release *Trichogramma pretiosum* parasitoid cards @ 1,00,000 eggs/ha.
-   - **IPM & Cultural Practices**: Apply dry sand-lime mix (9:1) or wood ash into whorls to physically deter feeding larvae.
-
-### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
-1. **[Question-Specific Weather Advisory]**: Based on ${o} mm rainfall in ${i}, plan whorl-directed applications during rain-free windows.
-2. **[Field Operation / Spray Window]**: Apply biopesticides or chemical sprays during late afternoon/evening (4:30–6:30 PM) to target active nocturnal larvae and avoid UV degradation.
-3. **[Micro-Climate & Agronomic Risk Alert]**: High humidity promotes rapid larval feeding; inspect funnel whorls immediately after rain showers.
-
-### ⚠️ Important Message for Farmer
-Direct spray nozzles straight into the central plant whorl where larvae feed.
-
-### Sources
-[1] ICAR-IIMR — Fall Armyworm Management in Maize
-    https://iimr.icar.gov.in/
-[2] AICRP on Maize — IPM Guidelines
-    https://aicrpmaize.icar.gov.in/`,crop:r,intent:`pest_disease`,citations:[{id:1,title:`ICAR-IIMR — Fall Armyworm Management`,url:`https://iimr.icar.gov.in/`,sourceId:`icar`,relevance:.98},{id:2,title:`AICRP on Maize — IPM Guidelines`,url:`https://aicrpmaize.icar.gov.in/`,sourceId:`aicrp`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}:r===`arecanut`&&(n.includes(`koleroga`)||n.includes(`fruit rot`)||n.includes(`mahali`)||n.includes(`rot`)||n.includes(`ಕೊಳೆರೋಗ`))?t?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
-ಅಡಿಕೆಯಲ್ಲಿ ಕೊಳೆರೋಗ ಅಥವಾ ಮಹಾಳಿ ರೋಗವು (*ಫೈಟೋಫ್ತೋರಾ ಮೀಡಿಯಾ*) ಮುಂಗಾರು ಮಳೆಯ ಸಮಯದಲ್ಲಿ ತೀವ್ರ ಕಾಯಿ ಕೊಳೆತ ಮತ್ತು ಅಕಾಲಿಕ ಕಾಯಿ ಉದುರುವಿಕೆಗೆ ಕಾರಣವಾಗುತ್ತದೆ. ಮಳೆಗಾಲದ ಆರಂಭಕ್ಕೆ ಮುನ್ನ ಬೋರ್ಡೋ ದ್ರಾವಣ ಸಿಂಪಡಣೆ ಅತ್ಯಂತ ಪರಿಣಾಮಕಾರಿ ನಿಯಂತ್ರಣ ಕ್ರಮವಾಗಿದೆ.
+ಈ ಹಂತವು ಮುಂದಿನ **ಹೊಡೆ ಒಡೆಯುವ ಹಾಗೂ ಹೂವಾಡುವ (Booting & Flowering @ 65–85 DAT) ಹಂತಕ್ಕೆ** ಬದಲಾಗಲಿದೆ. ತೆನೆ ಮೂಡುವ ಹಂತವು ತೆನೆಯಲ್ಲಿನ ಕಾಳುಗಳ ಸಂಖ್ಯೆಯನ್ನು ನಿರ್ಧರಿಸುವ ನಿರ್ಣಾಯಕ ಘಟ್ಟವಾಗಿದೆ. ಈ ಸಮಯದಲ್ಲಿ ಬ್ಲಾಸ್ಟ್ ರೋಗ ಅಥವಾ ಕಾಂಡಕೊರಕದಿಂದ ಸತ್ತ ಸುಳಿಗಳು (Dead Hearts) ಉಂಟಾಗದಂತೆ ತಡೆಯುವುದು ಹಾಗೂ ೩ನೇ ಕಂತಿನ ಸಾರಜನಕ ಮತ್ತು ಪೊಟ್ಯಾಷ್ ಗೊಬ್ಬರ ನೀಡುವುದು ಅತ್ಯಗತ್ಯ.
 
 ### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
-1. **[ಅಧಿಕ ಇಳುವರಿ ಪ್ರಮುಖ ಕ್ರಮ — ಮುನ್ನೆಚ್ಚರಿಕೆ ಬೋರ್ಡೋ ಸಿಂಪಡಣೆ]**: ಮುಂಗಾರು ಮಳೆ ಆರಂಭಕ್ಕೂ ಮುನ್ನ **1% ಬೋರ್ಡೋ ದ್ರಾವಣ** (100 ಲೀಟರ್ ನೀರಿಗೆ 1 ಕೆಜಿ ಮೈಲುತುತ್ತು + 1 ಕೆಜಿ ಸುಣ್ಣ) ಅಥವಾ **ಕಾಪರ್ ಆಕ್ಸಿಕ್ಲೋರೈಡ್ 50 WP @ 3 ಗ್ರಾಂ/ಲೀಟರ್** ಅನ್ನು ಅಡಿಕೆ ಗೊಂಚಲುಗಳಿಗೆ ಚೆನ್ನಾಗಿ ತಾಗುವಂತೆ ಸಿಂಪಡಿಸಿ.
-2. **[ಗೊಂಚಲು ಕಟ್ಟುವುದು ಮತ್ತು ನೈರ್ಮಲ್ಯ]**: ನಿರಂತರ ಮಳೆಯಿಂದ ಕಾಯಿಗಳನ್ನು ರಕ್ಷಿಸಲು ಪಾಲಿಥಿನ್ ಚೀಲಗಳಿಂದ (100 ಗೇಜ್) ಗೊಂಚಲುಗಳನ್ನು ಕಟ್ಟಿ ಮತ್ತು ಉದುರಿದ ಕೊಳೆತ ಕಾಯಿಗಳನ್ನು ಆರಿಸಿ ನಾಶಪಡಿಸಿ.
+1. **[ಪ್ರಸ್ತುತ ಹಂತದ ಮುಖ್ಯ ಕ್ರಮ ಮತ್ತು ಪೋಷಕಾಂಶ/ಗೊಬ್ಬರದ ನಿಖರ ಪ್ರಮಾಣ — ${c} ತೆನೆ ಮೂಡುವ ಹಂತ]**:
+   - **ಹಂತ**: ತೆನೆ ಮೂಡುವ ಹಂತ (Panicle Initiation @ 45–50 DAT).
+   - **ಗೊಬ್ಬರದ ಕಂತು (Fertilizer Schedule)**: 3ನೇ ಕಂತಿನ ಸಾರಜನಕವಾಗಿ ಎಕರೆಗೆ **25–30 ಕೆಜಿ ಯೂರಿಯಾ** ಜೊತೆಗೆ **15–20 ಕೆಜಿ ಎಂಒಪಿ (MOP - ಪೊಟ್ಯಾಷ್)** ಅನ್ನು ನೀಡಿ. ಪೊಟ್ಯಾಷ್ ಕಾಂಡವನ್ನು ಗಟ್ಟಿಗೊಳಿಸಿ ಬೆಂಕಿ ರೋಗದ ವಿರುದ್ಧ ನಿರೋಧಕ ಶಕ್ತಿ ನೀಡುತ್ತದೆ.
+   - **ಲಘು ಪೋಷಕಾಂಶ ಮತ್ತು ಎಲೆ ಸಿಂಪಡಣೆ**: ಆರಂಭದಲ್ಲಿ ಜಿಂಕ್ ನೀಡದಿದ್ದರೆ **ಜಿಂಕ್ ಸಲ್ಫೇಟ್ @ 2 ಗ್ರಾಂ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ. ತೆನೆ ಹೊಡೆಯುವ ಮುನ್ನ **13:0:45 (ಪೊಟ್ಯಾಸಿಯಂ ನೈಟ್ರೇಟ್) @ 5 ಗ್ರಾಂ/ಲೀಟರ್** ಸಿಂಪಡಿಸುವುದರಿಂದ ಜೊಳ್ಳು ಕಾಳುಗಳ ಸಂಖ್ಯೆ ಕಡಿಮೆಯಾಗುತ್ತದೆ.
+2. **[ಕ್ಷೇತ್ರ ಮತ್ತು ಮಣ್ಣಿನ ನಿರ್ವಹಣೆ]**:
+   - **ಆವರ್ತಕ ತೇವ ಮತ್ತು ಒಣ ಪದ್ಧತಿ (AWD)**: ತೆನೆ ಮೂಡುವ ಮತ್ತು ಹೂವಾಡುವ ಹಂತದಲ್ಲಿ ಗದ್ದೆಯಲ್ಲಿ ಸದಾ 2–3 ಸೆಂ.ಮೀ ತೆಳು ನೀರು ನಿಲ್ಲಿಸಿ; ಈ ಹಂತದಲ್ಲಿ ಗದ್ದೆ ಒಣಗದಂತೆ ಎಚ್ಚರವಹಿಸಿ.
+   - **ಗಾಳಿ-ಬೆಳಕಿನ ಸಾಲುಗಳು (Alleyways)**: ಪ್ರತಿ 8–10 ಸಾಲುಗಳಿಗೆ 1 ಅಡಿ ಜಾಗವನ್ನು ಬಿಡುವುದರಿಂದ ಸೂರ್ಯನ ಬೆಳಕು ಚೆನ್ನಾಗಿ ಬಿದ್ದು ಕಂದು ಜಿಗಿಹುಳು (BPH) ಹಾವಳಿ ತಡೆಯಬಹುದು.
 3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
-   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**: ರೋಗದ ಆರಂಭಿಕ ಲಕ್ಷಣಗಳು ಕಂಡುಬಂದರೆ **ಮೆಟಾಲಾಕ್ಸಿಲ್ + ಮ್ಯಾಂಕೋಜೆಬ್ 72 WP @ 2 ಗ್ರಾಂ/ಲೀಟರ್** ನೀರಿಗೆ ಬೆರೆಸಿ ಸಿಂಪಡಿಸಿ.
-   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**: *ಟ್ರೈಕೋಡರ್ಮಾ ಹರ್ಜಿಯಾನಮ್* ಜೈವಿಕ ಶಿಲೀಂಧ್ರನಾಶಕವನ್ನು (50 ಗ್ರಾಂ ಪ್ರತಿ ಮರಕ್ಕೆ) ಕಾಂಪೋಸ್ಟ್ ಗೊಬ್ಬರದೊಂದಿಗೆ ಬುಡಕ್ಕೆ ಸೇರಿಸಿ.
-   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**: ತೋಟದಲ್ಲಿ ನೀರು ನಿಲ್ಲದಂತೆ ಆಳವಾದ ಬಸಿಗಾಲುವೆಗಳನ್ನು (45-60 ಸೆಂ.ಮೀ) ನಿರ್ಮಿಸಿ ಸೂರ್ಯನ ಬೆಳಕು ಚೆನ್ನಾಗಿ ಬೀಳುವಂತೆ ತೋಟ ಸ್ವಚ್ಛವಾಗಿಡಿ.
+   - **ಈ ಹಂತದ ಪ್ರಮುಖ ಕೀಟ ಮತ್ತು ರೋಗಗಳು**: ಬೆಂಕಿ ರೋಗ / ಬ್ಲಾಸ್ಟ್ (*Pyricularia oryzae*), ಹಾಳೆ ಕರಕಲು ರೋಗ (*Rhizoctonia solani*), ಹಳದಿ ಕಾಂಡಕೊರಕ (*Scirpophaga incertulas*), ಕಂದು ಜಿಗಿಹುಳು (BPH), ಎಲೆ ಸುರುಳಿ ಹುಳು.
+   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**:
+     * ಬೆಂಕಿ ರೋಗಕ್ಕೆ (Blast): **ಟ್ರೈಸೈಕ್ಲೋಜೋಲ್ 75 WP @ 0.6 ಗ್ರಾಂ/ಲೀಟರ್** (ಹೆಕ್ಟೇರಿಗೆ 300 ಗ್ರಾಂ / 500 ಲೀಟರ್ ನೀರು) ಅಥವಾ **ಐಸೋಪ್ರೊಥಿಯೋಲೇನ್ 40 EC @ 1.5 ಮಿ.ಲೀ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
+     * ಹಾಳೆ ಕರಕಲು ರೋಗಕ್ಕೆ: **ಹೆಕ್ಸಾಕೊನಾಜೋಲ್ 5 SC @ 2 ಮಿ.ಲೀ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
+     * ಕಾಂಡಕೊರಕ ಮತ್ತು ಎಲೆ ಸುರುಳಿ ಹುಳುಗೆ: **ಕಾರ್ಟಾಪ್ ಹೈಡ್ರೋಕ್ಲೋರೈಡ್ 50 SP @ 2 ಗ್ರಾಂ/ಲೀಟರ್** ಅಥವಾ **ಕ್ಲೋರಾಂಟ್ರಾನಿಲಿಪ್ರೋಲ್ 18.5 SC @ 0.3 ಮಿ.ಲೀ/ಲೀಟರ್** (ಎಕರೆಗೆ 60 ಮಿ.ಲೀ) ಸಿಂಪಡಿಸಿ.
+     * ಕಂದು ಜಿಗಿಹುಳುಗೆ (BPH): **ಪೈಮೆಟ್ರೋಜೈನ್ 50 WG @ 0.6 ಗ್ರಾಂ/ಲೀಟರ್** ಅನ್ನು ಗಿಡಗಳ ಬುಡಕ್ಕೆ ತಾಗುವಂತೆ ಸಿಂಪಡಿಸಿ.
+   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**:
+     * *ಸ್ಯೂಡೋಮೊನಾಸ್ ಫ್ಲೋರೊಸೆನ್ಸ್* 1% WP @ 10 ಗ್ರಾಂ/ಲೀಟರ್ ಅಥವಾ *ಟ್ರೈಕೋಡರ್ಮಾ ಆಸ್ಪರೆಲ್ಲಮ್* @ 5 ಗ್ರಾಂ/ಲೀಟರ್ ಸಿಂಪಡಿಸಿ.
+     * ಕಾಂಡಕೊರಕ ನಿಯಂತ್ರಣಕ್ಕೆ *ಟ್ರೈಕೋಗ್ರಾಮಾ ಜಪಾನಿಕಮ್* ಪರತಂತ್ರ ಜೀವಿ ಕಾರ್ಡ್‌ಗಳನ್ನು (ಎಕರೆಗೆ 2 ಕಾರ್ಡ್‌ಗಳು) ಬಿಡುಗಡೆ ಮಾಡಿ.
+   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**:
+     * ಕಾಂಡಕೊರಕ ಪತಂಗಗಳ ಕಣ್ಗಾವಲಿಗೆ ಎಕರೆಗೆ **4–5 ಮೋಹಕ ಬಲೆಗಳನ್ನು** ಅಳವಡಿಸಿ.
+     * ಹೊಲದಲ್ಲಿ ಬ್ಲಾಸ್ಟ್ ರೋಗದ ಕಣ್ಣಿನಾಕಾರದ ಚುಕ್ಕೆಗಳು ಹೆಚ್ಚಾಗಿದ್ದರೆ ಸಾರಜನಕ (ಯೂರಿಯಾ) ಗೊಬ್ಬರ ನೀಡುವುದನ್ನು ತಕ್ಷಣ ನಿಲ್ಲಿಸಿ.
 
 ### 🌦️ ಐಎಂಡಿ 5-ದಿನಗಳ ಹವಾಮಾನ ಆಧಾರಿತ ಕೃಷಿ ಸಲಹೆ
-1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ 5 ದಿನಗಳಲ್ಲಿ ${o} ಮಿ.ಮೀ ಮಳೆ ಮುನ್ಸೂಚನೆಯಿರುವುದರಿಂದ ಮಳೆ ಬಿಡುವು ಕೊಟ್ಟ ಸಮಯದಲ್ಲಿ ಬೋರ್ಡೋ ಸಿಂಪಡಣೆ ನಡೆಸಿ.
-2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಮಳೆಯಲ್ಲಿ ದ್ರಾವಣ ತೊಳೆದು ಹೋಗದಂತೆ ಬೋರ್ಡೋ ದ್ರಾವಣಕ್ಕೆ ರಾಳ ಅಥವಾ ಅಂಟು ದ್ರಾವಣವನ್ನು (Sticker) ಕಡ್ಡಾಯವಾಗಿ ಬೆರೆಸಿ ಸಿಂಪಡಿಸಿ.
-3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ನಿರಂತರ ಮೋಡ, ಹೆಚ್ಚಿನ ಆರ್ದ್ರತೆ (>95%) ರೋಗಾಣು ವೇಗವಾಗಿ ಹರಡಲು ಪ್ರಮುಖ ಕಾರಣವಾಗಿದೆ.
+1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ 5 ದಿನಗಳಲ್ಲಿ ${o} ಮಿ.ಮೀ ಮಳೆ ನಿರೀಕ್ಷೆಯಿರುವುದರಿಂದ ಗದ್ದೆಯಲ್ಲಿನ ಹೆಚ್ಚುವರಿ ನೀರನ್ನು ಹೊರಹಾಕಿ, ಮಣ್ಣು ಕೆಸರಾಗಿರುವಾಗ ಯೂರಿಯಾ ಮತ್ತು ಪೊಟ್ಯಾಷ್ ಗೊಬ್ಬರವನ್ನು ಮೇಲುಗೊಬ್ಬರವಾಗಿ ನೀಡಿ.
+2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಟ್ರೈಸೈಕ್ಲೋಜೋಲ್ ಅಥವಾ ಕೀಟನಾಶಕ ಸಿಂಪಡಣೆಯನ್ನು ಮಳೆಯಿಲ್ಲದ ಮುಂಜಾನೆ (6:30–9:00 AM) ವೇಳೆಯಲ್ಲಿ ಗಾಳಿಯ ವೇಗ ಕಡಿಮೆ ಇದ್ದಾಗ ನಡೆಸಿ.
+3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ಮುಂಜಾನೆಯ ಆರ್ದ್ರತೆ >90% ಮತ್ತು ಮೋಡ ಕವಿದ ವಾತಾವರಣದಿಂದಾಗಿ ಬ್ಲಾಸ್ಟ್ ಮತ್ತು ಹಾಳೆ ಕರಕಲು ರೋಗ ತೀವ್ರವಾಗಿ ಹರಡುವ ಸಾಧ್ಯತೆಯಿದ್ದು, ಗಿಡಗಳ ಕೆಳಭಾಗದ ಎಲೆಗಳನ್ನು ತಕ್ಷಣ ಪರಿಶೀಲಿಸಿ.
 
 ### ⚠️ ರೈತರಿಗೆ ಪ್ರಮುಖ ಸಂದೇಶ
-ಮುಂಗಾರು ಪೂರ್ವದ ಮೊದಲ ಬೋರ್ಡೋ ಸಿಂಪಡಣೆಯನ್ನು ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ತಪ್ಪಿಸಬೇಡಿ. ಸಿಂಪಡಿಸುವಾಗ ರೋಗಗ್ರಸ್ತ ಗೊಂಚಲುಗಳ ಜೊತೆಗೆ ಮರದ ಸುಳಿಗೂ ಔಷಧಿ ತಾಗುವಂತೆ ಸಿಂಪಡಿಸಿ.
+**ಮುಖ್ಯ ಎಚ್ಚರಿಕೆ**: ಎಲೆಗಳ ಮೇಲೆ ಬೆಂಕಿ ರೋಗದ ಸಕ್ರಿಯ ಕಣ್ಣಿನಾಕಾರದ ಚುಕ್ಕೆಗಳು ಹರಡುತ್ತಿರುವಾಗ ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ಯೂರಿಯಾ ಗೊಬ್ಬರವನ್ನು ಹಾಕಬೇಡಿ. ತೆನೆ ಮೂಡುವ ಹಂತದಲ್ಲಿ ಗದ್ದೆಯಲ್ಲಿ ಸದಾ 2–3 ಸೆಂ.ಮೀ ನೀರು ಇರುವಂತೆ ನೋಡಿಕೊಳ್ಳಿ.
 
 ### ಮೂಲಗಳು
-[1] KSNUAHS Shivamogga & ICAR-CPCRI — Koleroga Management in Arecanut
+[1] KSNUAHS ಶಿವಮೊಗ್ಗ — ಭತ್ತದ ಕೃಷಿ ಕೈಪಿಡಿ (PoP 2026)
     https://uahs.edu.in/
-[2] UAS Dharwad — Arecanut PoP Karnataka
-    https://www.uasd.edu/`,crop:r,intent:`pest_disease`,citations:[{id:1,title:`KSNUAHS Shivamogga & ICAR-CPCRI`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`UAS Dharwad — Arecanut PoP`,url:`https://www.uasd.edu/`,sourceId:`uasd`,relevance:.95}],provider:`mock`,isDemo:!0,language:`kn`,outOfScope:!1,farmContext:e.farmContext,weather:a}:{answer:`### Diagnosis & Direct Answer
-Koleroga (Mahali fruit rot caused by *Phytophthora meadii*) causes severe nut rot and premature nut fall in arecanut during monsoon in **${i}**. Prophylactic fungicide sprays before the onset of continuous southwest monsoon are critical for complete protection.
+[2] ICAR-ಭಾರತೀಯ ಭತ್ತ ಸಂಶೋಧನಾ ಸಂಸ್ಥೆ (ICAR-IIRR)
+    https://icar-iirr.org/`,crop:r,intent:`crop_production`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIRR Rice Research`,url:`https://icar-iirr.org/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`kn`,outOfScope:!1,farmContext:e.farmContext,weather:a}:{answer:`### Diagnosis & Direct Answer
+Dear farmer, your **${s}** paddy crop in **${i}** at **${n}** is transitioning from **Maximum Tillering into the critical Panicle Initiation (PI) & Stem Elongation Stage**. Physiologically, the embryonic panicle is currently forming at the base of the tiller culm.
+
+This stage is preparing to transition into **Booting and Heading / Flowering (65–85 DAT)**. Panicle Initiation determines the total number of spikelets per panicle and potential grain count. The presence of blast lesions or stem borer dead hearts at this stage will directly abort productive tillers. Applying your second top-dressed nitrogen split along with potassium and prophylactic protective sprays is crucial right now.
 
 ### What to do & Recommended Field Operations
-1. **[Core Stage Operation & Higher Yield Priority — Prophylactic Bunch Spraying]**: Spray **1% Bordeaux mixture** (1 kg copper sulphate + 1 kg quicklime in 100 L water) or **Copper Oxychloride 50 WP @ 3 g/L** thoroughly covering all bunches before heavy monsoon onset.
-2. **[Bunch Covering & Garden Sanitation]**: Tie 100-gauge polythene bunch covers above nut bunches to shield against continuous direct rainfall; collect and burn fallen infected nuts.
+1. **[Core Stage Operation & Higher Yield Priority — ${n} Stage & Fertilizer Schedules]**:
+   - **Growth Stage**: Panicle Initiation (PI) & Stem Elongation (45–50 DAT).
+   - **Fertilizer Schedule**: Apply the 3rd Split of Nitrogen: **25% of total N (Urea @ 25–30 kg/acre)** combined with **MOP (Potash) @ 15–20 kg/acre**. Potassium at PI strengthens the culm and enhances disease resistance.
+   - **Micronutrients & Foliar Booster**: Apply **Zinc Sulphate @ 20–25 kg/ha** (if not basal applied) or foliar spray **Zinc Sulphate @ 2 g/L**. Foliar spray **13:0:45 (Potassium Nitrate) @ 5 g/L** at early boot stage to maximize spikelet fertility.
+2. **[Field & Soil Management]**:
+   - **Alternate Wetting & Drying (AWD)**: Maintain a shallow water layer of 2–3 cm during Panicle Initiation and Flowering; strictly avoid drying the field during PI and flowering stages.
+   - **Skip Rows / Alleyways**: Maintain 1-foot alleyways (skip rows) every 8–10 rows to allow sunlight penetration and prevent microclimate build-up of Brown Plant Hopper (BPH).
 3. **[Pest & Disease Management — 3 Approaches]**:
-   - **Chemical Control (PoP 2026)**: Spray **Metalaxyl + Mancozeb 72 WP @ 2 g/L water** if active rot symptoms already appear on bunches.
-   - **Biological & Organic Control**: Apply *Trichoderma harzianum* @ 50 g/palm enriched in FYM around the root basin during pre-monsoon.
-   - **IPM & Cultural Practices**: Maintain deep drainage channels (45–60 cm depth) between palm rows to prevent water stagnation in gardens.
+   - **Major Pests & Diseases at this Stage**: Leaf & Neck Blast (*Pyricularia oryzae*), Sheath Blight (*Rhizoctonia solani*), Yellow Stem Borer (*Scirpophaga incertulas*), Brown Plant Hopper (BPH - *Nilaparvata lugens*), Leaf Folder (*Cnaphalocrocis medinalis*).
+   - **Chemical Control (PoP 2026)**:
+     * For Blast: Spray **Tricyclazole 75% WP @ 0.6 g/L** (300 g/ha in 500 L water) OR **Isoprothiolane 40% EC @ 1.5 mL/L**.
+     * For Sheath Blight: Spray **Hexaconazole 5% SC @ 2 mL/L** OR **Azoxystrobin 18.2% + Difenoconazole 11.4% SC @ 1 mL/L**.
+     * For Stem Borer & Leaf Folder: Apply **Cartap Hydrochloride 50% SP @ 2 g/L** OR **Chlorantraniliprole 18.5% SC @ 0.3 mL/L** (60 mL/acre).
+     * For BPH: Spray **Pymetrozine 50% WG @ 0.6 g/L** directed strictly at the base of the hills.
+   - **Biological & Organic Control**:
+     * Foliar spray of *Pseudomonas fluorescens* 1% WP @ 10 g/L water or *Trichoderma asperellum* @ 5 g/L.
+     * Release *Trichogramma japonicum* parasitoid cards @ 1,00,000 eggs/ha (5 cards/ha) for stem borer.
+   - **IPM & Cultural Practices**:
+     * Install **4–5 Pheromone traps/acre** with *Scirpophaga* lures for stem borer monitoring.
+     * Set up **light traps (1 per hectare)** to monitor adult moth flushes.
+     * Stop excessive nitrogen applications when active blast spindle lesions are expanding on leaves.
 
 ### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
-1. **[Question-Specific Weather Advisory]**: With ${o} mm rainfall forecasted in ${i}, utilize rain-free breaks to execute mandatory prophylactic bunch sprays.
-2. **[Field Operation / Spray Window]**: Always mix adhesive resin/sticker (rosin compound) with Bordeaux mixture to prevent wash-off during showers.
-3. **[Micro-Climate & Agronomic Risk Alert]**: Continuous cloudiness, high relative humidity (>95%), and heavy rainfall create epidemic conditions for Phytophthora spread; inspect crown areas weekly.
+1. **[Question-Specific Weather Advisory]**: With forecasted rainfall of ${o} mm in ${i}, top-dress Urea and Potash after draining excess water, ensuring fertilizer is incorporated into moist puddle soil.
+2. **[Field Operation / Spray Window]**: Plan Tricyclazole or insecticide sprays strictly during clear morning hours (6:30–9:00 AM) with low wind speed (<8 km/h) to avoid chemical wash-off.
+3. **[Micro-Climate & Agronomic Risk Alert]**: High morning relative humidity (>90%) with intermittent cloudy skies creates an epidemic trigger for leaf blast and sheath blight spread; inspect leaf sheaths near the waterline immediately.
 
 ### ⚠️ Important Message for Farmer
-Never skip the pre-monsoon prophylactic spray. Always add sticker/adherent to Bordeaux mixture during monsoon sprays.
+**Crucial Warning**: Never apply urea top-dressing when active blast spindle lesions are spreading on the foliage, as excessive nitrogen aggravates blast epidemics. Maintain continuous shallow standing water (2–3 cm) during the panicle initiation stage.
 
 ### Sources
-[1] KSNUAHS Shivamogga & ICAR-CPCRI — Koleroga Management in Arecanut
+[1] KSNUAHS Shivamogga — Rice Package of Practices (PoP 2026)
     https://uahs.edu.in/
-[2] UAS Dharwad — Arecanut PoP Karnataka
-    https://www.uasd.edu/`,crop:r,intent:`pest_disease`,citations:[{id:1,title:`KSNUAHS Shivamogga & ICAR-CPCRI`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`UAS Dharwad — Arecanut PoP`,url:`https://www.uasd.edu/`,sourceId:`uasd`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}:t?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
+[2] ICAR-Indian Institute of Rice Research (ICAR-IIRR)
+    https://icar-iirr.org/`,crop:r,intent:`crop_production`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIRR Rice Research`,url:`https://icar-iirr.org/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}}if(r===`maize`&&(l!==null&&l>=20&&l<=50||n.includes(`armyworm`)||n.includes(`faw`)||n.includes(`knee`)||n.includes(`fertilizer`)||n.includes(`urea`)||n.includes(`ಗೊಬ್ಬರ`)||n.includes(`ಸೈನಿಕ`))){let n=l?`${l} DAS`:`30–35 DAS`,c=l?`${l} ದಿನಗಳ (DAS)`:`30–35 ದಿನಗಳ`;return t?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
+ರೈತ ಬಾಂಧವರೇ, ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ ನಿಮ್ಮ **${s}** ಮೆಕ್ಕೆಜೋಳ ಬೆಳೆಯು ಪ್ರಸ್ತುತ **${c} ಹಂತದಲ್ಲಿದ್ದು, ಮೊಣಕಾಲು ಎತ್ತರದ ಸಕ್ರಿಯ ಕವಲೊಡೆಯುವ ಹಂತದಲ್ಲಿದೆ (Knee-High / V6-V8 Stage)**. ಪ್ರಸ್ತುತ ಗಿಡವು ತನ್ನ ಬಲವಾದ ಊರುಗೋಲು ಬೇರುಗಳನ್ನು (Brace Roots) ಬೆಳೆಸಿಕೊಳ್ಳುತ್ತಿದ್ದು, ಕಾಂಡದೊಳಗೆ ತೆನೆ ಮತ್ತು ಹೂಗೊಂಚಲಿನ ಪ್ರಾಥಮಿಕ ಅಂಗಗಳು ರೂಪುಗೊಳ್ಳುತ್ತಿವೆ.
+
+ಈ ಹಂತವು ಮುಂದಿನ **ಹೂಬಿಡುವ ಹಾಗೂ ತೆನೆ/ರೇಷ್ಮೆ ಬರುವ (Tasseling & Silking @ 45–60 DAS) ಹಂತಕ್ಕೆ** ಬದಲಾಗಲಿದೆ. 30–35 ದಿನಗಳ ಮೊಣಕಾಲು ಎತ್ತರದ ಹಂತವು ಸೈನಿಕ ಹುಳು (Fall Armyworm) ಬಾಧೆಗೆ ಅತ್ಯಂತ ಸೂಕ್ಷ್ಮ ಘಟ್ಟವಾಗಿದೆ. ಸುಳಿಯಲ್ಲಿ ಹುಳು ಸೇರಿಕೊಂಡು ಎಲೆಗಳನ್ನು ತಿಂದು ಜಾಲರಿ ಮಾಡಿದರೆ ತೆನೆ ಚಿಕ್ಕದಾಗಿ ಇಳುವರಿ ತೀವ್ರವಾಗಿ ಕುಸಿಯುತ್ತದೆ.
+
+### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
+1. **[ಪ್ರಸ್ತುತ ಹಂತದ ಮುಖ್ಯ ಕ್ರಮ ಮತ್ತು ಪೋಷಕಾಂಶ/ಗೊಬ್ಬರದ ನಿಖರ ಪ್ರಮಾಣ — ${c} ಮೊಣಕಾಲು ಎತ್ತರದ ಹಂತ]**:
+   - **ಹಂತ**: ಮೊಣಕಾಲು ಎತ್ತರದ ಹಂತ (Knee-High Stage @ 30–35 DAS).
+   - **ಮೇಲುಗೊಬ್ಬರ ವೇಳಾಪಟ್ಟಿ (Top-Dressing)**: 2ನೇ ಕಂತಿನ ಸಾರಜನಕವಾಗಿ ಎಕರೆಗೆ **35–40 ಕೆಜಿ ಯೂರಿಯಾ**ವನ್ನು ಗಿಡಗಳ ಸಾಲಿನಿಂದ ೫ ಸೆಂ.ಮೀ ದೂರದಲ್ಲಿ ಹಾಕಿ ತಕ್ಷಣ ಮಣ್ಣು ಏರಿಸಿ.
+   - **ಲಘು ಪೋಷಕಾಂಶ ಮತ್ತು ಎಲೆ ಸಿಂಪಡಣೆ**: ಸತುವಿನ ಕೊರತೆಯಿದ್ದರೆ **ಜಿಂಕ್ ಸಲ್ಫೇಟ್ @ 2 ಗ್ರಾಂ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ. ಹೂಬಿಡುವ ಮುನ್ನ ಸಮೃದ್ಧ ಹಸಿರಿಗೆ **19:19:19 @ 5 ಗ್ರಾಂ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
+2. **[ಕ್ಷೇತ್ರ ಮತ್ತು ಮಣ್ಣಿನ ನಿರ್ವಹಣೆ]**:
+   - **ಮಣ್ಣು ಏರಿಸುವುದು (Earthing Up @ 30–35 DAS)**: 2ನೇ ಕಂತಿನ ಯೂರಿಯಾ ಹಾಕಿದ ನಂತರ ಸಾಲುಗಳ ಮಧ್ಯೆ ಮಣ್ಣು ಏರಿಸುವುದು ಕಡ್ಡಾಯ. ಇದು ಕಳೆಗಳನ್ನು ಮುಚ್ಚುತ್ತದೆ ಮತ್ತು ಜೋರು ಗಾಳಿಗೆ ಬೆಳೆ ನೆಲಕ್ಕುರುಳದಂತೆ ಬೇರುಗಳಿಗೆ ಆಧಾರ ನೀಡುತ್ತದೆ.
+   - ಮಳೆ ನೀರು ಬುಡದಲ್ಲಿ ನಿಲ್ಲದಂತೆ ಬಸಿಗಾಲುವೆಗಳನ್ನು ಸ್ವಚ್ಛವಾಗಿಡಿ.
+3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
+   - **ಈ ಹಂತದ ಪ್ರಮುಖ ಕೀಟ ಮತ್ತು ರೋಗಗಳು**: ಸೈನಿಕ ಹುಳು / ಲದ್ದಿ ಹುಳು (Fall Armyworm - *Spodoptera frugiperda*), ಕಾಂಡಕೊರಕ (*Chilo partellus*), ಟರ್ಸಿಕಮ್ ಎಲೆ ಕರಕಲು ರೋಗ (*Exserohilum turcicum*).
+   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026 — ಸುಳಿಗೆ ಸಿಂಪಡಣೆ)**:
+     * ಸೈನಿಕ ಹುಳು ನಿಯಂತ್ರಣಕ್ಕೆ: **ಎಮಾಮೆಕ್ಟಿನ್ ಬೆಂಜೊಯೆಟ್ 5 SG @ 0.4 ಗ್ರಾಂ/ಲೀಟರ್** (ಎಕರೆಗೆ 80 ಗ್ರಾಂ) ಅಥವಾ **ಕ್ಲೋರಾಂಟ್ರಾನಿಲಿಪ್ರೋಲ್ 18.5 SC @ 0.4 ಮಿ.ಲೀ/ಲೀಟರ್** (ಎಕರೆಗೆ 80 ಮಿ.ಲೀ) ಅಥವಾ **ಸ್ಪಿನೆಟೋರಾಮ್ 11.7 SC @ 0.5 ಮಿ.ಲೀ/ಲೀಟರ್** ಅನ್ನು **ನೇರವಾಗಿ ಗಿಡದ ಸುಳಿಗೆ (Whorl)** ತಾಗುವಂತೆ ಸಿಂಪಡಿಸಿ.
+     * ಟರ್ಸಿಕಮ್ ಎಲೆ ಕರಕಲು ರೋಗಕ್ಕೆ: **ಮ್ಯಾಂಕೋಜೆಬ್ 75 WP @ 2.5 ಗ್ರಾಂ/ಲೀಟರ್** ಅಥವಾ **ಅಜೋಕ್ಸಿಸ್ಟ್ರೋಬಿನ್ 23 SC @ 1 ಮಿ.ಲೀ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
+   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**:
+     * *ಮೆಟಾರೈಜಿಯಂ ಅನಿಸೊಪ್ಲಿಯೆ* ಅಥವಾ *ನೊಮುರಿಯಾ ರಿಲೈ* ಜೈವಿಕ ಕೀಟನಾಶಕ @ 5 ಗ್ರಾಂ/ಲೀಟರ್ ನೀರಿಗೆ ಬೆರೆಸಿ ಸುಳಿಗೆ ಸಿಂಪಡಿಸಿ.
+     * ಬಿತ್ತನೆಯ 10 ಮತ್ತು 20 ದಿನಗಳಲ್ಲಿ ಎಕರೆಗೆ 2 *ಟ್ರೈಕೋಗ್ರಾಮಾ ಪ್ರಿಟಿಯೋಸಮ್* ಕಾರ್ಡ್‌ಗಳನ್ನು ಅಳವಡಿಸಿ.
+     * **5% ಬೇವಿನ ಬೀಜದ ಕಷಾಯ (NSKE @ 50 ಮಿ.ಲೀ/ಲೀಟರ್)** ಸಿಂಪಡಿಸಿ.
+   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**:
+     * ಎಕರೆಗೆ **4–5 FAW ಮೋಹಕ ಬಲೆಗಳನ್ನು** ಅಳವಡಿಸಿ ಪತಂಗಗಳ ಚಲನವಲನ ಗಮನಿಸಿ.
+     * ಒಣ ಮರಳು ಮತ್ತು ಸುಣ್ಣ/ಬೇವಿನ ಹಿಂಡಿಯ ಮಿಶ್ರಣವನ್ನು (9:1 ಅನುಪಾತ) ಗಿಡಗಳ ಸುಳಿಗೆ ಕೈಯಿಂದ ಹಾಕಿ ಲದ್ದಿ ಹುಳುಗಳ ಚಲನೆಯನ್ನು ತಡೆಯಿರಿ.
+     * ಹೊಲದ ಸುತ್ತಲೂ 3–4 ಸಾಲು ಮೇವಿನ ಜೋಳ ಅಥವಾ ಅಲಸಂದೆ ಬೆಳೆದು ಬಲೆ ಬೆಳೆಯಾಗಿ ನಿರ್ವಹಿಸಿ.
+
+### 🌦️ ಐಎಂಡಿ 5-ದಿನಗಳ ಹವಾಮಾನ ಆಧಾರಿತ ಕೃಷಿ ಸಲಹೆ
+1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ 5 ದಿನಗಳಲ್ಲಿ ಒಟ್ಟು ${o} ಮಿ.ಮೀ ಮಳೆ ಮುನ್ಸೂಚನೆಯಿರುವುದರಿಂದ ಮಣ್ಣಿನಲ್ಲಿ ತೇವಾಂಶವಿರುವಾಗ 2ನೇ ಕಂತಿನ ಯೂರಿಯಾ ಹಾಕಿ ತಕ್ಷಣ ಎಡೆಕುಂಟೆ ಹೊಡೆದು ಮಣ್ಣು ಏರಿಸಿ.
+2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಸೈನಿಕ ಹುಳುಗಳು ರಾತ್ರಿಯ ವೇಳೆಯಲ್ಲಿ ಸುಳಿಯಿಂದ ಹೊರಬಂದು ತಿನ್ನುವುದರಿಂದ, ಸುಳಿಗೆ ಸಿಂಪಡಣೆಯನ್ನು ಸಂಜೆ ವೇಳೆಯಲ್ಲಿ (4:30–6:30 PM) ಕೈಗೊಳ್ಳುವುದು ಅತ್ಯಂತ ಪರಿಣಾಮಕಾರಿ.
+3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ಹೆಚ್ಚಿನ ಆರ್ದ್ರತೆ (>80%) ಮತ್ತು ಮೋಡ ಕವಿದ ವಾತಾವರಣವು ಸೈನಿಕ ಹುಳುವಿನ ಸಂತಾನೋತ್ಪತ್ತಿಗೆ ಪೂರಕವಾಗಿದೆ; ಹೊಲದಲ್ಲಿನ 20 ಗಿಡಗಳನ್ನು ಪ್ರತಿದಿನ ಪರೀಕ್ಷಿಸಿ.
+
+### ⚠️ ರೈತರಿಗೆ ಪ್ರಮುಖ ಸಂದೇಶ
+**ಮುಖ್ಯ ಸುರಕ್ಷತಾ ನಿಯಮ**: ಸಿಂಪಡಿಸುವ ನಾಜಲ್ ಅನ್ನು ನೇರವಾಗಿ ಪ್ರತಿಯೊಂದು ಗಿಡದ ಮಧ್ಯದ ಸುಳಿಗೆ (Whorl) ಹಿಡಿದು ಸಿಂಪಡಿಸಬೇಕು. 30–35 ದಿನಗಳಲ್ಲಿ ಮಣ್ಣು ಏರಿಸುವುದನ್ನು (Earthing up) ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ಮರೆಯಬೇಡಿ.
+
+### ಮೂಲಗಳು
+[1] KSNUAHS ಶಿವಮೊಗ್ಗ ಮತ್ತು UAS ಧಾರವಾಡ — ಮೆಕ್ಕೆಜೋಳ ಕೃಷಿ ಕೈಪಿಡಿ (PoP 2026)
+    https://uahs.edu.in/
+[2] ICAR-ಭಾರತೀಯ ಮೆಕ್ಕೆಜೋಳ ಸಂಶೋಧನಾ ಸಂಸ್ಥೆ (ICAR-IIMR)
+    https://iimr.icar.gov.in/`,crop:r,intent:`crop_production`,citations:[{id:1,title:`UAS Dharwad — Maize PoP 2026`,url:`https://www.uasd.edu/`,sourceId:`uasd`,relevance:.98},{id:2,title:`ICAR-IIMR Maize Guidelines`,url:`https://iimr.icar.gov.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`kn`,outOfScope:!1,farmContext:e.farmContext,weather:a}:{answer:`### Diagnosis & Direct Answer
+Dear farmer, your **${s}** maize crop in **${i}** at **${n}** is in the rapid **Knee-High to Late Vegetative Stage (V6–V8)**. Physiologically, the plant is establishing its structural brace root system and initiating internal tassel and cob primordia.
+
+This stage is preparing to transition into **Tasseling & Silking (45–60 DAS)**. The knee-high stage is the peak vulnerable period for Fall Armyworm (*Spodoptera frugiperda*) whorl damage. Central leaf whorl defoliation at this stage directly stunts tassel emergence and drastically reduces final cob size and grain weight.
+
+### What to do & Recommended Field Operations
+1. **[Core Stage Operation & Higher Yield Priority — ${n} Stage & Fertilizer Schedules]**:
+   - **Growth Stage**: Knee-High Vegetative Stage (30–35 DAS).
+   - **Top-Dressing Fertilizer Schedule**: Apply the 2nd split of Nitrogen: **35% of total N (Urea @ 35–40 kg/acre)** placed 5–7 cm away from plant rows, followed immediately by earthing up.
+   - **Micronutrients & Foliar Booster**: Apply **Zinc Sulphate @ 25 kg/ha** (if deficient) or foliar spray **Zinc Sulphate @ 2 g/L**. Foliar spray **19:19:19 @ 5 g/L** to accelerate canopy expansion before tasseling.
+2. **[Field & Soil Management]**:
+   - **Earthing Up @ 30–35 DAS**: Mandatory earthing up of soil around plant stems covers the second split of Urea, buries weeds, and anchors brace/prop roots to prevent lodging during wind gusts at tasseling.
+   - Maintain clear field drainage furrows to prevent water stagnation around maize root zones.
+3. **[Pest & Disease Management — 3 Approaches]**:
+   - **Major Pests & Diseases at this Stage**: Fall Armyworm (FAW - *Spodoptera frugiperda*), Stem Borer (*Chilo partellus*), Turcicum Leaf Blight (*Exserohilum turcicum*), Banded Sheath Blight.
+   - **Chemical Control (PoP 2026)**:
+     * For FAW (Whorl Application): Spray **Emamectin Benzoate 5% SG @ 0.4 g/L** (80 g/acre) OR **Chlorantraniliprole 18.5% SC @ 0.4 mL/L** (80 mL/acre) OR **Spinetoram 11.7% SC @ 0.5 mL/L**, directing spray nozzles **straight into the central plant whorl**.
+     * For Turcicum Blight: Spray **Mancozeb 75 WP @ 2.5 g/L** OR **Azoxystrobin 23% SC @ 1 mL/L**.
+   - **Biological & Organic Control**:
+     * Spray *Nomuraea rileyi* OR *Metarhizium anisopliae* bio-formulation @ 5 g/L water (directed into whorls).
+     * Release egg parasitoids *Trichogramma pretiosum* @ 1,00,000/ha (5 cards/ha) at 10 and 20 DAS.
+     * Apply **5% Neem Seed Kernel Extract (NSKE @ 50 mL/L)** or botanical neem oil (1500 ppm @ 5 mL/L).
+   - **IPM & Cultural Practices**:
+     * Install **4–5 FAW Pheromone traps/acre** to monitor male moth flights.
+     * Apply dry sand mixed with neem cake / lime (9:1 ratio) into central leaf funnels to physically deter larval feeding.
+     * Plant 3–4 border rows of fodder sorghum or cowpea as a barrier/trap crop.
+
+### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
+1. **[Question-Specific Weather Advisory]**: With ${o} mm rainfall expected in ${i}, broadcast the 2nd split of Urea while soil has workable moisture, followed immediately by intercultivation and earthing up.
+2. **[Field Operation / Spray Window]**: Apply whorl-directed Fall Armyworm sprays during late afternoon / evening hours (4:30–6:30 PM) when nocturnal FAW larvae emerge to feed on whorl foliage.
+3. **[Micro-Climate & Agronomic Risk Alert]**: High humidity (>80%) combined with overcast skies creates ideal conditions for rapid FAW larval instar development; inspect 20 consecutive plants in 5 field spots daily.
+
+### ⚠️ Important Message for Farmer
+**Crucial Safety Rule**: Direct the spray nozzle directly into the central funnel/whorl of each maize plant, rather than general broadcast leaf spraying. Earthing up at 30–35 DAS is mandatory to prevent crop lodging during flowering.
+
+### Sources
+[1] KSNUAHS Shivamogga & UAS Dharwad — Maize Package of Practices (PoP 2026)
+    https://uahs.edu.in/
+[2] ICAR-Indian Institute of Maize Research (ICAR-IIMR)
+    https://iimr.icar.gov.in/`,crop:r,intent:`crop_production`,citations:[{id:1,title:`UAS Dharwad — Maize PoP 2026`,url:`https://www.uasd.edu/`,sourceId:`uasd`,relevance:.98},{id:2,title:`ICAR-IIMR Maize Guidelines`,url:`https://iimr.icar.gov.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}}return r===`arecanut`?t?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
+ರೈತ ಬಾಂಧವರೇ, ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ ನಿಮ್ಮ **${s}** ಅಡಿಕೆ ತೋಟವು ಪ್ರಸ್ತುತ **ನೈಋತ್ಯ ಮುಂಗಾರು ಮಳೆಯ ಸಕ್ರಿಯ ಕಾಯಿ ವಿಕಾಸದ ಹಂತದಲ್ಲಿದೆ**. ಹೆಣ್ಣು ಹೂವುಗಳು ಕಾಯಿಕಟ್ಟಿ ಎಳೆಯ ಅಡಿಕೆ ಕಾಯಿಗಳು ಗಾತ್ರದಲ್ಲಿ ಹಿರಿದಾಗುತ್ತಿವೆ.
+
+ಈ ಹಂತವು ಮುಂದಿನ **ಮುಂಗಾರು ನಂತರದ ಕಾಯಿ ಬಲಿತು ಹಣ್ಣಾಗುವ (Sept–Dec) ಹಂತಕ್ಕೆ** ಬದಲಾಗಲಿದೆ. ಮಲೆನಾಡು ಭಾಗದ ಭಾರಿ ಮಳೆಯ ಸಮಯದಲ್ಲಿ ಕೊಳೆರೋಗ ಅಥವಾ ಮಹಾಲಿ ರೋಗವು (*Phytophthora meadii*) ಕಾಯಿಗಳಿಗೆ ತಗುಲಿ ಅಕಾಲಿಕವಾಗಿ ಕಾಯಿಗಳು ಉದುರಿ ಇಡೀ ಗೊಂಚಲು ನಾಶವಾಗುತ್ತದೆ. ಆದ್ದರಿಂದ ಮುಂಗಾರು ಪೂರ್ವ ಮತ್ತು ಮಳೆ ಬಿಡುವಿನ ವೇಳೆಯಲ್ಲಿ ಮುನ್ನೆಚ್ಚರಿಕೆಯ ಬೋರ್ಡೋ ಸಿಂಪಡಣೆ, ಗೊಬ್ಬರ ನಿರ್ವಹಣೆ ಹಾಗೂ ಬಸಿಗಾಲುವೆ ನಿರ್ವಹಣೆ ಅತ್ಯಂತ ಮುಖ್ಯವಾಗಿದೆ.
+
+### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
+1. **[ಪ್ರಸ್ತುತ ಹಂತದ ಮುಖ್ಯ ಕ್ರಮ ಮತ್ತು ಪೋಷಕಾಂಶ/ಗೊಬ್ಬರದ ನಿಖರ ಪ್ರಮಾಣ — ಮುಂಗಾರು ಕಾಯಿ ರಕ್ಷಣೆ ಮತ್ತು ಗೊಬ್ಬರ ವೇಳಾಪಟ್ಟಿ]**:
+   - **ಹಂತ**: ಮುಂಗಾರು ಮಳೆಯ ಕಾಯಿ ರಕ್ಷಣೆ ಮತ್ತು ಪೋಷಕಾಂಶ ನಿರ್ವಹಣೆ.
+   - **ಮುನ್ನೆಚ್ಚರಿಕೆ ಸಿಂಪಡಣೆ**: ಮುಂಗಾರು ಮಳೆ ಆರಂಭಕ್ಕೂ ಮುನ್ನ ಮತ್ತು ಮಳೆ ಬಿಡುವು ನೀಡಿದಾಗ **1% ಬೋರ್ಡೋ ದ್ರಾವಣ** (100 ಲೀಟರ್ ನೀರಿಗೆ 1 ಕೆಜಿ ಮೈಲುತುತ್ತು + 1 ಕೆಜಿ ಸುಣ್ಣ) ಅನ್ನು ಅಡಿಕೆ ಗೊಂಚಲು, ಸುಳಿ ಮತ್ತು ಗಿಡದ ಮೇಲ್ಭಾಗಕ್ಕೆ ಚೆನ್ನಾಗಿ ತಾಗುವಂತೆ ಸಿಂಪಡಿಸಿ. ಮಳೆಯಲ್ಲಿ ದ್ರಾವಣ ತೊಳೆದು ಹೋಗದಂತೆ **100 ಲೀಟರ್ ದ್ರಾವಣಕ್ಕೆ ರಾಳ ಅಥವಾ ಅಂಟು ದ್ರಾವಣವನ್ನು (Sticker - 100 ಮಿ.ಲೀ)** ಕಡ್ಡಾಯವಾಗಿ ಬೆರೆಸಿ.
+   - **ರಸಗೊಬ್ಬರದ ಕಂತು**: 5 ವರ್ಷ ಮೇಲ್ಪಟ್ಟ ಫಲ ನೀಡುವ ಮರಕ್ಕೆ ವಾರ್ಷಿಕ ಶಿಫಾರಸು: **100 ಗ್ರಾಂ ಸಾರಜನಕ (220 ಗ್ರಾಂ ಯೂರಿಯಾ) + 40 ಗ್ರಾಂ ರಂಜಕ (250 ಗ್ರಾಂ SSP) + 140 ಗ್ರಾಂ ಪೊಟ್ಯಾಷ್ (235 ಗ್ರಾಂ MOP)**. 1ನೇ ಕಂತನ್ನು (1/3rd ಭಾಗ) ಮೇ-ಜೂನ್ ತಿಂಗಳಲ್ಲಿ 12 ಕೆಜಿ ಕೊಟ್ಟಿಗೆ ಗೊಬ್ಬರದೊಂದಿಗೆ ಬುಡಕ್ಕೆ ಹಾಕಿ, 2ನೇ ಕಂತನ್ನು (2/3rd ಭಾಗ) ಸೆಪ್ಟೆಂಬರ್-ಅಕ್ಟೋಬರ್‌ನಲ್ಲಿ ನೀಡಿ.
+   - **ಸುಣ್ಣ ಮತ್ತು ಲಘು ಪೋಷಕಾಂಶ**: ಮಣ್ಣಿನ ಆಮ್ಲೀಯತೆ ಸರಿಪಡಿಸಲು ಮೇ ತಿಂಗಳಲ್ಲಿ ಪ್ರತಿ ಮರಕ್ಕೆ **500 ಗ್ರಾಂ ಕೃಷಿ ಸುಣ್ಣ / ಡಾಲಮೈಟ್** ಹಾಕಿ. ಪ್ರತಿ ಮರಕ್ಕೆ **25 ಗ್ರಾಂ ಬೋರಾಕ್ಸ್ + 25 ಗ್ರಾಂ ಜಿಂಕ್ ಸಲ್ಫೇಟ್ + 50 ಗ್ರಾಂ ಮೆಗ್ನೀಸಿಯಮ್ ಸಲ್ಫೇಟ್** ಅನ್ನು ಬುಡಕ್ಕೆ ನೀಡಿ.
+2. **[ಕ್ಷೇತ್ರ ಮತ್ತು ಮಣ್ಣಿನ ನಿರ್ವಹಣೆ]**:
+   - **ಆಳವಾದ ಬಸಿಗಾಲುವೆಗಳು**: ಅಡಿಕೆ ಸಾಲುಗಳ ಮಧ್ಯೆ 50–60 ಸೆಂ.ಮೀ ಆಳದ ಬಸಿಗಾಲುವೆಗಳನ್ನು ನಿರ್ಮಿಸಿ ಮಳೆ ನೀರು ಸರಾಗವಾಗಿ ಹರಿದು ಹೋಗುವಂತೆ ಮಾಡಿ. ಬುಡದಲ್ಲಿ ನೀರು ನಿಂತರೆ ಬೇರು ಕೊಳೆತು ಅನಬೆ ರೋಗ (Anabe roga) ಬರುತ್ತದೆ.
+   - ಉದುರಿ ಬಿದ್ದ ಕೊಳೆತ ಕಾಯಿಗಳನ್ನು ಮತ್ತು ಒಣಗಿದ ಗೊಂಚಲುಗಳನ್ನು ಆರಿಸಿ ಸುಟ್ಟು ನಾಶಪಡಿಸಿ.
+3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
+   - **ಈ ಹಂತದ ಪ್ರಮುಖ ಕೀಟ ಮತ್ತು ರೋಗಗಳು**: ಕೊಳೆರೋಗ / ಮಹಾಲಿ (*Phytophthora meadii*), ಅನಬೆ ರೋಗ / ಬುಡ ಕೊಳೆ ರೋಗ (*Ganoderma lucidum*), ಹಳದಿ ಎಲೆ ರೋಗ (YLD), ಸುಳಿ ತಿಗಣೆ (*Carvalhoia arecae*), ಬೇರು ಹುಳು (*Leucopholis lepidophora*).
+   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**:
+     * ಕೊಳೆರೋಗ ಮುನ್ನೆಚ್ಚರಿಕೆಗೆ: **1% ಬೋರ್ಡೋ ದ್ರಾವಣ** (1ನೇ ಸಿಂಪಡಣೆ ಮುಂಗಾರು ಆರಂಭಕ್ಕೆ ಮುನ್ನ ಮೇ-ಜೂನ್‌ನಲ್ಲಿ, 2ನೇ ಸಿಂಪಡಣೆ 40-45 ದಿನಗಳ ನಂತರ ಜುಲೈ-ಆಗಸ್ಟ್ ಮಳೆ ಬಿಡುವಿನಲ್ಲಿ).
+     * ಕೊಳೆರೋಗದ ತೀವ್ರ ಲಕ್ಷಣಗಳು ಕಂಡುಬಂದರೆ: **ಮೆಟಾಲಾಕ್ಸಿಲ್ 8% + ಮ್ಯಾಂಕೋಜೆಬ್ 64% WP @ 2 ಗ್ರಾಂ/ಲೀಟರ್** (ಅಥವಾ **ಫಾಸೆಟೈಲ್-ಎಎಲ್ 80 WP @ 2 ಗ್ರಾಂ/ಲೀಟರ್**) ಸಿಂಪಡಿಸಿ.
+     * ಸುಳಿ ತಿಗಣೆಗೆ: **ಡೈಮೆಥೋಯೇಟ್ 30 EC @ 1.5 ಮಿ.ಲೀ/ಲೀಟರ್** ಅನ್ನು ಸುಳಿಯ ಎಲೆಗಳಿಗೆ ಸಿಂಪಡಿಸಿ.
+     * ಬೇರು ಹುಳು ನಿಯಂತ್ರಣಕ್ಕೆ: **ಕ್ಲೋರ್ಪೈರಿಫಾಸ್ 20 EC @ 5 ಮಿ.ಲೀ/ಲೀಟರ್** ದ್ರಾವಣವನ್ನು ಮೇ/ಜೂನ್‌ನಲ್ಲಿ ಮರದ ಬುಡಕ್ಕೆ ಸುರಿಯಿರಿ.
+   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**:
+     * ಅನಬೆ ರೋಗ ಮತ್ತು ಕೊಳೆರೋಗ ನಿಯಂತ್ರಣಕ್ಕೆ ಕೊಟ್ಟಿಗೆ ಗೊಬ್ಬರದಲ್ಲಿ ಸಂವರ್ಧಿಸಿದ *ಟ್ರೈಕೋಡರ್ಮಾ ಹರ್ಜಿಯಾನಮ್* ಜೈವಿಕ ಶಿಲೀಂಧ್ರವನ್ನು ಪ್ರತಿ ಮರದ ಬುಡಕ್ಕೆ **2–3 ಕೆಜಿ** ನೀಡಿ.
+     * *ಸ್ಯೂಡೋಮೊನಾಸ್ ಫ್ಲೋರೊಸೆನ್ಸ್* 1% WP @ 20 ಗ್ರಾಂ/ಲೀಟರ್ ದ್ರಾವಣವನ್ನು ಬುಡಕ್ಕೆ ಸುರಿಯಿರಿ.
+   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**:
+     * **ಪಾಲಿಥಿನ್ ಚೀಲ ಕಟ್ಟುವುದು**: ಮುಂಗಾರು ಆರಂಭಕ್ಕೂ ಮುನ್ನ ಅಡಿಕೆ ಗೊಂಚಲುಗಳಿಗೆ 100 ಗೇಜ್‌ನ ಯುವಿ ನಿರೋಧಕ ಪಾಲಿಥಿನ್ ಚೀಲಗಳನ್ನು ಕಟ್ಟುವುದು (ಯಾವುದೇ ರಾಸಾಯನಿಕವಿಲ್ಲದೆ ಕೊಳೆರೋಗ ಸಂಪೂರ್ಣ ತಡೆಯಬಹುದು).
+     * ಬೇಸಿಗೆಯಲ್ಲಿ ಮರದ ಬುಡಗಳನ್ನು ಅಗೆದು ಬಿಳಿ ಬೇರು ಹುಳುಗಳನ್ನು ಪಕ್ಷಿಗಳಿಗೆ ತೆರೆದಿಡಿ.
+
+### 🌦️ ಐಎಂಡಿ 5-ದಿನಗಳ ಹವಾಮಾನ ಆಧಾರಿತ ಕೃಷಿ ಸಲಹೆ
+1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ 5 ದಿನಗಳಲ್ಲಿ ಒಟ್ಟು ${o} ಮಿ.ಮೀ ಮಳೆ ಮುನ್ಸೂಚನೆಯಿರುವುದರಿಂದ ಮಳೆ ಬಿಡುವು ಕೊಟ್ಟ ತಕ್ಷಣವೇ ಅಡಿಕೆ ಗೊಂಚಲುಗಳಿಗೆ ಬೋರ್ಡೋ ಸಿಂಪಡಣೆಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ.
+2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಬೋರ್ಡೋ ದ್ರಾವಣಕ್ಕೆ ಅಂಟು ದ್ರಾವಣವನ್ನು (Sticker) ಕಡ್ಡಾಯವಾಗಿ ಬೆರೆಸಿ, ಮಳೆಯಿಲ್ಲದ ಶುಷ್ಕ ಮುಂಜಾನೆ (7:00–10:00 AM) ವೇಳೆಯಲ್ಲಿ ಸಿಂಪಡಿಸಿ.
+3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ನಿರಂತರ ಹೆಚ್ಚಿನ ಆರ್ದ್ರತೆ (>95%), ಮಂಜು ಮತ್ತು ತಂಪು ವಾತಾವರಣವು ಫೈಟೋಫ್ತೋರಾ ಶಿಲೀಂಧ್ರ ಹರಡಲು ಪ್ರಮುಖ ಕಾರಣವಾಗಿದೆ; ತೋಟದ ಮರಗಳ ಸುಳಿಗಳನ್ನು ವಾರಕ್ಕೊಮ್ಮೆ ಪರಿಶೀಲಿಸಿ.
+
+### ⚠️ ರೈತರಿಗೆ ಪ್ರಮುಖ ಸಂದೇಶ
+**ಮುಖ್ಯ ಎಚ್ಚರಿಕೆ**: ಮುಂಗಾರು ಪೂರ್ವದ ಮೊದಲ 1% ಬೋರ್ಡೋ ದ್ರಾವಣ ಸಿಂಪಡಣೆಯನ್ನು ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ತಪ್ಪಿಸಬೇಡಿ. ಸಿಂಪಡಿಸುವಾಗ ದ್ರಾವಣಕ್ಕೆ ರಾಳ ಅಥವಾ ಅಂಟು ದ್ರಾವಣವನ್ನು ಕಡ್ಡಾಯವಾಗಿ ಬೆರೆಸಿ.
+
+### ಮೂಲಗಳು
+[1] KSNUAHS ಶಿವಮೊಗ್ಗ ಮತ್ತು ICAR-CPCRI — ಅಡಿಕೆ ಕೊಳೆರೋಗ ನಿರ್ವಹಣೆ
+    https://uahs.edu.in/
+[2] ಕೇಂದ್ರೀಯ ತೋಟದ ಬೆಳೆಗಳ ಸಂಶೋಧನಾ ಸಂಸ್ಥೆ (ICAR-CPCRI)
+    https://cpcri.icar.gov.in/`,crop:r,intent:`pest_disease`,citations:[{id:1,title:`KSNUAHS Shivamogga & ICAR-CPCRI`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`UAS Dharwad — Arecanut PoP`,url:`https://www.uasd.edu/`,sourceId:`uasd`,relevance:.95}],provider:`mock`,isDemo:!0,language:`kn`,outOfScope:!1,farmContext:e.farmContext,weather:a}:{answer:`### Diagnosis & Direct Answer
+Dear farmer, your **${s}** arecanut plantation in **${i}** is currently in the **South-West Monsoon Active Nut Development & Expansion Stage**. Physiologically, female flower buttons have set and young nuts are expanding in size.
+
+This stage transitions into **Post-Monsoon Nut Maturation & Hardening (Sept–Dec)**. In high-rainfall areas, Koleroga (Mahali Fruit Rot caused by *Phytophthora meadii*) is the #1 devastating disease that causes premature nut shedding and total bunch destruction. Prophylactic bunch protection before and during monsoon breaks is the only effective defense.
+
+### What to do & Recommended Field Operations
+1. **[Core Stage Operation & Higher Yield Priority — Pre/Mid Monsoon Bunch Protection & Fertilizer Schedules]**:
+   - **Stage**: Monsoon Nut Development & Bunches Protection.
+   - **Prophylactic Spraying**: Spray **1% Bordeaux mixture** (1 kg Copper Sulphate + 1 kg Quicklime in 100 L water) thoroughly covering all nut bunches, crowns, and leaf axils. **Always mix adhesive rosin compound / sticker (100 mL per 100 L)** to prevent rain wash-off.
+   - **Fertilizer Split**: Annual recommended dose per palm (5+ years): **100g N (220g Urea) + 40g P2O5 (250g SSP) + 140g K2O (235g MOP)**. Apply the 1st split (1/3rd dose) in May–June with 12 kg FYM/green leaf manure, and 2nd split (2/3rd dose) in Sept–October.
+   - **Micronutrients & Liming**: Apply **Agricultural Lime / Dolomite @ 500 g/palm** in May to correct soil acidity. Broadcast **Borax @ 25g + Zinc Sulphate @ 25g + Magnesium Sulphate @ 50g per palm** in the root basin.
+2. **[Field & Soil Management]**:
+   - **Deep Drainage Trenches**: Maintain 50–60 cm deep drainage channels between palm rows to drain excess monsoon runoff and prevent root waterlogging and foot rot (*Anabe roga*).
+   - Collect and burn all fallen infected nuts and dried bunches to eliminate inoculum sources.
+3. **[Pest & Disease Management — 3 Approaches]**:
+   - **Major Pests & Diseases at this Stage**: Koleroga / Mahali Fruit Rot (*Phytophthora meadii*), Foot Rot / Anabe Roga (*Ganoderma lucidum*), Yellow Leaf Disease (YLD), Spindle Bug (*Carvalhoia arecae*), Root Grub (*Leucopholis lepidophora*).
+   - **Chemical Control (PoP 2026)**:
+     * For Koleroga Prophylaxis: Spray **1% Bordeaux Mixture** (1st spray before heavy monsoon onset in May–June, 2nd spray 40–45 days later during rain breaks in July–August).
+     * If Active Koleroga Symptoms Appear: Spray **Metalaxyl 8% + Mancozeb 64% WP @ 2 g/L water** (or **Fosetyl-Al 80 WP @ 2 g/L**).
+     * For Spindle Bug: Spray **Dimethoate 30% EC @ 1.5 mL/L** directed into topmost spindle leaves.
+     * For Root Grub: Soil drench **Chlorpyrifos 20% EC @ 5 mL/L** or apply **Phorate 10G @ 10–15 g/palm** in May/June.
+   - **Biological & Organic Control**:
+     * Apply *Trichoderma harzianum* enriched in FYM (1:100 ratio) @ **2–3 kg/palm** around the root basin to control *Phytophthora* and *Ganoderma* foot rot.
+     * Drench *Pseudomonas fluorescens* 1% WP @ 20 g/L in palm basins.
+   - **IPM & Cultural Practices**:
+     * **Polythene Bunch Covering**: Tie 100-gauge UV-stabilized polythene bags over nut bunches before monsoon onset (completely prevents Koleroga without chemicals).
+     * Deep inter-cultivation of root basins in April–May to expose white root grubs to predatory birds.
+
+### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
+1. **[Question-Specific Weather Advisory]**: With ${o} mm rainfall forecasted across ${i}, immediately utilize any clear 3–4 hour dry break to complete the protective Bordeaux mixture spray on bunches.
+2. **[Field Operation / Spray Window]**: Always incorporate rosin/resin sticker with Bordeaux mixture; spray during clear morning breaks (7:00–10:00 AM) when wind is calm.
+3. **[Micro-Climate & Agronomic Risk Alert]**: Continuous high relative humidity (>95%), mist, and heavy cloud cover create an epidemic environment for *Phytophthora* zoospores; inspect tree crowns weekly.
+
+### ⚠️ Important Message for Farmer
+**Crucial Warning**: Never skip the pre-monsoon prophylactic spray of 1% Bordeaux mixture on nut bunches. Always add sticker/adherent compound to the spray mixture to prevent wash-off during heavy monsoon downpours.
+
+### Sources
+[1] KSNUAHS Shivamogga & ICAR-CPCRI — Arecanut Koleroga Management
+    https://uahs.edu.in/
+[2] Central Plantation Crops Research Institute (ICAR-CPCRI)
+    https://cpcri.icar.gov.in/`,crop:r,intent:`pest_disease`,citations:[{id:1,title:`KSNUAHS Shivamogga & ICAR-CPCRI`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`UAS Dharwad — Arecanut PoP`,url:`https://www.uasd.edu/`,sourceId:`uasd`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}:t?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
 ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ ನಿಮ್ಮ **${s}** ${r===`groundnut`?`ಕಡಲೆಕಾಯಿ`:r===`rice`?`ಭತ್ತ`:r===`maize`?`ಮೆಕ್ಕೆಜೋಳ`:`ಅಡಿಕೆ`} ಬೆಳೆಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಕೃಷಿ ಕೈಪಿಡಿ (PoP 2026) ಆಧಾರಿತ ಶಿಫಾರಸುಗಳು ಇಲ್ಲಿವೆ. 5 ದಿನಗಳ ಹವಾಮಾನ ಮುನ್ಸೂಚನೆಯಲ್ಲಿ ಒಟ್ಟು **${o} ಮಿ.ಮೀ ಮಳೆ** ನಿರೀಕ್ಷೆಯಿದ್ದು, ಪ್ರಸ್ತುತ ಬೆಳವಣಿಗೆಯ ಹಂತದಲ್ಲಿ ಸಮತೋಲನ ಪೋಷಕಾಂಶ ಮತ್ತು ರೋಗ ಕಣ್ಗಾವಲು ನಿರ್ವಹಣೆ ಅತ್ಯಂತ ಮಹತ್ವದ್ದಾಗಿದೆ.
 
 ### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
