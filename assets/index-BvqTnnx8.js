@@ -157,13 +157,102 @@ Always use certified seeds with >80% germination rate. Plan for **Gypsum top-dre
 [1] KSNUAHS Shivamogga — Groundnut Package of Practices (PoP 2026)
     https://uahs.edu.in/
 [2] ICAR-IIGR — Directorate of Groundnut Research
-    https://www.icar-iigr.org.in/`,crop:r,intent:`crop_production`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIGR Groundnut Research`,url:`https://www.icar-iigr.org.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}:r===`groundnut`&&(n.includes(`30 day`)||n.includes(`30 days`)||n.includes(`pegging`)||n.includes(`higher yield`)||n.includes(`rainfall`))?t?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
-30 ದಿನಗಳ ವಯಸ್ಸಿನ ಕಡಲೆಕಾಯಿ ಬೆಳೆಯು (ವೆಜಿಟೇಟಿವ್‌ನಿಂದ ಕಾಯಿ ಇಳಿಯುವ - Pegging ಹಂತ) ಅಧಿಕ ಇಳುವರಿ ಪಡೆಯಲು ಅತ್ಯಂತ ಪ್ರಮುಖ ಘಟ್ಟದಲ್ಲಿದೆ. ಈ ಸಮಯದಲ್ಲಿ ಮಳೆ ಮುನ್ಸೂಚನೆಗೆ ಅನುಗುಣವಾಗಿ ಸಮರ್ಪಕ ಕಳೆ ನಿಯಂತ್ರಣ, ಜಿಪ್ಸಮ್ ಬಳಕೆ ಹಾಗೂ ರೋಗ ಕಣ್ಗಾವಲು ನಿರ್ವಹಣೆ ಮಾಡುವುದು ಅನಿವಾರ್ಯ.
+    https://www.icar-iigr.org.in/`,crop:r,intent:`crop_production`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIGR Groundnut Research`,url:`https://www.icar-iigr.org.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}:r===`groundnut`&&(n.includes(`45 das`)||n.includes(`45 day`)||n.includes(`40 das`)||n.includes(`50 das`)||n.includes(`das`)&&(n.includes(`pest`)||n.includes(`disease`)))?t?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
+${i} ಜಿಲ್ಲೆಯಲ್ಲಿ ನಿಮ್ಮ **${s}** ಕಡಲೆಕಾಯಿ ಬೆಳೆಯು **45 ದಿನಗಳ (45 DAS)** ಹಂತದಲ್ಲಿದ್ದು, ಪ್ರಸ್ತುತ **ಗರಿಷ್ಠ ಹೂವಾಡುವಿಕೆಯಿಂದ ಸಕ್ರಿಯ ಕಾಯಿ ಇಳಿಯುವ (Peak Flowering to Active Pegging & Pod Initiation) ಹಂತದಲ್ಲಿದೆ**. ಈ ಹಂತದಲ್ಲಿ ಗಿಡಗಳ ಹೂವಿನಿಂದ ಹೊರಬರುವ ಕಡ್ಡಿಗಳು (Pegs/Gynophores) 4–7 ಸೆಂ.ಮೀ ಆಳಕ್ಕೆ ಮಣ್ಣಿಗೆ ಇಳಿದು ಕಾಯಿಗಳಾಗಿ ಮಾರ್ಪಡುತ್ತವೆ. ಬೆಳೆಯು ಮುಂದಿನ **ಕಾಯಿ ಬೆಳವಣಿಗೆ ಮತ್ತು ಕಾಳು ತುಂಬುವ ಹಂತಕ್ಕೆ (55–75 DAS)** ಸಾಗುತ್ತಿದ್ದು, ಈ ನಿರ್ಣಾಯಕ ಸಮಯದಲ್ಲಿ ಕಾಯಿಗಳಿಗೆ ಕ್ಯಾಲ್ಸಿಯಂ ಒದಗಿಸುವುದು, ಮಣ್ಣಿನ ಸಡಿಲತೆ ಕಾಪಾಡುವುದು ಮತ್ತು ಎಲೆ ತಿನ್ನುವ ಕೀಟ ಹಾಗೂ ಎಲೆಚುಕ್ಕೆ ರೋಗಗಳಿಂದ ರಕ್ಷಿಸುವುದು ಅಧಿಕ ಇಳುವರಿಗೆ ಅತ್ಯಂತ ನಿರ್ಣಾಯಕವಾಗಿದೆ.
 
 ### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
-1. **[ಅಧಿಕ ಇಳುವರಿ ಪ್ರಮುಖ ಅಂಶ — ಜಿಪ್ಸಮ್ ಬಳಕೆ (Gypsum Application)]**: 30 ರಿಂದ 40 ದಿನಗಳ ಹಂತದಲ್ಲಿ ಎಕರೆಗೆ 200 ಕೆಜಿ (ಹೆಕ್ಟೇರಿಗೆ 500 ಕೆಜಿ) ಜಿಪ್ಸಮ್ ಅನ್ನು ಗಿಡಗಳ ಬುಡಕ್ಕೆ ಹಾಕಿ ಮಣ್ಣು ಏರಿಸಬೇಕು. ಕ್ಯಾಲ್ಸಿಯಂ ಅಂಶವು ಕಾಯಿಗಳಲ್ಲಿ ಕಾಳು ತುಂಬಲು (Pod Filling) ಮತ್ತು ಎಣ್ಣೆ ಅಂಶ ಹೆಚ್ಚಿಸಲು #1 ನಿರ್ಣಾಯಕ ಅಂಶವಾಗಿದೆ.
+1. **[ಪ್ರಸ್ತುತ ಹಂತದ ಮುಖ್ಯ ಕ್ರಮ ಮತ್ತು ಪೋಷಕಾಂಶ/ಗೊಬ್ಬರದ ನಿಖರ ಪ್ರಮಾಣ — 45 DAS]**:
+   - **ಜಿಪ್ಸಮ್ ಬಳಕೆ (Gypsum Application)**: ಎಕರೆಗೆ **200 ಕೆಜಿ (ಹೆಕ್ಟೇರಿಗೆ 500 ಕೆಜಿ)** ಜಿಪ್ಸಮ್ ಅನ್ನು ಗಿಡಗಳ ಬುಡಕ್ಕೆ ಹಾಕಿ ಲಘು ಮಣ್ಣು ಏರಿಸಿ. ಜಿಪ್ಸಮ್‌ನಲ್ಲಿರುವ ಕ್ಯಾಲ್ಸಿಯಂ ಮತ್ತು ಗಂಧಕವು ಕಾಯಿಗಳಲ್ಲಿ ಕಾಳು ಗಟ್ಟಿಯಾಗಲು ಮತ್ತು ಜೊಳ್ಳು ಕಾಯಿಗಳನ್ನು (Pops) ತಡೆಯಲು #1 ಪ್ರಮುಖ ಪೋಷಕಾಂಶವಾಗಿದೆ.
+   - **ಎಲೆಗಳ ಪೋಷಕಾಂಶ ಮತ್ತು ಹೂವು ಉಳಿಸುವ ಸಿಂಪಡಣೆ**: ಹೂವು ಮತ್ತು ಕಡ್ಡಿಗಳ ಉದುರುವಿಕೆ ತಡೆಯಲು **2% ಡಿಎಪಿ (DAP @ 20 ಗ್ರಾಂ/ಲೀಟರ್)** + **ಪ್ಲಾನೋಫಿಕ್ಸ್ (NAA @ 0.25 ಮಿ.ಲೀ/ಲೀಟರ್)** ಅಥವಾ **19:19:19 @ 5 ಗ್ರಾಂ/ಲೀಟರ್ + ಬೋರಾಕ್ಸ್ @ 1 ಗ್ರಾಂ/ಲೀಟರ್** ಬೆರೆಸಿ ಸಿಂಪಡಿಸಿ.
+   - **ಲಘು ಪೋಷಕಾಂಶಗಳು**: ಎಲೆಗಳು ಹಳದಿಯಾಗಿದ್ದರೆ **ಸತು ಸಲ್ಫೇಟ್ (Zinc Sulphate) @ 2 ಗ್ರಾಂ/ಲೀಟರ್ + ಫೆರಸ್ ಸಲ್ಫೇಟ್ @ 2 ಗ್ರಾಂ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
+2. **[ಕ್ಷೇತ್ರ ಮತ್ತು ಮಣ್ಣಿನ ನಿರ್ವಹಣೆ]**:
+   - **ಕಡ್ಡಾಯ ನಿಯಮ**: ಕಾಯಿ ಇಳಿಯುವ ಕಡ್ಡಿಗಳು (Pegs) ಮಣ್ಣಿಗೆ ಇಳಿಯಲು ಪ್ರಾರಂಭಿಸಿರುವುದರಿಂದ **ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ಆಳವಾದ ಎಡೆಕುಂಟೆ ಅಥವಾ ಯಾಂತ್ರಿಕ ಕಳೆ ತೆಗೆಯುವುದನ್ನು ಮಾಡಬೇಡಿ**. ಕಡ್ಡಿಗಳು ತುಂಡಾದರೆ ಶೇ. 30–40 ರಷ್ಟು ಇಳುವರಿ ಕುಸಿಯುತ್ತದೆ.
+   - ಮಣ್ಣು ಸದಾ ಸಡಿಲವಾಗಿರುವಂತೆ ನೋಡಿಕೊಳ್ಳಿ ಮತ್ತು ಮಳೆ ನೀರು ನಿಲ್ಲದಂತೆ ಬಸಿಗಾಲುವೆಗಳನ್ನು ಸದಾ ತೆರೆದಿಡಿ.
+3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
+   - **ಈ ಹಂತದ ಪ್ರಮುಖ ಕೀಟ ಮತ್ತು ರೋಗಗಳು**:
+     1. **ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ರೋಗ** (*Cercospora arachidicola / Phaeoisariopsis personata*): ಎಲೆಗಳ ಮೇಲೆ ಕಂದು/ಕಪ್ಪು ದುಂಡಗಿನ ಚುಕ್ಕೆಗಳು.
+     2. **ತುಕ್ಕು ರೋಗ** (*Puccinia arachidis*): ಎಲೆಗಳ ಕೆಳಭಾಗದಲ್ಲಿ ಕಿತ್ತಳೆ-ಕಂದು ಬಣ್ಣದ ರೇಣು ಗುಳ್ಳೆಗಳು.
+     3. **ತಂಬಾಕು ಕಂಬಳಿಹುಳು / ಸ್ಪೊಡೋಪ್ಟೆರಾ** (*Spodoptera litura*): ಎಲೆಗಳನ್ನು ಜರಡಿಯಂತೆ ತಿನ್ನುವ ಹಸಿರು/ಕಂದು ಹುಳುಗಳು.
+     4. **ಎಲೆ ಸುರುಳಿ ಹುಳು (Leaf Miner)** (*Aproaerema modicella*): ಎಲೆಗಳ ಒಳಗೆ ಗೂಡು ಕಟ್ಟಿ ಎಲೆ ಒಣಗಿಸುವುದು.
+     5. **ನುಸಿ ಮತ್ತು ಥ್ರಿಪ್ಸ್ (Thrips)**: ಎಲೆ ಮುದುರುವಿಕೆ ಹಾಗೂ ಮೊಗ್ಗು ಕೊಳೆ ರೋಗ (PBND) ಹರಡುವ ಕೀಟಗಳು.
+   - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**:
+     - *ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ಮತ್ತು ತುಕ್ಕು ರೋಗಕ್ಕೆ*: **ಹೆಕ್ಸಾಕೊನಾಜೋಲ್ 5% EC @ 1 ಮಿ.ಲೀ/ಲೀಟರ್** (ಎಕರೆಗೆ 200 ಮಿ.ಲೀ) ಅಥವಾ **ಟೆಬುಕೊನಾಜೋಲ್ 25.9% EC @ 1 ಮಿ.ಲೀ/ಲೀಟರ್** ಅಥವಾ **ಮ್ಯಾಂಕೋಜೆಬ್ 75% WP @ 2 ಗ್ರಾಂ/ಲೀಟರ್** ನೀರಿಗೆ ಬೆರೆಸಿ ಸಿಂಪಡಿಸಿ.
+     - *ಸ್ಪೊಡೋಪ್ಟೆರಾ ಮತ್ತು ಎಲೆ ಸುರುಳಿ ಹುಳುವಿಗೆ*: **ಕ್ಲೋರಾಂಟ್ರಾನಿಲಿಪ್ರೋಲ್ 18.5% SC @ 0.3 ಮಿ.ಲೀ/ಲೀಟರ್** (ಎಕರೆಗೆ 60 ಮಿ.ಲೀ) ಅಥವಾ **ಎಮಾಮೆಕ್ಟಿನ್ ಬೆಂಜೊಯೇಟ್ 5% SG @ 0.4 ಗ್ರಾಂ/ಲೀಟರ್** (ಎಕರೆಗೆ 80 ಗ್ರಾಂ) ಸಿಂಪಡಿಸಿ.
+     - *ಥ್ರಿಪ್ಸ್ ಮತ್ತು ನುಸಿ ಕೀಟಗಳಿಗೆ*: **ಇಮಿಡಾಕ್ಲೋಪ್ರಿಡ್ 17.8% SL @ 0.3 ಮಿ.ಲೀ/ಲೀಟರ್** ಅಥವಾ **ಡೈಮೆಥೋಯೇಟ್ 30% EC @ 1.7 ಮಿ.ಲೀ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
+   - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**:
+     - *ಟಿಕ್ಕಾ ಮತ್ತು ಶಿಲೀಂಧ್ರ ರೋಗಗಳಿಗೆ*: **ಸ್ಯೂಡೋಮೊನಾಸ್ ಫ್ಲೋರೊಸೆನ್ಸ್ 1% WP @ 10 ಗ್ರಾಂ/ಲೀಟರ್** ಅಥವಾ **ಟ್ರೈಕೋಡರ್ಮಾ ವಿರಿಡೆ @ 10 ಗ್ರಾಂ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
+     - *ಸ್ಪೊಡೋಪ್ಟೆರಾ ಮತ್ತು ಕಂಬಳಿಹುಳುವಿಗೆ*: **ನೊಮುರಿಯಾ ರಿಲೈ (Nomuraea rileyi) @ 2 ಕೆಜಿ/ಹೆ** ಅಥವಾ **5% ಬೇವಿನ ಬೀಜದ ಕಷಾಯ (NSKE @ 50 ಮಿ.ಲೀ/ಲೀಟರ್)** ಅಥವಾ **SlNPV @ 250 LE/ಹೆ** ಸಿಂಪಡಿಸಿ.
+     - *ಥ್ರಿಪ್ಸ್ ಕೀಟಕ್ಕೆ*: **ವರ್ಟಿಸಿಲಿಯಂ ಲೆಕಾನಿ (Verticillium lecanii) @ 5 ಗ್ರಾಂ/ಲೀಟರ್** ಅಥವಾ **ಅಜಾಡಿರಾಕ್ಟಿನ್ 1500 ppm @ 5 ಮಿ.ಲೀ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
+   - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**:
+     - ಎಕರೆಗೆ **4–5 ಸ್ಪೊಡೋಪ್ಟೆರಾ ಮೋಹಕ ಬಲೆಗಳನ್ನು (Pheromone traps)** ಅಳವಡಿಸಿ.
+     - ಥ್ರಿಪ್ಸ್ ಮತ್ತು ಎಲೆ ಸುರುಳಿ ಕೀಟ ಕಣ್ಗಾವಲಿಗೆ ಎಕರೆಗೆ **10–12 ಹಳದಿ ಅಂಟು ಬಲೆಗಳನ್ನು** ಅಳವಡಿಸಿ.
+     - ಕಂಬಳಿಹುಳುವಿನ ಮೊಟ್ಟೆಯ ಗುಂಪುಗಳು ಮತ್ತು ಎಳೆಯ ಮರಿಹುಳುಗಳನ್ನು ಕೈಯಿಂದ ಆರಿಸಿ ನಾಶಪಡಿಸಿ.
+     - ಹೊಲದ ಸುತ್ತ 3 ಸಾಲು ಸಜ್ಜೆ ಅಥವಾ ಜೋಳವನ್ನು ಗಡಿ ಬೆಳೆಯಾಗಿ ಬಿತ್ತಿ ಕೀಟಗಳ ಚಲನೆಯನ್ನು ತಡೆಯಿರಿ.
+
+### 🌦️ ಐಎಂಡಿ 5-ದಿನಗಳ ಹವಾಮಾನ ಆಧಾರಿತ ಕೃಷಿ ಸಲಹೆ
+1. **[ಪ್ರಶ್ನೆ ಆಧಾರಿತ ಹವಾಮಾನ ಸಲಹೆ]**: ${i} ಜಿಲ್ಲೆಯಲ್ಲಿ 5 ದಿನಗಳಲ್ಲಿ ಒಟ್ಟು ${o} ಮಿ.ಮೀ ಮಳೆ ಮುನ್ಸೂಚನೆಯಿರುವುದರಿಂದ ಮಣ್ಣಿನಲ್ಲಿ ತೇವಾಂಶ ಹದವಾಗಿದ್ದಾಗ ಕಾಯಿ ಇಳಿಯಲು (Pegging) ಅನುಕೂಲವಾಗುವಂತೆ ಜಿಪ್ಸಮ್ ಬುಡಕ್ಕೆ ಹಾಕಿ. 
+2. **[ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ಸಿಂಪಡಣೆ ಸಮಯ (Spray Window)]**: ಕೀಟನಾಶಕ/ಶಿಲೀಂಧ್ರನಾಶಕ ಸಿಂಪಡಣೆಯನ್ನು ಮಳೆ ಇಲ್ಲದ ಶುಷ್ಕ ಮುಂಜಾನೆ (6:30–9:00 AM) ವೇಳೆಯಲ್ಲಿ ಗಾಳಿಯ ವೇಗ <8 ಕಿ.ಮೀ/ಗಂಟೆ ಇದ್ದಾಗ ಮಾತ್ರ ಕೈಗೊಳ್ಳಿ.
+3. **[ಸೂಕ್ಷ್ಮ ಹವಾಮಾನ ಮತ್ತು ರೋಗ/ಕೀಟ ಎಚ್ಚರಿಕೆ]**: ಹೆಚ್ಚಿನ ಬೆಳಗಿನ ಆರ್ದ್ರತೆ (>85–97%) ಮತ್ತು ಮೋಡ ಕವಿದ ವಾತಾವರಣವು ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ಮತ್ತು ಸ್ಪೊಡೋಪ್ಟೆರಾ ಹುಳುಗಳ ಉಲ್ಬಣಕ್ಕೆ ಪೂರಕವಾಗಿದೆ; ಪ್ರತಿ 3 ದಿನಗಳಿಗೊಮ್ಮೆ ಕೆಳ ಎಲೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.
+
+### ⚠️ ರೈತರಿಗೆ ಪ್ರಮುಖ ಸಂದೇಶ
+45 ದಿನಗಳ ನಂತರ ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ಆಳವಾದ ಎಡೆಕುಂಟೆ ಹೊಡೆಯಬೇಡಿ. ಕಾಯಿ ಇಳಿಯುವ ಕಡ್ಡಿಗಳಿಗೆ ಹಾನಿಯಾಗದಂತೆ ಕೈಯಿಂದ ಮಾತ್ರ ಕಳೆ ಕೀಳಿ.
+
+### ಮೂಲಗಳು
+[1] KSNUAHS Shivamogga — Groundnut Package of Practices (PoP 2026)
+    https://uahs.edu.in/
+[2] ICAR-IIGR — Directorate of Groundnut Research
+    https://www.icar-iigr.org.in/`,crop:r,intent:`pest_disease`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIGR Groundnut Research`,url:`https://www.icar-iigr.org.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`kn`,outOfScope:!1,farmContext:e.farmContext,weather:a}:{answer:`### Diagnosis & Direct Answer
+At **45 Days After Sowing (DAS)**, your **${s} Groundnut crop** in **${i}** is at the **Peak Flowering to Active Peg Penetration & Early Pod Development / Pegging Stage**. In this physiological stage, aerial pegs (gynophores) are actively elongating and penetrating 4–7 cm into the soil to initiate subterranean pod expansion. The crop is transitioning into the upcoming **Pod Development and Kernel Filling Stage (55–75 DAS)**. Safeguarding peg entry, supplying calcium, and preventing canopy defoliation now is decisive for achieving maximum pod filling and preventing empty pods ("pops").
+
+### What to do & Recommended Field Operations
+1. **[Core Stage Operation & Higher Yield Priority — Gypsum & Foliar Nutrition at 40–45 DAS]**:
+   - **Top-Dress Gypsum @ 500 kg/ha (200 kg/acre)**: Broadcast gypsum around the root zone followed by light earthing up. Calcium (Ca) and Sulfur (S) are absorbed directly by developing pods from the moist soil solution to form strong shells, maximize kernel weight, and synthesize oil.
+   - **Foliar Booster Nutrition**: Spray **2% DAP (20 g/L)** + **Planofix (NAA) @ 0.25 mL/L water** (or 19:19:19 @ 5 g/L + Borax @ 1 g/L) at 40–45 DAS to arrest flower/peg drop and stimulate uniform pod setting.
+   - **Micronutrient Correction**: If foliage shows interveinal yellowing (chlorosis), spray **Zinc Sulphate @ 2 g/L + Ferrous Sulphate @ 2 g/L + Citric acid @ 0.5 g/L**.
+2. **[Field & Soil Management]**:
+   - **CRITICAL CULTURAL RULE**: Strictly **STOP all mechanical hoeing, cultivation, and deep intercultivation** after 35–40 DAS to prevent severing or dislodging tender pegs entering the soil (which causes 30–40% pod loss).
+   - Maintain light, friable moisture in the top 10 cm soil layer for easy peg penetration. Keep field drainage furrows open to avoid waterlogging after rain.
+3. **[Pest & Disease Management — 3 Approaches]**:
+   - **Major Pests & Diseases at 45 DAS**:
+     1. **Tikka Leaf Spot** (*Cercospora arachidicola / Phaeoisariopsis personata*): Circular reddish-brown/black necrotic leaf lesions with yellow halos.
+     2. **Rust** (*Puccinia arachidis*): Orange-brown powdery pustules on the lower leaf surface.
+     3. **Tobacco Caterpillar / Spodoptera** (*Spodoptera litura*): Defoliation and skeletonization of leaves.
+     4. **Groundnut Leaf Miner** (*Aproaerema modicella*): Blotch mines and leaf webbing.
+     5. **Thrips & Jassids**: Leaf margin curling and transmission of Peanut Bud Necrosis Virus (PBNV).
+   - **Chemical Control (PoP 2026)**:
+     - *For Tikka Leaf Spot & Rust*: Spray **Hexaconazole 5% EC @ 1 mL/L (500 mL/ha)** or **Tebuconazole 25.9% EC @ 1 mL/L** or **Mancozeb 75% WP @ 2 g/L (1 kg/ha)** in 500 L water/ha.
+     - *For Spodoptera & Leaf Miner*: Spray **Chlorantraniliprole 18.5% SC @ 0.3 mL/L (150 mL/ha)** or **Emamectin Benzoate 5% SG @ 0.4 g/L (200 g/ha)**.
+     - *For Thrips & Sucking Pests*: Spray **Imidacloprid 17.8% SL @ 0.3 mL/L** or **Dimethoate 30% EC @ 1.7 mL/L**.
+   - **Biological & Organic Control**:
+     - *For Tikka & Rust*: Foliar spray of **Pseudomonas fluorescens 1% WP @ 10 g/L (2 kg/ha)** or **Trichoderma viride @ 10 g/L**.
+     - *For Spodoptera & Leaf Miner*: Spray **Nomuraea rileyi @ 2 kg/ha** or **5% Neem Seed Kernel Extract (NSKE @ 50 mL/L)** or **SlNPV @ 250 LE/ha**.
+     - *For Thrips*: Spray **Verticillium lecanii 1.15% WP @ 5 g/L** or **Azadirachtin 1500 ppm @ 5 mL/L**.
+   - **IPM & Cultural Practices**:
+     - Install **4–5 Spodoptera litura Pheromone traps/acre** to monitor moth population.
+     - Erect **10–12 Yellow Sticky Traps/acre** for continuous thrips and leaf miner monitoring.
+     - Manually collect and destroy egg masses and gregarious young caterpillars.
+     - Plant 3 border rows of pearl millet or sorghum as an insect barrier crop.
+
+### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
+1. **[Question-Specific Weather Advisory]**: With ${o} mm cumulative rainfall expected in ${i}, utilize moist soil conditions to ensure easy peg penetration. If gypsum has not yet been applied, broadcast immediately when soil is moist to enable rapid calcium uptake.
+2. **[Field Operation / Spray Window]**: Carry out fungicide or insecticide sprays strictly during calm morning hours (6:30–9:00 AM) or late evening (4:30–6:30 PM) when wind speed is <8 km/h.
+3. **[Micro-Climate & Agronomic Risk Alert]**: Forecasted high relative humidity (>85–97%) combined with warm day temperatures elevates micro-climatic risk of Tikka leaf spot and Spodoptera outbreaks; scout the lower canopy every 3 days.
+
+### ⚠️ Important Message for Farmer
+Strictly avoid mechanical hoeing or deep intercultivation from 45 DAS onwards. Only remove weeds manually by hand without pulling soil away from plant crowns.
+
+### Sources
+[1] KSNUAHS Shivamogga — Groundnut Package of Practices (PoP 2026)
+    https://uahs.edu.in/
+[2] ICAR-IIGR — Directorate of Groundnut Research
+    https://www.icar-iigr.org.in/`,crop:r,intent:`pest_disease`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIGR Groundnut Research`,url:`https://www.icar-iigr.org.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`en`,outOfScope:!1,farmContext:e.farmContext,weather:a}:r===`groundnut`&&(n.includes(`30 day`)||n.includes(`30 days`)||n.includes(`pegging`)||n.includes(`higher yield`)||n.includes(`rainfall`))?t?{answer:`### ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ನೇರ ಉತ್ತರ
+30 ದಿನಗಳ ವಯಸ್ಸಿನ ಕಡಲೆಕಾಯಿ ಬೆಳೆಯು **ಕವಲೊಡೆಯುವಿಕೆಯಿಂದ ಆರಂಭಿಕ ಹೂವಾಡುವಿಕೆ ಹಂತದಲ್ಲಿದ್ದು (Vegetative to Early Flowering Stage)**, ಅಧಿಕ ಇಳುವರಿ ಪಡೆಯಲು ಅತ್ಯಂತ ಪ್ರಮುಖ ಘಟ್ಟದಲ್ಲಿದೆ. ಈ ಸಮಯದಲ್ಲಿ ಮಳೆ ಮುನ್ಸೂಚನೆಗೆ ಅನುಗುಣವಾಗಿ ಸಮರ್ಪಕ ಕಳೆ ನಿಯಂತ್ರಣ, ಜಿಪ್ಸಮ್ ಬಳಕೆ ಹಾಗೂ ರೋಗ ಕಣ್ಗಾವಲು ನಿರ್ವಹಣೆ ಮಾಡುವುದು ಅನಿವಾರ್ಯ.
+
+### ಏನು ಮಾಡಬೇಕು (ಶಿಫಾರಸು ಮಾಡಿದ ಕ್ಷೇತ್ರ ಕಾರ್ಯಾಚರಣೆಗಳು)
+1. **[ಪ್ರಸ್ತುತ ಹಂತದ ಮುಖ್ಯ ಕ್ರಮ ಮತ್ತು ಪೋಷಕಾಂಶ/ಗೊಬ್ಬರದ ನಿಖರ ಪ್ರಮಾಣ — 30 DAS]**: 30 ರಿಂದ 40 ದಿನಗಳ ಹಂತದಲ್ಲಿ ಎಕರೆಗೆ **200 ಕೆಜಿ (ಹೆಕ್ಟೇರಿಗೆ 500 ಕೆಜಿ)** ಜಿಪ್ಸಮ್ ಅನ್ನು ಗಿಡಗಳ ಬುಡಕ್ಕೆ ಹಾಕಿ ಮಣ್ಣು ಏರಿಸಬೇಕು. ಕ್ಯಾಲ್ಸಿಯಂ ಅಂಶವು ಕಾಯಿಗಳಲ್ಲಿ ಕಾಳು ತುಂಬಲು (Pod Filling) ಮತ್ತು ಎಣ್ಣೆ ಅಂಶ ಹೆಚ್ಚಿಸಲು #1 ನಿರ್ಣಾಯಕ ಅಂಶವಾಗಿದೆ. ಹೂವಾಡುವಿಕೆ ಉತ್ತೇಜಿಸಲು **2% ಡಿಎಪಿ (DAP @ 20 ಗ್ರಾಂ/ಲೀಟರ್)** ಅಥವಾ **ಪ್ಲಾನೋಫಿಕ್ಸ್ (NAA @ 0.25 ಮಿ.ಲೀ/ಲೀಟರ್)** ಸಿಂಪಡಿಸಿ.
 2. **[ಕಳೆ ನಿರ್ವಹಣೆ ಹಾಗೂ ಎಡೆಕುಂಟೆ]**: 30 ದಿನಗಳೊಳಗೆ ಕೊನೆಯ ಕೈಕಳೆ ಮತ್ತು ಲಘು ಎಡೆಕುಂಟೆ ಮುಗಿಸಿಕೊಳ್ಳಿ. **ಗಮನಿಸಿ**: ಕಾಯಿ ಇಳಿಯುವ ಕಡ್ಡಿಗಳು (Pegs) ಮಣ್ಣಿಗೆ ಇಳಿಯಲು ಪ್ರಾರಂಭಿಸಿದ ನಂತರ (35 ದಿನಗಳ ನಂತರ) ಯಾವುದೇ ಕಾರಣಕ್ಕೂ ಆಳವಾದ ಎಡೆಕುಂಟೆ ಹೊಡೆಯಬಾರದು.
 3. **[ರೋಗ ಮತ್ತು ಕೀಟ ನಿರ್ವಹಣೆ — ೩ ವಿಧಾನಗಳಲ್ಲಿ]**:
+   - **ಪ್ರಮುಖ ರೋಗ/ಕೀಟಗಳು**: ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ರೋಗ, ತುಕ್ಕು ರೋಗ, ಎಲೆ ಸುರುಳಿ ಹುಳು.
    - **ರಾಸಾಯನಿಕ ನಿರ್ವಹಣೆ (PoP 2026)**: ಟಿಕ್ಕಾ ಎಲೆಚುಕ್ಕೆ ರೋಗ ಕಂಡುಬಂದರೆ **ಮ್ಯಾಂಕೋಜೆಬ್ 75 WP @ 2 ಗ್ರಾಂ/ಲೀಟರ್** ಅಥವಾ **ಹೆಕ್ಸಾಕೊನಾಜೋಲ್ 5 EC @ 1 ಮಿ.ಲೀ/ಲೀಟರ್** ಸಿಂಪಡಿಸಿ.
    - **ಜೈವಿಕ ಮತ್ತು ಸಾವಯವ ನಿಯಂತ್ರಣ**: 5% ಬೇವಿನ ಕಷಾಯ (NSKE @ 50 ಮಿ.ಲೀ/ಲೀಟರ್) ಅಥವಾ *ಸ್ಯೂಡೋಮೊನಾಸ್ ಫ್ಲೋರೊಸೆನ್ಸ್* @ 10 ಗ್ರಾಂ/ಲೀಟರ್ ಸಿಂಪಡಿಸಿ.
    - **ಸಮಗ್ರ ಕೀಟ ಹಾಗೂ ರೋಗ ನಿರ್ವಹಣೆ (IPM)**: ಎಲೆ ಸುರುಳಿ ಹುಳು ಮತ್ತು ಸ್ಪೊಡೋಪ್ಟೆರಾ ಕೀಟಕ್ಕೆ ಎಕರೆಗೆ 4-5 ಮೋಹಕ ಬಲೆಗಳನ್ನು (Pheromone traps) ಅಳವಡಿಸಿ.
@@ -181,18 +270,19 @@ Always use certified seeds with >80% germination rate. Plan for **Gypsum top-dre
     https://uahs.edu.in/
 [2] ICAR-IIGR — Directorate of Groundnut Research
     https://www.icar-iigr.org.in/`,crop:r,intent:`nutrient_soil`,citations:[{id:1,title:`KSNUAHS Shivamogga — PoP 2026`,url:`https://uahs.edu.in/`,sourceId:`ksnuahs`,relevance:.98},{id:2,title:`ICAR-IIGR Groundnut Research`,url:`https://www.icar-iigr.org.in/`,sourceId:`icar`,relevance:.95}],provider:`mock`,isDemo:!0,language:`kn`,outOfScope:!1,farmContext:e.farmContext,weather:a}:{answer:`### Diagnosis & Direct Answer
-At **30 days after sowing (DAS)**, your groundnut crop is transitioning from vegetative growth into the **critical flowering and early pegging stage**. Based on current rainfall and soil moisture conditions in **${i}**, executing timely gypsum application, final light intercultivation, and stage-specific foliar nutrition is decisive for achieving maximum pod filling and yield.
+At **30 days after sowing (DAS)**, your groundnut crop is in the **Vegetative Branching to Early Flowering Stage** and is actively preparing for pegging. Based on current rainfall and soil moisture conditions in **${i}**, executing timely gypsum application, final light intercultivation, and stage-specific foliar nutrition is decisive for achieving maximum pod filling and yield.
 
 ### What to do & Recommended Field Operations
-1. **[Core Stage Operation & Higher Yield Priority — Gypsum Top-Dressing @ 500 kg/ha (200 kg/acre)]**: Apply gypsum at 30–40 DAS around the root zone followed by light earthing up. Calcium from gypsum is indispensable for pod development and preventing empty pods ("pops").
+1. **[Core Stage Operation & Higher Yield Priority — Gypsum Top-Dressing @ 500 kg/ha (200 kg/acre)]**: Apply gypsum at 30–40 DAS around the root zone followed by light earthing up. Calcium from gypsum is indispensable for pod development and preventing empty pods ("pops"). Foliar spray **2% DAP (20 g/L)** or **Planofix (NAA) @ 0.25 mL/L water** at flowering to arrest flower drop.
 2. **[Final Weeding & Intercultivation]**: Complete all hand weeding and light hoeing now (25–30 DAS). **Crucial Warning**: Stop all mechanical intercultivation after 35–40 DAS to avoid severing delicate developing pegs entering the soil.
 3. **[Pest & Disease Management — 3 Approaches]**:
+   - **Major Pests & Diseases**: Early Tikka leaf spot, Collar rot, Leaf miner.
    - **Chemical Control (PoP 2026)**: If early Tikka leaf spot lesions appear, spray **Mancozeb 75 WP @ 2 g/L** or **Hexaconazole 5% EC @ 1 mL/L water** (in 500 L/ha).
    - **Biological & Organic Control**: Spray **5% Neem Seed Kernel Extract (NSKE @ 50 mL/L)** or *Pseudomonas fluorescens* 1% WP @ 10 g/L water.
    - **IPM & Cultural Practices**: Install 4–5 pheromone traps per acre for *Spodoptera litura* and ensure clear field furrows for excess water evacuation.
 
 ### 🌦️ IMD Agromet 5-Day Weather-Based Advisory
-1. **[Question-Specific Weather Advisory]**: With ${o} mm cumulative rainfall expected across ${i}, broadcast gypsum when soil is moist to facilitate rapid calcium dissolution into the pod zone.
+1. **[Question-Specific Weather Advisory]**: With ${o} mm cumulative rainfall expected across ${i}, broadcast gypsum when soil is moist to facilitate calcium solubilization into the pod zone.
 2. **[Field Operation / Spray Window]**: Schedule foliar nutritional (2% DAP / Planofix) or protective sprays strictly during dry morning windows (6:30–9:00 AM) under calm winds (<8 km/h).
 3. **[Micro-Climate & Agronomic Risk Alert]**: Forecasted high relative humidity (>85%) combined with warm temperatures elevates micro-climatic risk of early Tikka leaf spot. Ensure field drainage furrows are clear to prevent waterlogging around root zones.
 
