@@ -171,14 +171,23 @@ function sanitizeFarmContext(farmCtx: RAGInput['farmContext'], crop: string): RA
   });
 
   // ─── Step 7: Generate Answer with Gemini / LLM ────────────────────────────
-  const llmResult = await callLLM(AGRICULTURAL_SYSTEM_PROMPT, userMessage);
+  const llmResult = await callLLM({
+    question,
+    crop: finalCrop,
+    intent: detection.intent,
+    language: finalLang,
+    context: contextText,
+    sourceList,
+    weatherContext,
+    farmContext: sanitizedFarmContext,
+  });
 
   // ─── Step 8: Validate Citations ───────────────────────────────────────────
-  const validCitations = validateCitations(llmResult.text, citations);
+  const validCitations = validateCitations(llmResult.answer, citations);
   const formattedCitations = formatCitationsForPanel(validCitations);
 
   return {
-    answer: llmResult.text,
+    answer: llmResult.answer,
     crop: finalCrop,
     intent: detection.intent,
     citations: formattedCitations,

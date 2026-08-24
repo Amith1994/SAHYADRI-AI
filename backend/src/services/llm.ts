@@ -1,20 +1,6 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import axios from 'axios';
 import { AGRICULTURAL_SYSTEM_PROMPT, buildUserMessage } from '../prompts/agricultural';
 import { generateIMDWeatherBulletin } from './weather';
-
-// Lazy init Gemini client
-let genAI: GoogleGenerativeAI | null = null;
-
-function getGeminiClient(): GoogleGenerativeAI {
-  if (!genAI) {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-      throw new Error('GEMINI_API_KEY is not set in environment variables');
-    }
-    genAI = new GoogleGenerativeAI(apiKey);
-  }
-  return genAI;
-}
 
 export interface LLMResponse {
   answer: string;
@@ -65,53 +51,54 @@ async function callGemini(params: {
   weatherContext?: string;
   farmContext?: any;
 }): Promise<LLMResponse> {
-  const client = getGeminiClient();
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    throw new Error('GEMINI_API_KEY is not set in environment variables');
+  }
+
   const userMessage = buildUserMessage(params);
-
-  const modelCandidates = [
-    'gemini-2.5-flash',
-    'gemini-2.0-flash',
-    'gemini-1.5-flash',
-    'gemini-2.5-flash-lite',
-  ];
-
+  const models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
   let lastError: any = null;
 
-  for (const modelName of modelCandidates) {
-    for (let attempt = 1; attempt <= 2; attempt++) {
-      try {
-        const model = client.getGenerativeModel({
-          model: modelName,
-          systemInstruction: AGRICULTURAL_SYSTEM_PROMPT,
-        });
-
-        const result = await model.generateContent({
-          contents: [{ role: 'user', parts: [{ text: userMessage }] }],
-          generationConfig: {
-            temperature: 0.1,
-            maxOutputTokens: 1500,
+  for (const model of models) {
+    try {
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+      const payload = {
+        system_instruction: {
+          parts: [{ text: AGRICULTURAL_SYSTEM_PROMPT }],
+        },
+        contents: [
+          {
+            role: 'user',
+            parts: [{ text: userMessage }],
           },
-        });
+        ],
+        generationConfig: {
+          temperature: 0.1,
+          maxOutputTokens: 1500,
+        },
+      };
 
-        const text = result.response.text();
+      const res = await axios.post(url, payload, {
+        headers: { 'Content-Type': 'application/json' },
+        timeout: 20000,
+      });
+
+      const text = res.data?.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (text) {
         return {
           answer: text,
           provider: 'gemini',
-          model: modelName,
+          model,
         };
-      } catch (err: any) {
-        lastError = err;
-        console.warn(`[Gemini] Model ${modelName} (attempt ${attempt}) error:`, err?.message || err);
-        if (err?.message?.includes('429') && attempt === 1) {
-          await new Promise((res) => setTimeout(res, 2000));
-        } else {
-          break;
-        }
       }
+    } catch (err: any) {
+      lastError = err;
+      console.warn(`[Gemini API] Model ${model} failed:`, err?.response?.data?.error?.message || err?.message);
     }
   }
 
-  throw lastError || new Error('All Gemini model candidates failed');
+  throw lastError || new Error('All Gemini API models failed');
 }
 
 /**
